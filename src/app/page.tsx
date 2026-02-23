@@ -1,65 +1,104 @@
-import Image from "next/image";
+'use client'
+
+import { useState } from 'react'
+import telmore from '../../data/telmore/telmore_offers.json'
+import oister from '../../data/oister/oister_offers.json'
+import elgiganten from '../../data/elgiganten/elgiganten_offers.json'
+
+const allOffers = [
+    ...telmore.map(o => ({ ...o, product_name: o.product_name, provider: 'Telmore' })),
+    ...oister.map(o => ({ ...o, product_name: o.product_name, provider: 'Oister' })),
+    ...elgiganten.map(o => ({ ...o, product_name: o.product, provider: 'Elgiganten' })),
+]
+
+const providers = ['Alle', 'Telmore', 'Oister', 'Elgiganten']
 
 export default function Home() {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+    const [selectedProvider, setSelectedProvider] = useState('Alle')
+    const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc')
+
+    const filtered = allOffers
+        .filter(o => selectedProvider === 'Alle' || o.provider === selectedProvider)
+        .filter(o => o.price_with_subscription !== null && o.price_with_subscription !== undefined && Number(o.price_with_subscription) > 0)        .sort((a, b) => {
+            const aPrice = Number(a.price_with_subscription)
+            const bPrice = Number(b.price_with_subscription)
+            return sortOrder === 'asc' ? aPrice - bPrice : bPrice - aPrice
+        })
+
+    return (
+        <main style={{ maxWidth: 1200, margin: '0 auto', padding: '2rem' }}>
+            <h1 style={{ marginBottom: '1.5rem' }}>Mobiltelefoner med abonnement</h1>
+
+            {/* filters */}
+            <div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', gap: '0.5rem' }}>
+                    {providers.map(p => (
+                        <button
+                            key={p}
+                            onClick={() => setSelectedProvider(p)}
+                            style={{
+                                padding: '0.5rem 1rem',
+                                borderRadius: 6,
+                                border: '1px solid #ccc',
+                                background: selectedProvider === p ? '#000' : '#fff',
+                                color: selectedProvider === p ? '#fff' : '#000',
+                                cursor: 'pointer'
+                            }}
+                        >
+                            {p}
+                        </button>
+                    ))}
+                </div>
+
+                <select
+                    value={sortOrder}
+                    onChange={e => setSortOrder(e.target.value as 'asc' | 'desc')}
+                    style={{ padding: '0.5rem 1rem', borderRadius: 6, border: '1px solid #ccc' }}
+                >
+                    <option value="asc">Pris: lav til høj</option>
+                    <option value="desc">Pris: høj til lav</option>
+                </select>
+            </div>
+
+            {/* card grid */}
+            <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
+                gap: '1.5rem'
+            }}>
+                {filtered.map((offer, index) => (
+                    <div key={index} style={{
+                        border: '1px solid #e0e0e0',
+                        borderRadius: 12,
+                        padding: '1rem',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        gap: '0.5rem'
+                    }}>
+                        {offer.image_url && (
+                            <img
+                                src={offer.image_url}
+                                alt={offer.product_name}
+                                style={{ width: 120, height: 120, objectFit: 'contain' }}
+                            />
+                        )}
+                        <p style={{ fontSize: 12, color: '#888', margin: 0 }}>{offer.provider}</p>
+                        <h2 style={{ fontSize: 15, textAlign: 'center', margin: 0 }}>{offer.product_name}</h2>
+                        <p style={{ margin: 0 }}>
+                            <strong>{offer.price_with_subscription} kr.</strong> med abonnement
+                        </p>
+                        <p style={{ margin: 0, fontSize: 13, color: '#555' }}>
+                            Uden abonnement: {offer.price_without_subscription} kr.
+                        </p>
+                        {offer.min_cost_6_months && (
+                            <p style={{ margin: 0, fontSize: 13, color: '#555' }}>
+                                Mindstepris: {offer.min_cost_6_months} kr.
+                            </p>
+                        )}
+                    </div>
+                ))}
+            </div>
+        </main>
+    )
 }

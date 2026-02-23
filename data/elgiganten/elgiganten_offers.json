@@ -1,0 +1,762 @@
+[
+    {
+        "product": "Samsung Galaxy A26 5G smartphone 6/128GB (sort)",
+        "image_url": "/images/elgiganten/samsung_galaxy_a26_5g_smartphone_6_128gb__sort_.webp",
+        "sku": "897825",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 2299,
+        "price_with_subscription": 1,
+        "min_cost_6_months": 1594,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 2298,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Google Pixel 10 Pro 5G smartphone 128GB (obsidian)",
+        "image_url": "/images/elgiganten/google_pixel_10_pro_5g_smartphone_128gb__obsidian_.webp",
+        "sku": "943542",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 8599,
+        "price_with_subscription": 2999,
+        "min_cost_6_months": 4592,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 5600,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Google Pixel 10 Pro XL 5G smartphone 16/256GB (obsidian)",
+        "image_url": "/images/elgiganten/google_pixel_10_pro_xl_5g_smartphone_16_256gb__obsidian_.webp",
+        "sku": "943537",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 10199,
+        "price_with_subscription": 4599,
+        "min_cost_6_months": 6192,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 5600,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Google Pixel 10 Pro 5G smartphone 256GB (månesten)",
+        "image_url": "/images/elgiganten/google_pixel_10_pro_5g_smartphone_256gb__m_nesten_.webp",
+        "sku": "943483",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 9399,
+        "price_with_subscription": 3799,
+        "min_cost_6_months": 5392,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 5600,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Google Pixel 10 Pro 5G smartphone 128GB (månesten)",
+        "image_url": "/images/elgiganten/google_pixel_10_pro_5g_smartphone_128gb__m_nesten_.webp",
+        "sku": "943492",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 8599,
+        "price_with_subscription": 2999,
+        "min_cost_6_months": 4592,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 5600,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Google Pixel 10a 5G smartphone 8/128 GB (obsidian)",
+        "image_url": "/images/elgiganten/google_pixel_10a_5g_smartphone_8_128_gb__obsidian_.webp",
+        "sku": "1027603",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 4299,
+        "price_with_subscription": 1999,
+        "min_cost_6_months": 3592,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 2300,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Google Pixel 10a 5G smartphone 8/128 GB (lavendel)",
+        "image_url": "/images/elgiganten/google_pixel_10a_5g_smartphone_8_128_gb__lavendel_.webp",
+        "sku": "1027604",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 4299,
+        "price_with_subscription": 1999,
+        "min_cost_6_months": 3592,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 2300,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Google Pixel 10a 5G smartphone 8/256 GB (lavendel)",
+        "image_url": "/images/elgiganten/google_pixel_10a_5g_smartphone_8_256_gb__lavendel_.webp",
+        "sku": "1027608",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 5099,
+        "price_with_subscription": 2799,
+        "min_cost_6_months": 4392,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 2300,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Google Pixel 10 5G smartphone 12/128GB (obsidian)",
+        "image_url": "/images/elgiganten/google_pixel_10_5g_smartphone_12_128gb__obsidian_.webp",
+        "sku": "943532",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 6999,
+        "price_with_subscription": 2299,
+        "min_cost_6_months": 3892,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 4700,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Samsung Galaxy A26 5G smartphone 8/256GB (sort)",
+        "image_url": "/images/elgiganten/samsung_galaxy_a26_5g_smartphone_8_256gb__sort_.webp",
+        "sku": "897818",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 2799,
+        "price_with_subscription": 399,
+        "min_cost_6_months": 1992,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 2400,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Google Pixel 10 Pro Fold 5G smartphone 16/256GB (månesten)",
+        "image_url": "/images/elgiganten/google_pixel_10_pro_fold_5g_smartphone_16_256gb__m_nesten_.webp",
+        "sku": "943530",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 14799,
+        "price_with_subscription": 9199,
+        "min_cost_6_months": 10792,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 5600,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Google Pixel 10a 5G smartphone 8/128 GB (berry)",
+        "image_url": "/images/elgiganten/google_pixel_10a_5g_smartphone_8_128_gb__berry_.webp",
+        "sku": "1027607",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 4299,
+        "price_with_subscription": 1999,
+        "min_cost_6_months": 3592,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 2300,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Samsung Galaxy A26 5G smartphone 6/128GB (hvid)",
+        "image_url": "/images/elgiganten/samsung_galaxy_a26_5g_smartphone_6_128gb__hvid_.webp",
+        "sku": "897817",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 2299,
+        "price_with_subscription": 1,
+        "min_cost_6_months": 1594,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 2298,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Google Pixel 10a 5G smartphone 8/128 GB (tåge)",
+        "image_url": "/images/elgiganten/google_pixel_10a_5g_smartphone_8_128_gb__t_ge_.webp",
+        "sku": "1027606",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 4299,
+        "price_with_subscription": 1999,
+        "min_cost_6_months": 3592,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 2300,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Google Pixel 10 Pro 5G smartphone 256GB (obsidian)",
+        "image_url": "/images/elgiganten/google_pixel_10_pro_5g_smartphone_256gb__obsidian_.webp",
+        "sku": "943507",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 9399,
+        "price_with_subscription": 3799,
+        "min_cost_6_months": 5392,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 5600,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Google Pixel 10a 5G smartphone 8/256 GB (tåge)",
+        "image_url": "/images/elgiganten/google_pixel_10a_5g_smartphone_8_256_gb__t_ge_.webp",
+        "sku": "1027605",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 5099,
+        "price_with_subscription": 2799,
+        "min_cost_6_months": 4392,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 2300,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Google Pixel 10a 5G smartphone 8/256 GB (lavendel)",
+        "image_url": "/images/elgiganten/google_pixel_10a_5g_smartphone_8_256_gb__lavendel_.webp",
+        "sku": "1027601",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 5099,
+        "price_with_subscription": 2799,
+        "min_cost_6_months": 4392,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 2300,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Google Pixel 10 5G smartphone 12/256GB (obsidian)",
+        "image_url": "/images/elgiganten/google_pixel_10_5g_smartphone_12_256gb__obsidian_.webp",
+        "sku": "943521",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 7799,
+        "price_with_subscription": 3099,
+        "min_cost_6_months": 4692,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 4700,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Google Pixel 10a 5G smartphone 8/256 GB (bær)",
+        "image_url": "/images/elgiganten/google_pixel_10a_5g_smartphone_8_256_gb__b_r_.webp",
+        "sku": "1027609",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 5099,
+        "price_with_subscription": 2799,
+        "min_cost_6_months": 4392,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 2300,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Samsung Galaxy Z Flip 7 5G smartphone 12/512GB (Coral Red)",
+        "image_url": "/images/elgiganten/samsung_galaxy_z_flip_7_5g_smartphone_12_512gb__coral_red_.webp",
+        "sku": "943107",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 10499,
+        "price_with_subscription": 5299,
+        "min_cost_6_months": 6892,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 5200,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Samsung Galaxy Z Flip 7 5G smartphone 12/256GB (Jetblack)",
+        "image_url": "/images/elgiganten/samsung_galaxy_z_flip_7_5g_smartphone_12_256gb__jetblack_.webp",
+        "sku": "943119",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 9499,
+        "price_with_subscription": 4299,
+        "min_cost_6_months": 5892,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 5200,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Google Pixel 10 Pro Fold 5G smartphone 16/256GB (jade)",
+        "image_url": "/images/elgiganten/google_pixel_10_pro_fold_5g_smartphone_16_256gb__jade_.webp",
+        "sku": "943517",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 14799,
+        "price_with_subscription": 9199,
+        "min_cost_6_months": 10792,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 5600,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Google Pixel 10 5G smartphone 12/128GB (indigo)",
+        "image_url": "/images/elgiganten/google_pixel_10_5g_smartphone_12_128gb__indigo_.webp",
+        "sku": "943522",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 6999,
+        "price_with_subscription": 2299,
+        "min_cost_6_months": 3892,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 4700,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Samsung Galaxy Z Flip 7 5G smartphone 12/256GB (Coral Red)",
+        "image_url": "/images/elgiganten/samsung_galaxy_z_flip_7_5g_smartphone_12_256gb__coral_red_.webp",
+        "sku": "943108",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 9499,
+        "price_with_subscription": 4299,
+        "min_cost_6_months": 5892,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 5200,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Google Pixel 10 Pro XL 5G smartphone 16/256GB (jade)",
+        "image_url": "/images/elgiganten/google_pixel_10_pro_xl_5g_smartphone_16_256gb__jade_.webp",
+        "sku": "943503",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 10199,
+        "price_with_subscription": 4599,
+        "min_cost_6_months": 6192,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 5600,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Google Pixel 10 Pro XL 5G smartphone 16/256GB (månesten)",
+        "image_url": "/images/elgiganten/google_pixel_10_pro_xl_5g_smartphone_16_256gb__m_nesten_.webp",
+        "sku": "943525",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 10199,
+        "price_with_subscription": 4599,
+        "min_cost_6_months": 6192,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 5600,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Google Pixel 10 5G smartphone 12/256GB (frost)",
+        "image_url": "/images/elgiganten/google_pixel_10_5g_smartphone_12_256gb__frost_.webp",
+        "sku": "943515",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 7799,
+        "price_with_subscription": 3099,
+        "min_cost_6_months": 4692,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 4700,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Samsung Galaxy A26 5G smartphone 6/128GB (mint)",
+        "image_url": "/images/elgiganten/samsung_galaxy_a26_5g_smartphone_6_128gb__mint_.webp",
+        "sku": "897832",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 2299,
+        "price_with_subscription": 1,
+        "min_cost_6_months": 1594,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 2298,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Samsung Galaxy Z Flip 7 5G smartphone 12/256GB (Blue Shadow)",
+        "image_url": "/images/elgiganten/samsung_galaxy_z_flip_7_5g_smartphone_12_256gb__blue_shadow_.webp",
+        "sku": "943122",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 9499,
+        "price_with_subscription": 4299,
+        "min_cost_6_months": 5892,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 5200,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Google Pixel 10 Pro 5G smartphone 256GB (porcelæn)",
+        "image_url": "/images/elgiganten/google_pixel_10_pro_5g_smartphone_256gb__porcel_n_.webp",
+        "sku": "943502",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 9399,
+        "price_with_subscription": 3799,
+        "min_cost_6_months": 5392,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 5600,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Google Pixel 10 5G smartphone 12/128GB (frost)",
+        "image_url": "/images/elgiganten/google_pixel_10_5g_smartphone_12_128gb__frost_.webp",
+        "sku": "943512",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 6999,
+        "price_with_subscription": 2299,
+        "min_cost_6_months": 3892,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 4700,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Samsung Galaxy Z Flip 7 5G smartphone 12/512GB (Blue Shadow)",
+        "image_url": "/images/elgiganten/samsung_galaxy_z_flip_7_5g_smartphone_12_512gb__blue_shadow_.webp",
+        "sku": "943112",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 10499,
+        "price_with_subscription": 5299,
+        "min_cost_6_months": 6892,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 5200,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Google Pixel 10 Pro XL 5G smartphone 16/256GB (porcelæn)",
+        "image_url": "/images/elgiganten/google_pixel_10_pro_xl_5g_smartphone_16_256gb__porcel_n_.webp",
+        "sku": "943488",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 10199,
+        "price_with_subscription": 4599,
+        "min_cost_6_months": 6192,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 5600,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Google Pixel 10 Pro 5G smartphone 128GB (porcelæn)",
+        "image_url": "/images/elgiganten/google_pixel_10_pro_5g_smartphone_128gb__porcel_n_.webp",
+        "sku": "943518",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 8599,
+        "price_with_subscription": 2999,
+        "min_cost_6_months": 4592,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 5600,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Samsung Galaxy A26 5G smartphone 8/256GB (mint)",
+        "image_url": "/images/elgiganten/samsung_galaxy_a26_5g_smartphone_8_256gb__mint_.webp",
+        "sku": "897809",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 2799,
+        "price_with_subscription": 399,
+        "min_cost_6_months": 1992,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 2400,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Google Pixel 10 Pro 5G smartphone 256GB (jade)",
+        "image_url": "/images/elgiganten/google_pixel_10_pro_5g_smartphone_256gb__jade_.webp",
+        "sku": "943520",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 9399,
+        "price_with_subscription": 3799,
+        "min_cost_6_months": 5392,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 5600,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Google Pixel 10 5G smartphone 12/256GB (indigo)",
+        "image_url": "/images/elgiganten/google_pixel_10_5g_smartphone_12_256gb__indigo_.webp",
+        "sku": "943531",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 7799,
+        "price_with_subscription": 3099,
+        "min_cost_6_months": 4692,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 4700,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Samsung Galaxy Z Flip 7 5G smartphone 12/512GB (Jetblack)",
+        "image_url": "/images/elgiganten/samsung_galaxy_z_flip_7_5g_smartphone_12_512gb__jetblack_.webp",
+        "sku": "943111",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 10499,
+        "price_with_subscription": 5299,
+        "min_cost_6_months": 6892,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 5200,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Samsung Galaxy A26 5G smartphone 8/256GB (hvid)",
+        "image_url": "/images/elgiganten/samsung_galaxy_a26_5g_smartphone_8_256gb__hvid_.webp",
+        "sku": "897829",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 2799,
+        "price_with_subscription": 399,
+        "min_cost_6_months": 1992,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 2400,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    },
+    {
+        "product": "Nothing Phone (3) smartphone 12/256 (hvid)",
+        "image_url": "/images/elgiganten/nothing_phone__3__smartphone_12_256__hvid_.webp",
+        "sku": "934573",
+        "provider": "YouSee",
+        "title": "Yousee Fri Tale 100GB",
+        "data_gb": 100,
+        "price_without_subscription": 6599,
+        "price_with_subscription": 4099,
+        "min_cost_6_months": 5692,
+        "subscription_price_monthly": 249,
+        "discount_on_product": 2500,
+        "benefits": [
+            "Roaming World i 48 lande",
+            "YouSee Musik"
+        ],
+        "saved_at": "23-02-2026-13:48",
+        "sold_out": "false"
+    }
+]
