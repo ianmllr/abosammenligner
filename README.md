@@ -17,3 +17,15 @@ them switch to another provider and taking advantage of a new offer
 - A calculator showing how much money the user has saved in total
 
 - More to come
+
+
+
+
+## TO DO
+
+### Sammenlign 6 måneders mindstepris med vejledende pris
+- hent vejl. pris fra et sted - DONE
+- find ud af specifikke modeller (fx iPhone 15 128gb eller 256gb?) for bedre prissammenligning 
+- sammenlign 6 m. pris med vejledende pris
+
+### Tjek oprettelsespris for abonnement for de forskellige 
