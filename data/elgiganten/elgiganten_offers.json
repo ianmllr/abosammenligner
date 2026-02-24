@@ -15,7 +15,7 @@
             "Roaming World i 48 lande",
             "YouSee Musik"
         ],
-        "saved_at": "23-02-2026-17:47",
+        "saved_at": "24-02-2026-10:11",
         "sold_out": "false"
     },
     {
@@ -34,7 +34,7 @@
             "Roaming World i 48 lande",
             "YouSee Musik"
         ],
-        "saved_at": "23-02-2026-17:47",
+        "saved_at": "24-02-2026-10:11",
         "sold_out": "false"
     },
     {
@@ -53,7 +53,7 @@
             "Roaming World i 48 lande",
             "YouSee Musik"
         ],
-        "saved_at": "23-02-2026-17:47",
+        "saved_at": "24-02-2026-10:11",
         "sold_out": "false"
     },
     {
@@ -72,7 +72,7 @@
             "Roaming World i 48 lande",
             "YouSee Musik"
         ],
-        "saved_at": "23-02-2026-17:47",
+        "saved_at": "24-02-2026-10:11",
         "sold_out": "false"
     },
     {
@@ -91,7 +91,7 @@
             "Roaming World i 48 lande",
             "YouSee Musik"
         ],
-        "saved_at": "23-02-2026-17:47",
+        "saved_at": "24-02-2026-10:11",
         "sold_out": "false"
     },
     {
@@ -110,7 +110,7 @@
             "Roaming World i 48 lande",
             "YouSee Musik"
         ],
-        "saved_at": "23-02-2026-17:47",
+        "saved_at": "24-02-2026-10:11",
         "sold_out": "false"
     },
     {
@@ -129,7 +129,7 @@
             "Roaming World i 48 lande",
             "YouSee Musik"
         ],
-        "saved_at": "23-02-2026-17:47",
+        "saved_at": "24-02-2026-10:11",
         "sold_out": "false"
     },
     {
@@ -148,7 +148,7 @@
             "Roaming World i 48 lande",
             "YouSee Musik"
         ],
-        "saved_at": "23-02-2026-17:47",
+        "saved_at": "24-02-2026-10:11",
         "sold_out": "false"
     },
     {
@@ -167,7 +167,7 @@
             "Roaming World i 48 lande",
             "YouSee Musik"
         ],
-        "saved_at": "23-02-2026-17:47",
+        "saved_at": "24-02-2026-10:11",
         "sold_out": "false"
     },
     {
@@ -186,7 +186,7 @@
             "Roaming World i 48 lande",
             "YouSee Musik"
         ],
-        "saved_at": "23-02-2026-17:47",
+        "saved_at": "24-02-2026-10:11",
         "sold_out": "false"
     },
     {
@@ -205,7 +205,7 @@
             "Roaming World i 48 lande",
             "YouSee Musik"
         ],
-        "saved_at": "23-02-2026-17:47",
+        "saved_at": "24-02-2026-10:11",
         "sold_out": "false"
     },
     {
@@ -224,7 +224,7 @@
             "Roaming World i 48 lande",
             "YouSee Musik"
         ],
-        "saved_at": "23-02-2026-17:47",
+        "saved_at": "24-02-2026-10:11",
         "sold_out": "false"
     },
     {
@@ -243,64 +243,7 @@
             "Roaming World i 48 lande",
             "YouSee Musik"
         ],
-        "saved_at": "23-02-2026-17:47",
-        "sold_out": "false"
-    },
-    {
-        "product": "Motorola G06 Power LTE smartphone 256GB (tapestry)",
-        "image_url": "/images/elgiganten/motorola_g06_power_lte_smartphone_256gb.webp",
-        "sku": "975759",
-        "provider": "YouSee",
-        "title": "Yousee Fri Tale 100GB",
-        "data_gb": 100,
-        "price_without_subscription": 1599,
-        "price_with_subscription": 949,
-        "min_cost_6_months": 2542,
-        "subscription_price_monthly": 249,
-        "discount_on_product": 650,
-        "benefits": [
-            "Roaming World i 48 lande",
-            "YouSee Musik"
-        ],
-        "saved_at": "23-02-2026-17:47",
-        "sold_out": "false"
-    },
-    {
-        "product": "Samsung Galaxy A17 LTE smartphone 128GB (Sort)",
-        "image_url": "/images/elgiganten/samsung_galaxy_a17_lte_smartphone_128gb.webp",
-        "sku": "950282",
-        "provider": "YouSee",
-        "title": "Yousee Fri Tale 100GB",
-        "data_gb": 100,
-        "price_without_subscription": 1599,
-        "price_with_subscription": 949,
-        "min_cost_6_months": 2542,
-        "subscription_price_monthly": 249,
-        "discount_on_product": 650,
-        "benefits": [
-            "Roaming World i 48 lande",
-            "YouSee Musik"
-        ],
-        "saved_at": "23-02-2026-17:47",
-        "sold_out": "false"
-    },
-    {
-        "product": "Samsung Galaxy A17 LTE smartphone 256GB (Lyseblå)",
-        "image_url": "/images/elgiganten/samsung_galaxy_a17_lte_smartphone_256gb.webp",
-        "sku": "950279",
-        "provider": "YouSee",
-        "title": "Yousee Fri Tale 100GB",
-        "data_gb": 100,
-        "price_without_subscription": 2199,
-        "price_with_subscription": 1549,
-        "min_cost_6_months": 3142,
-        "subscription_price_monthly": 249,
-        "discount_on_product": 650,
-        "benefits": [
-            "Roaming World i 48 lande",
-            "YouSee Musik"
-        ],
-        "saved_at": "23-02-2026-17:47",
+        "saved_at": "24-02-2026-10:11",
         "sold_out": "false"
     }
 ]
