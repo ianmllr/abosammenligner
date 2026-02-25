@@ -60,8 +60,8 @@ def scrape_oister():
             "price_without_subscription": "",
             "price_with_subscription": "",
             "min_cost_6_months": "",
-            "subscription_price_monthly": "",
-            "discount_on_product": "",
+            "subscription_price_monthly": 0,
+            "discount_on_product": 0,
             "saved_at": date_time,
             "sold_out": "false"
         }
