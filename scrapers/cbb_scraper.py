@@ -38,10 +38,10 @@ def download_image(image_url, product_name):
 
 
 def parse_price(text):
-    """Extract integer price from a string like '1.064 kr.' or '39 kr./md.'"""
+    # extract integer price from a string like '1.064 kr.' or '39 kr./md.
     if not text:
         return None
-    cleaned = re.sub(r'[^\d]', '', text.replace('.', ''))
+    cleaned = re.sub(r'\D', '', text.replace('.', ''))
     try:
         return int(cleaned)
     except ValueError:
