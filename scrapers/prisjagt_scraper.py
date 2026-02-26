@@ -38,7 +38,9 @@ TIER_WORDS = {'ultra', 'plus', 'pro', 'max', 'mini', 'fe', 'fold', 'flip', 'lite
 
 
 def extract_storage(text):
-    # extract storage size in GB as an integer, or None if not specified.
+    """Extract storage size in GB as an integer, or None if not specified.
+    Skips RAM mentions like '12GB RAM' or '8GB RAM' — we only want the storage figure.
+    Handles '128GB', '256 GB', '1TB' (converted to 1024GB) etc."""
     # remove RAM mentions first so "12GB RAM 256GB" doesn't return 12
     cleaned = re.sub(r'\d+\s*GB\s*RAM', '', text, flags=re.IGNORECASE)
     # now match TB
@@ -53,8 +55,10 @@ def extract_storage(text):
 
 
 def split_fused_tokens(text):
-    # split fused alpha+digit tokens so tier word checks work even when prisjagt
-    # writes 'Flip7' instead of 'Flip 7'. E.g. 'flip7' -> {'flip', '7', 'flip7'}.
+    """
+    Split fused alpha+digit tokens so tier word checks work even when Prisjagt
+    writes 'Flip7' instead of 'Flip 7'. E.g. 'flip7' -> {'flip', '7', 'flip7'}.
+    """
     text = normalize(text)
     tokens = set()
     for word in text.split():
@@ -204,7 +208,6 @@ def get_market_price(page, product_name):
         print(f"  -> No cards found on page")
         return None, True
 
-    print(f"  Found {len(cards)} cards")
 
     # collect (title, price_element) for every card
     candidates = []
@@ -223,11 +226,8 @@ def get_market_price(page, product_name):
         if title and price_el:
             candidates.append((title, price_el))
         else:
-            print(f"  -> Skipped card: title={repr(title[:50])}, has_price={price_el is not None}")
-
-    if not candidates:
-        print(f"  -> No candidates with both title and price found")
-        return None, True
+            if not candidates:
+                return None, True
 
     query_clean = clean_search_query(product_name)
     q_has_storage = extract_storage(query_clean) is not None
@@ -243,7 +243,6 @@ def get_market_price(page, product_name):
     best_score = scored[0][0]
 
     if best_score < 0.2:
-        print(f"  -> Best match score too low, skipping")
         return None, True
 
     # keep only candidates within 5% of the best score (essentially tied)
@@ -263,7 +262,6 @@ def get_market_price(page, product_name):
         top_candidates.sort(key=storage_sort_key)
         best_score, best_title, best_price_el = top_candidates[0]
 
-    print(f"  Best match ({best_score:.2f}): {best_title}")
 
     raw = best_price_el.inner_text().strip()
     digits = "".join(re.findall(r'\d+', raw))

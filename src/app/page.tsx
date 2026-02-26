@@ -1,4 +1,3 @@
-// src/app/page.tsx
 'use client'
 import OfferCard from '@/components/OfferCard'
 import ProviderFilter from '@/components/ProviderFilter'
