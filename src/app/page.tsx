@@ -23,7 +23,7 @@ export default function Home() {
                                 : 'bg-[#1a1a1a] border-gray-600 text-gray-300 hover:border-gray-400'
                         }`}
                     >
-                        {hideNegative ? 'Skjuler dårlige tilbud' : 'Skjul dårlige tilbud'}
+                        {hideNegative ? 'Skjuler tilbud du ikke sparer penge på' : 'Skjul tilbud du ikke sparer penge på'}
                     </button>
                     <input
                         type="text"

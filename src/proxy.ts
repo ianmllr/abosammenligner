@@ -1,13 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 
+const WINDOW_MS = 60_000
+const MAX_REQUESTS = 60
 
-const WINDOW_MS = 60_000   // 1 minute
-const MAX_REQUESTS = 60    // max requests per window per IP
-
-// Map<ip, timestamps[]>
 const ipRequests = new Map<string, number[]>()
-
-// Clean up old entries every minute to prevent unbounded memory growth
 let lastCleanup = Date.now()
 
 function cleanup(now: number) {
@@ -23,15 +19,13 @@ function cleanup(now: number) {
     }
 }
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
     const now = Date.now()
     cleanup(now)
 
-    // Resolve the real client IP
     const forwarded = request.headers.get('x-forwarded-for')
     const ip = forwarded ? forwarded.split(',')[0].trim() : (request.headers.get('x-real-ip') ?? 'unknown')
 
-    // Get existing timestamps within the window
     const timestamps = (ipRequests.get(ip) ?? []).filter(t => now - t < WINDOW_MS)
 
     if (timestamps.length >= MAX_REQUESTS) {
@@ -63,7 +57,6 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-    // Apply to all routes except Next.js internals and static files
-    matcher: ['/((?!_next/static|_next/image|favicon.ico).*)'],
+    matcher: ['/((?!_next/static|_next/image|favicon.ico|images/).*)'],
 }
 
