@@ -27,8 +27,8 @@ export default function About() {
         <>
             <Header />
 
-        <main className="flex flex-col items-center justify-center min-h-screen px-4 text-center">
-            <h1 className="text-3xl font-bold mb-4">Om Abosammenligner</h1>
+        <main className="flex flex-col items-center px-4 text-center pt-16 pb-16">
+            <h1 className="text-3xl font-bold mb-4 justify-center-safe">Om Abosammenligner</h1>
             <p className="text-base max-w-prose mb-12 ">
                 Du har helt sikkert et mobilabonnement i forvejen. Det alene gør at du har muligheden for at spare penge.
                 <br/><br/>
