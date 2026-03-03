@@ -16,13 +16,14 @@ export function useOffers() {
                 .filter(o => o.price_with_subscription !== null && o.price_with_subscription !== undefined)
                 .filter(o => {
                     if (!hideNegative) return true
+                    if (o.min_cost_6_months == null) return false
                     const saved = (o.market_price ?? o.price_without_subscription) - o.min_cost_6_months
                     return saved >= 0
                 })
                 .sort((a, b) => {
                     if (sortOrder === 'saved_desc' || sortOrder === 'saved_asc') {
-                        const aSaved = (a.market_price ?? a.price_without_subscription) - a.min_cost_6_months
-                        const bSaved = (b.market_price ?? b.price_without_subscription) - b.min_cost_6_months
+                        const aSaved = a.min_cost_6_months != null ? (a.market_price ?? a.price_without_subscription) - a.min_cost_6_months : -Infinity
+                        const bSaved = b.min_cost_6_months != null ? (b.market_price ?? b.price_without_subscription) - b.min_cost_6_months : -Infinity
                         return sortOrder === 'saved_desc' ? bSaved - aSaved : aSaved - bSaved
                     }
                     if (sortOrder === 'market_asc' || sortOrder === 'market_desc') {

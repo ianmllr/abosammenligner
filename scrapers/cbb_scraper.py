@@ -53,70 +53,88 @@ def get_min_cost_from_page(page, url):
     # returns int or None
     try:
         page.goto(url, wait_until="networkidle", timeout=30000)
+        page.wait_for_timeout(1500)
 
-        # "kontant price" is the upfront price (that you can't actually pay)
-        # it's the "phones price" but it's artifical since you have to buy a subscription
-        # but we need it to calculate the min 6 month cost
+        # --- Kontant / upfront price ---
         kontant_price = None
 
-        kontant_block = page.locator('text=Kontant').first
-        if kontant_block:
-            parent = kontant_block.locator('xpath=ancestor::div[contains(@class,"payment") or contains(@class,"option") or contains(@class,"row")][1]')
-            price_text = parent.locator('.price, [class*="price"], strong').first.text_content()
-            kontant_price = parse_price(price_text)
+        # Strategy 1: look for a "Mindstepris inkl. X mdr. abonnement" line — take the LAST number
+        mindste_texts = page.locator('text=/Mindstepris/').all_text_contents()
+        for raw in mindste_texts:
+            raw = raw.replace('\xa0', ' ')
+            matches = re.findall(r'(\d{1,3}(?:\.\d{3})+|\d{3,})', raw)
+            if matches:
+                return int(matches[-1].replace('.', ''))
+
+        # Strategy 2: "Kontant" price block
+        for selector in ['text=Kontant', 'text=Betal kontant', 'text=Betales kontant']:
+            kontant_block = page.locator(selector).first
+            if kontant_block.count():
+                try:
+                    parent = kontant_block.locator('xpath=ancestor::*[self::div or self::li or self::button][1]')
+                    price_text = parent.locator('span, strong, p').first.text_content()
+                    kontant_price = parse_price(price_text)
+                    if kontant_price:
+                        break
+                except Exception:
+                    pass
 
         if not kontant_price:
-            # fallback: grab "Betales nu" total and subtract fragt (65 kr default)
-            betales_nu = page.locator('text=Betales nu').locator('xpath=following-sibling::*[1]').first.text_content()
-            fragt_text = page.locator('text=Fragt').locator('xpath=following-sibling::*[1]').first.text_content()
-            total = parse_price(betales_nu)
-            fragt = parse_price(fragt_text) or 65
-            if total:
-                kontant_price = total - fragt
+            # Strategy 3: "Betales nu" total
+            try:
+                betales_nu_el = page.locator('text=Betales nu').locator('xpath=following-sibling::*[1]').first
+                if betales_nu_el.count():
+                    total = parse_price(betales_nu_el.text_content())
+                    fragt_el = page.locator('text=Fragt').locator('xpath=following-sibling::*[1]').first
+                    fragt = parse_price(fragt_el.text_content()) if fragt_el.count() else 65
+                    if total:
+                        kontant_price = total - (fragt or 65)
+            except Exception:
+                pass
 
-        # subscription (first months can be discounted)
+        if not kontant_price:
+            # Strategy 4: largest standalone price-looking number on the page
+            price_els = page.locator('text=/^\\d{1,2}\\.\\d{3}\\s*kr\\.?$/').all_text_contents()
+            candidates = []
+            for t in price_els:
+                v = parse_price(t)
+                if v and v > 500:
+                    candidates.append(v)
+            if candidates:
+                kontant_price = min(candidates)  # cheapest upfront price
+
+        # --- Monthly subscription price ---
+        monthly_price = None
         promo_price = None
         promo_months = None
         regular_price = None
 
-        # different ways to find default selected subscription
-        selected_sub = page.locator('[class*="selected"] .subscription-price, [class*="active"] .subscription-price').first
-        if not selected_sub.count():
-            # fallback: just take the first subscription option (CBB pre-selects the cheapest)
-            selected_sub = page.locator('[class*="subscription"], [class*="abonnement"]').first
-
-        # the info text under the subscription price contains the promo structure
-        # look for this pattern anywhere on the page within the selected block
-        info_texts = page.locator('text=/kr\\.?\\/md\\. i \\d+ md/').all_text_contents()
-
+        info_texts = page.locator('text=/kr\\.?\\/md/').all_text_contents()
         for info in info_texts:
-            # Try to match the full pattern: "39kr./md. i 2 md. - Herefter 129 kr."
+            info = info.replace('\xa0', ' ')
+            # Pattern: "39 kr./md. i 2 md. - Herefter 129 kr."
             m = re.search(
                 r'([\d.]+)\s*kr\.?/md\.?\s+i\s+(\d+)\s+md\.?\s*[-–]\s*[Hh]erefter\s+([\d.]+)\s*kr',
-                info.replace('\xa0', ' ')
+                info
             )
             if m:
                 promo_price = int(m.group(1).replace('.', ''))
                 promo_months = int(m.group(2))
                 regular_price = int(m.group(3).replace('.', ''))
-                break  # use the first (default/cheapest) match
+                break
+
+            # Simpler pattern: just "X kr./md."
+            if not monthly_price:
+                m2 = re.search(r'([\d.]+)\s*kr\.?/md', info)
+                if m2:
+                    monthly_price = int(m2.group(1).replace('.', ''))
 
         if kontant_price and promo_price is not None and promo_months is not None and regular_price is not None:
-            remaining_months = 6 - promo_months
-            if remaining_months < 0:
-                remaining_months = 0
-            min_cost = kontant_price + (promo_months * promo_price) + (remaining_months * regular_price)
-            return min_cost
+            remaining_months = max(0, 6 - promo_months)
+            return kontant_price + (promo_months * promo_price) + (remaining_months * regular_price)
 
-        # if no promo structure found, try simpler: kontant + 6 * monthly_price
-        # (for subscriptions without a promo period)
-        if kontant_price:
-            monthly_texts = page.locator('text=/\\d+ kr\\.?\\/md/').all_text_contents()
-            for t in monthly_texts:
-                m = re.search(r'([\d.]+)\s*kr\.?/md', t)
-                if m:
-                    monthly = int(m.group(1).replace('.', ''))
-                    return kontant_price + (6 * monthly)
+        if kontant_price and monthly_price:
+            return kontant_price + 6 * monthly_price
 
     except Exception as e:
         print(f"  Error scraping {url}: {e}")

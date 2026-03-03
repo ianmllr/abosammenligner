@@ -15,5 +15,7 @@ jobs:
       - run: python scrapers/telmore_scraper.py
       - run: python scrapers/oister_scraper.py
       - run: python scrapers/elgiganten_scraper.py
+      - run: python scrapers/cbb_scraper.py
+      - run: python scrapers/3_scraper.py
       - run: python scrapers/prisjagt_scraper.py
       - uses: actions/checkout@v3  # commit updated JSON files back to repo

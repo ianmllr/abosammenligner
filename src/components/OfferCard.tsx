@@ -7,7 +7,8 @@ interface OfferCardProps {
 
 export default function OfferCard({ offer }: OfferCardProps) {
     const base = offer.market_price ?? offer.price_without_subscription
-    const saved = base - offer.min_cost_6_months
+    const hasMinCost = offer.min_cost_6_months != null && offer.min_cost_6_months > 0
+    const saved = hasMinCost ? base - offer.min_cost_6_months : null
     const isFallback = offer.market_price === null
 
     return (
@@ -59,11 +60,17 @@ export default function OfferCard({ offer }: OfferCardProps) {
 
                 <p className="text-[13px] text-[#ededed] m-0 flex items-center gap-1">
                     Penge reelt sparet efter 6 mdr.:{' '}
-                    <span className={`font-bold text-[15px] ${saved > 0 ? 'text-green-800' : 'text-red-800'}`}>
-                        {saved} kr.
-                    </span>
-                    {isFallback && (
-                        <Tooltip text="Ingen markedspris fundet. Resultatet er ud fra udbyderens tal." />
+                    {saved != null ? (
+                        <>
+                            <span className={`font-bold text-[15px] ${saved > 0 ? 'text-green-800' : 'text-red-800'}`}>
+                                {saved} kr.
+                            </span>
+                            {isFallback && (
+                                <Tooltip text="Ingen markedspris fundet. Resultatet er ud fra udbyderens tal." />
+                            )}
+                        </>
+                    ) : (
+                        <span className="text-gray-500 italic">Ikke tilgængelig</span>
                     )}
                 </p>
 

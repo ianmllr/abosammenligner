@@ -291,7 +291,8 @@ def scrape_prisjagt():
         ('data/telmore/telmore_offers.json', 'product_name'),
         ('data/oister/oister_offers.json', 'product_name'),
         ('data/elgiganten/elgiganten_offers.json', 'product'),
-        ('data/cbb/cbb_offers.json', 'product_name')
+        ('data/cbb/cbb_offers.json', 'product_name'),
+        ('data/3/3_offers.json', 'product_name'),
     ]
 
     products = []
