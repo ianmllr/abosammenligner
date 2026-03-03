@@ -64,18 +64,60 @@ def scrape_product_page(page, url, date_time):
         return []
 
     # --- Image ---
-    # 3.dk uses a carousel; grab the first visible product image
+    # 3.dk renders the main product image inside a picture element in the left-side gallery.
+    # We look for the largest/most-relevant <img> by filtering out known non-product images.
+    SKIP_SRC_PATTERNS = ['logo', 'badge', 'award', 'mobilsiden', 'sticker', 'icon', 'sprite',
+                         'trustpilot', 'payment', 'flag', 'ribbon', 'stamp', 'anbefalet']
+    SKIP_ALT_PATTERNS = ['anbefalet', 'badge', 'award', 'logo', 'mobilsiden']
+
+    def _is_product_image(el):
+        src = (el.get_attribute('src') or '').lower()
+        alt = (el.get_attribute('alt') or '').lower()
+        if not src or src.endswith('.svg'):
+            return False
+        if any(p in src for p in SKIP_SRC_PATTERNS):
+            return False
+        if any(p in alt for p in SKIP_ALT_PATTERNS):
+            return False
+        # Skip tiny images — check HTML attributes first, then rendered bounding box
+        try:
+            w = int(el.get_attribute('width') or 0)
+            h = int(el.get_attribute('height') or 0)
+            if (w and w < 80) or (h and h < 80):
+                return False
+        except (ValueError, TypeError):
+            pass
+        try:
+            box = el.bounding_box()
+            if box and (box['width'] < 80 or box['height'] < 80):
+                return False
+        except Exception:
+            pass
+        return True
+
     image_url = ""
-    img_el = page.query_selector('.slick-active img, [class*="carousel"] img, [class*="slider"] img, .product img')
-    if not img_el:
-        img_el = page.query_selector('img[src*="product"], img[src*="phone"], img[src*="mobil"]')
-    if not img_el:
-        # fallback: first img with a reasonable src
-        for el in page.query_selector_all('img'):
-            src = el.get_attribute('src') or ''
-            if src and not src.endswith('.svg') and 'logo' not in src.lower():
+    # 1. Try the active carousel slide first
+    img_el = None
+    for candidate_sel in [
+        '.slick-active img',
+        '[class*="carousel"] img',
+        '[class*="slider"] img',
+        'picture img',
+    ]:
+        for el in page.query_selector_all(candidate_sel):
+            if _is_product_image(el):
                 img_el = el
                 break
+        if img_el:
+            break
+
+    # 2. Fallback: walk all imgs and pick the first valid product image
+    if not img_el:
+        for el in page.query_selector_all('img'):
+            if _is_product_image(el):
+                img_el = el
+                break
+
     if img_el:
         src = img_el.get_attribute('src') or ''
         if src.startswith('//'):
@@ -123,19 +165,49 @@ def scrape_product_page(page, url, date_time):
 
         # --- Price without subscription (kontant / upfront price) ---
         price_without_subscription = None
-        # The upfront / kontant price is shown next to "Betal kontant" or "Betales nu"
-        kontant_el = page.locator('text=Betal kontant').first
-        if kontant_el.count():
-            parent = kontant_el.locator('xpath=ancestor::button[1]')
-            if parent.count():
-                price_span = parent.locator('span').first
-                price_without_subscription = parse_price(price_span.text_content())
 
+        # Strategy 1: The currently-selected storage button itself shows the upfront price.
+        # After clicking, the active button typically carries a price like "9.199 kr." in its text.
+        if btn is not None:
+            # Re-query the active/selected storage button (it may have a different class when active)
+            active_btn_text = btn.inner_text().strip()
+            # Extract a price-like number from the button text, ignoring the GB label
+            # e.g. "512 GB\n9.199 kr." → 9199
+            price_match = re.search(r'(\d{1,3}(?:\.\d{3})+|\d{4,})\s*kr', active_btn_text)
+            if price_match:
+                price_without_subscription = int(price_match.group(1).replace('.', ''))
+
+        # Strategy 2: Look for a "Størrelse" labelled row/section which shows "<X> GB ... <price> kr."
+        # The row with the size name and price is a reliable source on 3.dk product pages.
         if not price_without_subscription:
-            # fallback: look for the standalone large price in the size button area
-            size_price_el = page.locator('[class*="css-k1irjw"] span').first
-            if size_price_el.count():
-                price_without_subscription = parse_price(size_price_el.text_content())
+            storrelse_el = page.locator('text=/Størrelse/').first
+            if storrelse_el.count():
+                # Walk up to the containing row and look for a kr. price
+                row_text = storrelse_el.locator('xpath=ancestor::*[3]').first.text_content() or ''
+                price_match = re.search(r'(\d{1,3}(?:\.\d{3})+|\d{4,})\s*kr', row_text)
+                if price_match:
+                    price_without_subscription = int(price_match.group(1).replace('.', ''))
+
+        # Strategy 3: "Betal kontant" button — original approach
+        if not price_without_subscription:
+            kontant_el = page.locator('text=Betal kontant').first
+            if kontant_el.count():
+                parent = kontant_el.locator('xpath=ancestor::button[1]')
+                if parent.count():
+                    price_span = parent.locator('span').first
+                    price_without_subscription = parse_price(price_span.text_content())
+
+        # Strategy 4: Any element whose text matches a standalone price pattern "X.XXX kr."
+        # near the top of the page (price summary area), avoiding monthly prices (kr./md.)
+        if not price_without_subscription:
+            for el in page.locator('text=/\\d{1,3}\\.\\d{3}\\s*kr\\.?/').all():
+                raw = el.text_content() or ''
+                if '/md' in raw or 'md.' in raw:
+                    continue
+                m = re.search(r'(\d{1,3}(?:\.\d{3})+)', raw)
+                if m:
+                    price_without_subscription = int(m.group(1).replace('.', ''))
+                    break
 
         # --- Subscription / Mobilrabat ---
         # 3.dk shows a "Mobilrabat X.XXX kr." badge on the selected subscription

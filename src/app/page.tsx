@@ -13,8 +13,6 @@ export default function Home() {
                 <h1 className="mb-6 text-[#cdd6e0]">Mobiltelefoner med abonnement</h1>
 
                 <div className="flex gap-4 mb-8 flex-wrap items-center">
-                    <ProviderFilter selected={selectedProviders} onChange={setSelectedProviders} />
-                    <SortSelect value={sortOrder} onChange={setSortOrder} />
                     <button
                         onClick={() => setHideNegative(v => !v)}
                         className={`px-4 py-2 rounded-md border text-sm transition-colors ${
@@ -23,8 +21,10 @@ export default function Home() {
                                 : 'bg-[#2a3340] border-[#334155] text-[#7d8fa0] hover:border-[#4a90b8]'
                         }`}
                     >
-                        {hideNegative ? 'Skjuler tilbud du ikke sparer penge på' : 'Skjul tilbud du ikke sparer penge på'}
+                        {hideNegative ? 'Skjul tilbud du ikke sparer penge på' : 'Skjul tilbud du ikke sparer penge på'}
                     </button>
+                    <ProviderFilter selected={selectedProviders} onChange={setSelectedProviders} />
+                    <SortSelect value={sortOrder} onChange={setSortOrder} />
                     <input
                         type="text"
                         value={search}

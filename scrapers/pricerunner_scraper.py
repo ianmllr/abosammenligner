@@ -27,20 +27,19 @@ def normalize(text):
     # clean up for better matching: lowercase, remove punctuation, collapse whitespace
     text = text.lower()
     # convert + to 'plus' before stripping punctuation so "S25+" becomes "s25 plus"
-    # and gets correctly caught by the tier word check
     text = re.sub(r'\+', ' plus ', text)
     text = re.sub(r'[^\w\s]', ' ', text)
     text = re.sub(r'\s+', ' ', text).strip()
     return text
 
 
-# if a product has one of these in the name, but the query doesn't, it's almost certainly a different product tier (eg "Pro" vs "Pro Max")
+# if a product has one of these in the name, but the query doesn't, it's almost certainly a different product tier
 TIER_WORDS = {'ultra', 'plus', 'pro', 'max', 'mini', 'fe', 'fold', 'flip', 'lite', 'edge', 'air'}
 
 
 def extract_storage(text):
     """Extract storage size in GB as an integer, or None if not specified.
-    Skips RAM mentions like '12GB RAM' or '8GB RAM' — we only want the storage figure.
+    Skips RAM mentions like '12GB RAM' — we only want the storage figure.
     Handles '128GB', '256 GB', '1TB' (converted to 1024GB) etc."""
     # remove RAM mentions first so "12GB RAM 256GB" doesn't return 12
     cleaned = re.sub(r'\d+\s*GB\s*RAM', '', text, flags=re.IGNORECASE)
@@ -57,7 +56,7 @@ def extract_storage(text):
 
 def split_fused_tokens(text):
     """
-    Split fused alpha+digit tokens so tier word checks work even when Prisjagt
+    Split fused alpha+digit tokens so tier word checks work even when PriceRunner
     writes 'Flip7' instead of 'Flip 7'. E.g. 'flip7' -> {'flip', '7', 'flip7'}.
     """
     text = normalize(text)
@@ -73,9 +72,6 @@ def extract_model_number(text):
     """
     Extract the primary model number string for exact-match comparison.
     Returns a normalised string like '16e', 'a36', 's25', '17' etc., or None.
-    We look for the first alpha-numeric or standalone numeric token that follows
-    a known brand/series keyword and looks like a model identifier (not RAM/storage).
-    Strategy: strip storage/RAM, strip brand words, return first meaningful token.
     """
     # remove storage and RAM so they don't confuse things
     text = re.sub(r'\d+\s*GB\s*RAM', '', text, flags=re.IGNORECASE)
@@ -118,36 +114,24 @@ def score_match(query, candidate):
     if q_storage is not None and c_storage is not None and q_storage != c_storage:
         return 0.0
 
-    # disqualification: model number mismatch — e.g. "iPhone 16" vs "iPhone 16e", "A36" vs "S25"
+    # disqualification: model number mismatch — e.g. "iPhone 16" vs "iPhone 16e"
     q_model = extract_model_number(query)
     c_model = extract_model_number(candidate)
     if q_model and c_model and q_model != c_model:
         q_parts = set(re.findall(r'[a-z]+|\d+', q_model))
         c_parts = set(re.findall(r'[a-z]+|\d+', c_model))
-        # Case 1: one model is purely a number (e.g. '7' from 'Flip 7') and that
-        # number appears as a component of the other model (e.g. 'flip7') → same product
         q_digits = {p for p in q_parts if p.isdigit()}
         c_digits = {p for p in c_parts if p.isdigit()}
-        # Allow a pure number ('7') to match a fused token ('flip7') only when
-        # the digit sets match AND the non-digit parts of the longer token are
-        # already present as tier/series words elsewhere (i.e. 'flip' is in the name).
-        # Simpler rule: if one side is purely numeric and the other has extra alpha
-        # parts beyond what the numeric side has, they only match if the numeric
-        # digits are identical AND the candidate has NO extra alpha-only parts
-        # that would change the model identity (like 'e' in '16e').
         q_alpha = q_parts - q_digits
         c_alpha = c_parts - c_digits
         if q_digits == c_digits and q_alpha == c_alpha:
-            pass  # identical in all parts — same model
+            pass
         elif q_digits == c_digits and (not q_alpha or not c_alpha):
-            # one side is purely numeric ('7'), other is fused ('flip7')
-            # only safe if the extra alpha part is a known series word (flip/fold/etc)
-            # which is already checked by TIER_WORDS above — so allow it
             extra_alpha = q_alpha or c_alpha
             if extra_alpha.issubset(TIER_WORDS):
-                pass  # e.g. '7' matches 'flip7' because 'flip' is a tier word
+                pass
             else:
-                return 0.0  # e.g. '16' must NOT match '16e' ('e' is not a tier word)
+                return 0.0
         else:
             return 0.0
 
@@ -155,8 +139,8 @@ def score_match(query, candidate):
 
 
 def get_card_title(card):
-    # strategy 1: standard heading tags
-    for sel in ['h2', 'h3', 'h4']:
+    # strategy 1: PriceRunner product name — typically in an <h3> or <p> with a specific class
+    for sel in ['h3', 'h2', 'h4']:
         el = card.query_selector(sel)
         if el:
             t = el.inner_text().strip()
@@ -164,7 +148,8 @@ def get_card_title(card):
                 return t
 
     # strategy 2: class-name hints
-    for sel in ['[class*="title"]', '[class*="name"]', '[class*="heading"]', '[class*="product"]']:
+    for sel in ['[class*="ProductName"]', '[class*="product-name"]', '[class*="title"]',
+                '[class*="name"]', '[class*="heading"]']:
         el = card.query_selector(sel)
         if el:
             t = el.inner_text().strip()
@@ -181,7 +166,7 @@ def get_card_title(card):
 
     # strategy 4: take the longest non-price line from all card text
     lines = [l.strip() for l in card.inner_text().splitlines() if l.strip()]
-    non_price = [l for l in lines if not re.match(r'^[\d.,\s]+kr', l)]
+    non_price = [l for l in lines if not re.match(r'^[\d.,\s]+\s*kr', l, re.IGNORECASE)]
     if non_price:
         return max(non_price, key=len)
 
@@ -191,50 +176,74 @@ def get_card_title(card):
 def get_market_price(page, product_name):
 
     query = clean_search_query(product_name).replace(' ', '+')
-    url = (
-        f"https://prisjagt.dk/search?availability=AVAILABLE&query={query}"
-        f"&category=pc%3Amobiltelefoner%7Cpc%3Asmartwatches%7Cpc%3Ahovedtelefoner%7Cpc%3Atablets&sort=score"
-    )
+    # PriceRunner DK search — no category filter, let the site handle it
+    url = f"https://www.pricerunner.dk/results?q={query}&suggestionsActive=true&suggestionClicked=false&suggestionReverted=false"
 
     try:
-        page.goto(url, wait_until="domcontentloaded", timeout=20000)
-        page.wait_for_timeout(random.uniform(1500, 3000))
-        page.wait_for_selector('[data-test="ProductGridCard"]', timeout=8000)
-    except:
-        print(f"  -> Could not load results for: {product_name}")
+        page.goto(url, wait_until="domcontentloaded", timeout=25000)
+        page.wait_for_timeout(random.uniform(2000, 3500))
+    except Exception:
+        print(f"  -> Could not load page for: {product_name}")
         return None, False
 
-    cards = page.query_selector_all('[data-test="ProductGridCard"]')
-    if not cards:
-        print(f"  -> No cards found on page")
+    # PriceRunner uses obfuscated/hashed class names (e.g. "pr-13k6084-ProductList-grid").
+    # The most reliable hook is: each product card is an <a> tag with a title="" attribute
+    # that holds the full product name, sitting inside the product grid container.
+    # We find all such <a> tags whose href starts with "/pl/" (product listing pages).
+    card_links = page.query_selector_all('a[href^="/pl/"][title]')
+
+    if not card_links:
+        # Fallback: any <a> with a title inside a div whose class contains "ProductList"
+        card_links = page.query_selector_all('[class*="ProductList"] a[title]')
+
+    if not card_links:
+        print(f"  -> No product cards found for: {product_name}")
         return None, True
 
-
-    # collect (title, price_element) for every card
+    # collect (title, price_text) for every card
     candidates = []
-    for card in cards:
-        title = get_card_title(card)
+    for link in card_links:
+        title = (link.get_attribute('title') or '').strip()
+        if not title:
+            continue
 
-        price_el = card.query_selector(
-            '[data-sentry-element="Component"][data-sentry-component="Text"].font-heaviest'
-        )
-        if not price_el:
-            for el in card.query_selector_all('[data-sentry-component="Text"]'):
-                if 'kr' in el.inner_text():
-                    price_el = el
-                    break
+        # The price lives in a sibling/child span inside the same card wrapper.
+        # PriceRunner puts the lowest price in a <span> that contains "kr." text.
+        # We walk up to the card root (parent of the <a>) and search from there.
+        price_text = None
+        try:
+            # evaluate JS: walk up until we find a container that has a kr. span
+            price_text = link.evaluate("""el => {
+                let node = el.parentElement;
+                for (let i = 0; i < 6; i++) {
+                    if (!node) break;
+                    const spans = node.querySelectorAll('span');
+                    for (const s of spans) {
+                        const t = s.innerText || s.textContent || '';
+                        if (/\\d/.test(t) && t.includes('kr') && t.length < 25) {
+                            return t.trim();
+                        }
+                    }
+                    node = node.parentElement;
+                }
+                return null;
+            }""")
+        except Exception:
+            pass
 
-        if title and price_el:
-            candidates.append((title, price_el))
-        else:
-            if not candidates:
-                return None, True
+        if title and price_text:
+            candidates.append((title, price_text))
+
+    if not candidates:
+        print(f"  -> Could not extract prices for: {product_name}")
+        return None, True
 
     query_clean = clean_search_query(product_name)
     q_has_storage = extract_storage(query_clean) is not None
 
     # score every candidate and discard disqualified ones
-    scored = [(score_match(query_clean, title), title, price_el) for title, price_el in candidates]
+    scored = [(score_match(query_clean, title), title, price_text)
+              for title, price_text in candidates]
     scored = [s for s in scored if s[0] > 0.0]
 
     if not scored:
@@ -247,25 +256,26 @@ def get_market_price(page, product_name):
         return None, True
 
     # keep only candidates within 5% of the best score (essentially tied)
-    top_candidates = [(score, title, price_el) for score, title, price_el in scored
+    top_candidates = [(score, title, price_text) for score, title, price_text in scored
                       if score >= best_score * 0.95]
 
     if q_has_storage:
-        # storage already handled by disqualification — just take the best scorer
-        best_score, best_title, best_price_el = top_candidates[0]
+        best_score, best_title, best_price_text = top_candidates[0]
     else:
         # no storage in query: among tied top candidates, prefer the lowest storage size
-        # (subscription sites typically sell entry-level storage)
         def storage_sort_key(item):
             s = extract_storage(item[1])
-            return s if s is not None else 9999  # no storage info goes last
+            return s if s is not None else 9999
 
         top_candidates.sort(key=storage_sort_key)
-        best_score, best_title, best_price_el = top_candidates[0]
+        best_score, best_title, best_price_text = top_candidates[0]
 
+    print(f"  -> Matched: '{best_title}' (score={best_score:.2f})")
 
-    raw = best_price_el.inner_text().strip()
-    digits = "".join(re.findall(r'\d+', raw))
+    # parse price: "10.899 kr." → strip thousands-separator dots then grab digits
+    # Danish format uses period as thousands separator, so "10.899" = 10899
+    price_clean = re.sub(r'(\d)\.(\d{3})', r'\1\2', best_price_text)
+    digits = "".join(re.findall(r'\d+', price_clean))
     return (int(digits) if digits else None), True
 
 
@@ -282,17 +292,39 @@ def make_fresh_page(browser):
         is_mobile=False,
     )
     context.add_cookies([
-        {"name": "consentDate",  "value": "2026-02-23T17:25:15.142Z",                "domain": "prisjagt.dk", "path": "/"},
-        {"name": "consentUUID", "value": "b7d4dfb8-a27d-43a9-bca2-4b1dbb3205ff_53", "domain": "prisjagt.dk", "path": "/"},
+        {"name": "OptanonAlertBoxClosed", "value": datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S.000Z"),
+         "domain": ".pricerunner.dk", "path": "/"},
+        {"name": "OptanonConsent", "value": "isGpcEnabled=0&datestamp=" + datetime.datetime.now().strftime(
+            "%a+%b+%d+%Y+%H%%3A%M%%3A%S+GMT%%2B0100") + "&version=202209.1.0&isIABGlobal=false&hosts=&consentId=pricerunner-consent&interactionCount=1&landingPath=NotLandingPage&groups=C0001%%3A1%%2CC0002%%3A1%%2CC0003%%3A1%%2CC0004%%3A1",
+         "domain": ".pricerunner.dk", "path": "/"},
     ])
     page = context.new_page()
     Stealth().use_sync(page)
-    page.goto("https://prisjagt.dk", wait_until="domcontentloaded")
+    try:
+        page.goto("https://www.pricerunner.dk", wait_until="domcontentloaded", timeout=30000)
+    except Exception:
+        pass  # partial load is fine — we just need cookies set
+    page.wait_for_timeout(2000)
+    # Accept cookie / consent banner if present (OneTrust or PriceRunner's own)
+    for selector in [
+        '#onetrust-accept-btn-handler',
+        'button[id*="accept"]',
+        'button[class*="accept"]',
+        '[data-test="accept-all-cookies"]',
+        'button:has-text("Accepter alle")',
+        'button:has-text("Acceptér alle")',
+    ]:
+        try:
+            page.click(selector, timeout=3000)
+            page.wait_for_timeout(800)
+            break
+        except Exception:
+            pass
     return context, page
 
 
-def scrape_prisjagt():
-    os.makedirs(os.path.join(BASE_DIR, 'data/prisjagt'), exist_ok=True)
+def scrape_pricerunner():
+    os.makedirs(os.path.join(BASE_DIR, 'data/pricerunner'), exist_ok=True)
 
     providers = [
         ('data/telmore/telmore_offers.json', 'product_name'),
@@ -361,11 +393,12 @@ def scrape_prisjagt():
         context.close()
         browser.close()
 
-    with open(os.path.join(BASE_DIR, 'data/prisjagt/prisjagt_prices.json'), 'w', encoding='utf-8') as f:
+    with open(os.path.join(BASE_DIR, 'data/pricerunner/pricerunner_prices.json'), 'w', encoding='utf-8') as f:
         json.dump(results, f, ensure_ascii=False, indent=4)
 
     print(f"\nLooked up {len(results)} products.")
 
 
 if __name__ == "__main__":
-    scrape_prisjagt()
+    scrape_pricerunner()
+

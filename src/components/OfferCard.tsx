@@ -12,12 +12,12 @@ export default function OfferCard({ offer }: OfferCardProps) {
     const isFallback = offer.market_price === null
 
     return (
-        <div className="border border-[#334155] rounded-xl p-4 flex flex-row items-start gap-4 bg-[#2a3340]">
+        <div className="border border-[#334155] rounded-xl p-4 flex flex-row items-start gap-2 bg-[#2a3340]">
             {offer.image_url && (
                 <img
                     src={offer.image_url}
                     alt={offer.product_name}
-                    className="w-24 h-24 object-contain flex-shrink-0 self-center"
+                    className="w-30 h-30 object-contain flex-shrink-0 self-center"
                 />
             )}
 
@@ -28,11 +28,15 @@ export default function OfferCard({ offer }: OfferCardProps) {
                 <p className="text-sm text-[#cdd6e0] m-0">
                     <strong>{offer.price_with_subscription} kr.</strong> med abonnement
                 </p>
+
+                <hr className="border-none border-t border-[#334155] my-1" />
+
+
                 <p className="text-xs text-[#7d8fa0] m-0">
                     Rabat på telefonen: {offer.discount_on_product} kr.
                 </p>
 
-                <hr className="border-none border-t border-[#334155] my-1" />
+
 
                 <p className="text-xs text-[#7d8fa0] m-0 flex items-center gap-1">
                     Pris uden abonnement: {offer.price_without_subscription} kr.
@@ -47,6 +51,22 @@ export default function OfferCard({ offer }: OfferCardProps) {
                         </>
                     ) : (
                         <span className="text-[#7d8fa0] italic">Ingen markedspris fundet</span>
+                    )}
+                </p>
+
+                <p className="text-xs text-[#7d8fa0] m-0">
+                    Abonnementspris pr. måned:{' '}
+                    {offer.subscription_price_monthly != null ? (
+                        offer.subscription_price_monthly_after_promo != null ? (
+                            <span>
+                                {offer.subscription_price_monthly} kr.,{' '}
+                                <span className="italic">derefter {offer.subscription_price_monthly_after_promo} kr.</span>
+                            </span>
+                        ) : (
+                            <span>{offer.subscription_price_monthly} kr.</span>
+                        )
+                    ) : (
+                        <span className="italic">Ikke oplyst</span>
                     )}
                 </p>
 

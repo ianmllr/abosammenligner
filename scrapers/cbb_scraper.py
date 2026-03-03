@@ -131,15 +131,16 @@ def get_min_cost_from_page(page, url):
 
         if kontant_price and promo_price is not None and promo_months is not None and regular_price is not None:
             remaining_months = max(0, 6 - promo_months)
-            return kontant_price + (promo_months * promo_price) + (remaining_months * regular_price)
+            total = kontant_price + (promo_months * promo_price) + (remaining_months * regular_price)
+            return total, promo_price, regular_price
 
         if kontant_price and monthly_price:
-            return kontant_price + 6 * monthly_price
+            return kontant_price + 6 * monthly_price, monthly_price, None
 
     except Exception as e:
         print(f"  Error scraping {url}: {e}")
 
-    return None
+    return None, None, None
 
 
 def build_entry(phone, page, date_time):
@@ -161,13 +162,10 @@ def build_entry(phone, page, date_time):
 
     # get accurate min cost by visiting the product page
     min_cost = None
+    monthly_price = None
+    monthly_price_after_promo = None
     if product_link:
-        print(f"  Fetching min cost for: {product_name}")
-        min_cost = get_min_cost_from_page(page, product_link)
-        if min_cost:
-            print(f"    → {min_cost} kr.")
-        else:
-            print(f"    → Could not extract min cost")
+        min_cost, monthly_price, monthly_price_after_promo = get_min_cost_from_page(page, product_link)
 
     return {
         "link": product_link,
@@ -178,7 +176,8 @@ def build_entry(phone, page, date_time):
         "data_gb": 0,
         "price_without_subscription": 0,
         "price_with_subscription": price_with_subscription,
-        "subscription_price_monthly": 0,
+        "subscription_price_monthly": monthly_price,
+        "subscription_price_monthly_after_promo": monthly_price_after_promo,
         "min_cost_6_months": min_cost,
         "discount_on_product": 0,
         "saved_at": date_time,
