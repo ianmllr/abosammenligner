@@ -15,7 +15,7 @@ const faqs = [
     },
     {
         question: 'Hvordan kører Abosammenligner så rundt?',
-        answer: 'Abosammenligner får et lille beløb af abonnementudbyderen hvis du klikker på et tilbud og køber det. Det er samme som metode som kendte sider som Pricerunner og Ønskeskyen bruger. Det betyder at det er gratis for dig at bruge, og at Abosammenligner kan fortsætte med at være gratis i fremtiden.'
+        answer: 'Abosammenligner får et lille beløb af abonnementudbyderen hvis du klikker på et tilbud og køber det. Det er samme som metode som kendte sider som Pricerunner og Ønskeskyen bruger. Det betyder at det er gratis for dig at bruge, og at Abosammenligner kan fortsætte med at være gratis.'
     }
 ]
 
