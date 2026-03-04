@@ -11,8 +11,8 @@ export default function Header() {
                     <span className="text-[#cdd6e0] text-xl font-semibold tracking-tight">Tech-tilbud</span>
                     </Link>
                 </div>
-                <nav className="text-[#7d8fa0] text-sm">
-                    <Link href="/about" className="hover:text-[#cdd6e0] transition-colors">
+                <nav className="text-[#7d8fa0] text-sm ">
+                    <Link href="/about" className="px-3 py-1.5 rounded-md border border-[#334155] hover:border-[#4a90b8] hover:text-[#cdd6e0] transition-colors">
                         Om Tech-tilbud
                     </Link>
                 </nav>

@@ -31,7 +31,7 @@ export default function Home() {
                             type="text"
                             value={search}
                             onChange={e => setSearch(e.target.value)}
-                            placeholder="Søg efter telefon..."
+                            placeholder="Søg efter produkt..."
                             className="px-4 py-2 rounded-md border border-[#334155] bg-[#2a3340] text-[#cdd6e0] text-sm placeholder-[#7d8fa0] focus:outline-none focus:border-[#4a90b8]"
                         />
                         <PriceRangeSlider
