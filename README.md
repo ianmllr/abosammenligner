@@ -9,11 +9,10 @@ Tech-tilbud is a project that compares the offers that come with different phone
 Denmark, allowing users to save thousands of DKK per year if they are in the market for new tech. 
 
 
-### Planned features
+### Features
 
-- A reminder leading up to the 6-month commitment ending, reminding the user that the binding period is ending, letting
-them switch to another provider and taking advantage of a new offer
+- Helps you money on new tech by switching your subscription every 6 months
 
-- A calculator showing how much money the user has saved in total
+- Shows how much you *really* save by comparing the full 6-month price to market-prices from pricerunner and prisjagt instead of relying on the "before-price" from the subscription providers (who will inflate it to make their offer seem better). 
 
-- More to come
+- A reminder-tool that will send you an email after 6 months (minus a few days if you like), reminding you that you can switch your provider again.
