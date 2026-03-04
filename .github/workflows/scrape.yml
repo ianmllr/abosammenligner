@@ -21,7 +21,7 @@ jobs:
       - run: python scrapers/yousee_scraper.py
       - run: python scrapers/norlys_scraper.py
       - run: python scrapers/pricerunner_scraper.py
-      - run: python scrapers/prisjagt_scraper.py
+#     - run: python scrapers/prisjagt_scraper.py  # disabled for now because it gets blocked by cloudflare
       - uses: actions/checkout@v3  # commit updated JSON files back to repo
 
       - name: Commit updated data
