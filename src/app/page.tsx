@@ -3,10 +3,11 @@ import OfferCard from '@/components/OfferCard'
 import ProviderFilter from '@/components/ProviderFilter'
 import SortSelect from '@/components/SortSelect'
 import Header from '@/components/Header'
+import PriceRangeSlider from '@/components/PriceRangeSlider'
 import { useOffers } from '@/hooks/useOffers'
 
 export default function Home() {
-    const { filtered, selectedProviders, setSelectedProviders, sortOrder, setSortOrder, hideNegative, setHideNegative, search, setSearch } = useOffers()
+    const { filtered, selectedProviders, setSelectedProviders, sortOrder, setSortOrder, hideNegative, setHideNegative, search, setSearch, priceRange, setPriceRange, priceMin, priceMax } = useOffers()
 
     return (
         <>
@@ -32,6 +33,12 @@ export default function Home() {
                             onChange={e => setSearch(e.target.value)}
                             placeholder="Søg efter telefon..."
                             className="px-4 py-2 rounded-md border border-[#334155] bg-[#2a3340] text-[#cdd6e0] text-sm placeholder-[#7d8fa0] focus:outline-none focus:border-[#4a90b8]"
+                        />
+                        <PriceRangeSlider
+                            min={priceMin}
+                            max={priceMax}
+                            value={priceRange}
+                            onChange={setPriceRange}
                         />
                     </div>
 
