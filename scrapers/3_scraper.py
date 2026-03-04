@@ -5,7 +5,6 @@ import dataclasses
 import requests
 import os
 from pathlib import Path
-from urllib.parse import unquote
 from playwright.sync_api import sync_playwright
 
 
@@ -15,11 +14,9 @@ DATA_DIR  = BASE_DIR / "data" / "3"
 
 BASE_URL = "https://www.3.dk"
 
-# Category pages to crawl for product links, mapped to their product type
 CATEGORY_URLS: dict[str, str] = {
     f"{BASE_URL}/shop/mobiler/apple/":    "phone",
     f"{BASE_URL}/shop/mobiler/samsung/":  "phone",
-    f"{BASE_URL}/shop/mobiler/google/":   "phone",
     f"{BASE_URL}/shop/mobiler/motorola/": "phone",
     f"{BASE_URL}/shop/mobiler/oneplus/":  "phone",
     f"{BASE_URL}/shop/mobiler/nothing/":  "phone",
@@ -27,7 +24,6 @@ CATEGORY_URLS: dict[str, str] = {
     f"{BASE_URL}/shop/tablets/":          "tablet",
 }
 
-# Consent cookies to skip the cookie banner on 3.dk
 CONSENT_COOKIES = [
     {"name": "cookieconsent_status", "value": "allow", "domain": ".3.dk", "path": "/"},
     {
@@ -38,18 +34,15 @@ CONSENT_COOKIES = [
     },
 ]
 
-# Substrings in an image src/srcset that indicate it is NOT a product photo
-IMAGE_SKIP_SRC = [
+# keywords that indicate an image is not a product photo
+IMAGE_SKIP_KEYWORDS = [
     "logo", "badge", "award", "mobilsiden", "sticker", "icon", "sprite",
     "trustpilot", "payment", "flag", "ribbon", "stamp", "anbefalet",
     "lsiden", "lille", "siden_anbefalet",
 ]
 
-# Substrings in an image alt text that indicate it is NOT a product photo
-IMAGE_SKIP_ALT = ["anbefalet", "badge", "award", "logo", "mobilsiden"]
-
-# Run headless in CI, visible locally (useful for debugging)
 HEADLESS = os.environ.get("CI") == "true"
+
 
 @dataclasses.dataclass
 class Offer:
@@ -69,21 +62,18 @@ class Offer:
 
 
 def parse_price(text: str) -> int | None:
-    # cleans price and saves as int
     if not text:
         return None
-    digits = re.sub(r"\D", "", text.replace(".", ""))
+    digits = re.sub(r"[\D.]", "", text)
     return int(digits) if digits else None
 
 
 def download_image(image_url: str, product_name: str) -> str:
-    # downloads file unless img already exists, returns local path or empty string on failure
     if not image_url or not product_name:
         return ""
 
     filename = re.sub(r"[^a-z0-9]", "_", product_name.lower()) + ".webp"
     save_path = IMAGE_DIR / filename
-
     IMAGE_DIR.mkdir(parents=True, exist_ok=True)
 
     if save_path.exists():
@@ -99,39 +89,17 @@ def download_image(image_url: str, product_name: str) -> str:
 
     return ""
 
-def _is_product_image(el) -> bool:
-    # checks if image is likely to be a product photo based on src, srcset, alt text, and dimensions
-    src    = (el.get_attribute("src")    or "").lower()
-    srcset = (el.get_attribute("srcset") or "").lower()
-    alt    = (el.get_attribute("alt")    or "").lower()
 
-    # Decode percent-encoding twice to handle double-encoded URLs (%2520 → space)
-    def decode_twice(s):
-        try:
-            return unquote(unquote(s))
-        except Exception:
-            return s
+def _is_product_image(el) -> bool:
+    src = (el.get_attribute("src") or "").lower()
+    alt = (el.get_attribute("alt") or "").lower()
 
     if not src or src.endswith(".svg"):
         return False
-
-    # Reject images whose src/srcset contains a known non-product keyword
-    for text in (src, decode_twice(src), srcset, decode_twice(srcset)):
-        if any(keyword in text for keyword in IMAGE_SKIP_SRC):
-            return False
-
-    # Reject images with CSS-generated class names in the alt (e.g. "css-Inf9qcb") — these are badges
-    if alt.startswith("css-") or any(keyword in alt for keyword in IMAGE_SKIP_ALT):
+    if any(kw in src for kw in IMAGE_SKIP_KEYWORDS):
         return False
-
-    # Reject images that are too small (< 100 px in either dimension)
-    try:
-        w = int(el.get_attribute("width")  or 0)
-        h = int(el.get_attribute("height") or 0)
-        if (w and w < 100) or (h and h < 100):
-            return False
-    except (ValueError, TypeError):
-        pass
+    if alt.startswith("css-") or any(kw in alt for kw in IMAGE_SKIP_KEYWORDS):
+        return False
 
     try:
         box = el.bounding_box()
@@ -144,32 +112,18 @@ def _is_product_image(el) -> bool:
 
 
 def find_product_image(page) -> str:
-    # find product image by looking for common carousel patterns first, if not then falls back to scanning all images
-    carousel_selectors = [
+    selectors = [
         ".slick-active img",
         '[class*="carousel"] img',
         '[class*="slider"] img',
         "picture img",
+        "img",
     ]
 
-    img_el = None
-
-    # try more specific carousel selectors first
-    for selector in carousel_selectors:
-        for el in page.query_selector_all(selector):
-            if _is_product_image(el):
-                img_el = el
-                break
-        if img_el:
-            break
-
-    # fall back to scanning every image on the page
-    if not img_el:
-        for el in page.query_selector_all("img"):
-            if _is_product_image(el):
-                img_el = el
-                break
-
+    img_el = next(
+        (el for selector in selectors for el in page.query_selector_all(selector) if _is_product_image(el)),
+        None,
+    )
     if not img_el:
         return ""
 
@@ -182,24 +136,39 @@ def find_product_image(page) -> str:
 
 
 def get_storage_buttons(page) -> list:
-    # gets storage size options by looking for buttons with "GB" in the text, returns list of button elements or [None] if not found
-    all_buttons = page.query_selector_all('button[class*="css-1qu461p"]')
-    storage_buttons = [
-        btn for btn in all_buttons
-        if re.search(r"\d+\s*GB", btn.inner_text(), re.IGNORECASE)
-    ]
-    return storage_buttons or [None]
+    gb_pattern = re.compile(r"\d+\s*GB", re.IGNORECASE)
+
+    # Strategy 1: buttons inside the "Størrelse" section
+    storrelse_el = page.locator("text=/Størrelse/").first
+    if storrelse_el.count():
+        parent = None
+        for level in range(2, 6):
+            candidate = storrelse_el.locator(f"xpath=ancestor::*[{level}]").first
+            if candidate.locator("text=/\\d+\\s*GB/i").count() > 1:
+                parent = candidate
+                break
+        if parent is None:
+            parent = storrelse_el.locator("xpath=ancestor::*[3]").first
+
+        buttons = [btn for btn in parent.locator("button").all() if gb_pattern.search(btn.text_content() or "")]
+        if buttons:
+            return buttons
+
+        for tag in ("li", "div", "span", "a"):
+            clickable = [
+                el for el in parent.locator(tag).all()
+                if gb_pattern.search(el.text_content() or "")
+                and el.get_attribute("role") in ("button", "option", "tab", "radio")
+            ]
+            if clickable:
+                return clickable
+
+    # Strategy 2: any button on the page with a GB amount
+    buttons = [btn for btn in page.query_selector_all("button") if gb_pattern.search(btn.inner_text())]
+    return buttons or [None]
+
 
 def extract_upfront_price(page, btn) -> int | None:
-    """
-    Extract the full (no-subscription) price for the currently selected storage.
-
-    Tries four strategies in order, returning the first one that succeeds:
-      1. Read the price directly from the storage button text (e.g. "512 GB  9.199 kr.")
-      2. Find the "Størrelse" row and read the price next to it
-      3. Find the "Betal kontant" button and read its price span
-      4. Scan all elements for a standalone "X.XXX kr." pattern
-    """
     kr_pattern = r"(\d{1,3}(?:\.\d{3})+|\d{4,})\s*kr"
 
     # 1. Price inside the active storage button
@@ -223,7 +192,7 @@ def extract_upfront_price(page, btn) -> int | None:
         if parent.count():
             return parse_price(parent.locator("span").first.text_content())
 
-    # 4. Any standalone "X.XXX kr." element (skip monthly prices like "270 kr./md.")
+    # 4. Any standalone "X.XXX kr." element (skip monthly prices)
     for el in page.locator(r"text=/\d{1,3}\.\d{3}\s*kr\.?/").all():
         raw = el.text_content() or ""
         if "/md" in raw or "md." in raw:
@@ -236,19 +205,12 @@ def extract_upfront_price(page, btn) -> int | None:
 
 
 def extract_subscription_info(page) -> tuple[int | None, int | None, int | None]:
-    """
-    Returns:
-        discount_on_product     – "Mobilrabat" discount applied when buying with a subscription
-        subscription_price_monthly – monthly subscription price in kr.
-        min_cost_6_months       – total minimum cost over 6 months (upfront + 6x monthly)
-    """
-    # Mobilrabat: discount badge shown next to the selected subscription plan
+    """Returns (discount_on_product, subscription_price_monthly, min_cost_6_months)."""
     discount_on_product = None
     mobilrabat_el = page.locator("text=/Mobilrabat/").first
     if mobilrabat_el.count():
         discount_on_product = parse_price(mobilrabat_el.text_content() or "")
 
-    # Monthly price: look for any "X kr./md." pattern on the page
     subscription_price_monthly = None
     for text in page.locator(r"text=/\d+\s*kr\.?\/md/").all_text_contents():
         match = re.search(r"([\d.]+)\s*kr\.?/md", text)
@@ -256,21 +218,39 @@ def extract_subscription_info(page) -> tuple[int | None, int | None, int | None]
             subscription_price_monthly = int(match.group(1).replace(".", ""))
             break
 
-    # Minimum cost over 6 months (shown as "Mindstepris X.XXX kr.")
+    # take the last number to avoid picking up "6" from "6 mdr."
     min_cost_6_months = None
     mindste_el = page.locator("text=/Mindstepris/").first
     if mindste_el.count():
-        raw = mindste_el.text_content() or ""
-        # Use the LAST number to avoid accidentally picking up "6" from "6 mdr."
-        numbers = re.findall(r"(\d{1,3}(?:\.\d{3})+|\d+)", raw)
+        numbers = re.findall(r"(\d{1,3}(?:\.\d{3})+|\d+)", mindste_el.text_content() or "")
         if numbers:
             min_cost_6_months = int(numbers[-1].replace(".", ""))
 
     return discount_on_product, subscription_price_monthly, min_cost_6_months
 
 
+def _read_static_storage_label(page, product_name: str) -> str:
+    """Reads storage size from the Størrelse row when there are no clickable buttons."""
+    storrelse_el = page.locator("text=/Størrelse/").first
+    if storrelse_el.count():
+        row = storrelse_el.locator("xpath=ancestor::*[3]").first
+
+        for bold_sel in ("strong", "b", "[class*='bold']", "[class*='Bold']"):
+            bold_el = row.locator(bold_sel).first
+            if bold_el.count():
+                m = re.search(r"(\d+\s*(?:GB|TB))", bold_el.text_content() or "", re.IGNORECASE)
+                if m:
+                    return m.group(1).replace(" ", "")
+
+        m = re.search(r"(\d+\s*(?:GB|TB))", row.text_content() or "", re.IGNORECASE)
+        if m:
+            return m.group(1).replace(" ", "")
+
+    m = re.search(r"(\d+\s*GB)", product_name, re.IGNORECASE)
+    return m.group(1).replace(" ", "") if m else ""
+
+
 def scrape_product_page(page, url: str, saved_at: str, product_type: str = "phone") -> list[Offer]:
-    # scrapes product of different options
     try:
         page.goto(url, wait_until="networkidle", timeout=30000)
         page.wait_for_timeout(1500)
@@ -278,7 +258,6 @@ def scrape_product_page(page, url: str, saved_at: str, product_type: str = "phon
         print(f"  Could not load {url}: {e}")
         return []
 
-    # Product name (always the page's <h1>)
     name_el = page.query_selector("h1")
     product_name = name_el.inner_text().strip() if name_el else ""
     if not product_name:
@@ -286,42 +265,32 @@ def scrape_product_page(page, url: str, saved_at: str, product_type: str = "phon
         return []
 
     image_url = find_product_image(page)
-    storage_buttons = get_storage_buttons(page)
-
     offers = []
 
-    for btn in storage_buttons:
-        # Click the storage button to update prices, then read the storage label
+    for btn in get_storage_buttons(page):
         if btn is not None:
             btn_text = btn.inner_text().strip()
-            match = re.search(r"(\d+\s*GB)", btn_text, re.IGNORECASE)
-            storage_label = match.group(1).replace(" ", "") if match else btn_text
+            m = re.search(r"(\d+\s*(?:GB|TB))", btn_text, re.IGNORECASE)
+            storage_label = m.group(1).replace(" ", "") if m else btn_text
             try:
                 btn.click()
                 page.wait_for_timeout(800)
             except Exception as e:
-                print(f"  Could not click '{storage_label}' button: {e}")
-                continue
+                print(f"  Could not click '{storage_label}' button, using displayed value: {e}")
         else:
-            # No storage buttons, try to read storage from the product title
-            match = re.search(r"(\d+\s*GB)", product_name, re.IGNORECASE)
-            storage_label = match.group(1).replace(" ", "") if match else ""
+            storage_label = _read_static_storage_label(page, product_name)
 
         full_name = f"{product_name} {storage_label}".strip() if storage_label else product_name
 
-        # prices
         price_without_subscription = extract_upfront_price(page, btn)
         discount_on_product, subscription_price_monthly, min_cost_6_months = extract_subscription_info(page)
 
-        # price with subscription = upfront price minus mobilrabat discount
         if price_without_subscription is not None and discount_on_product is not None:
             price_with_subscription = price_without_subscription - discount_on_product
         else:
-            # Fallback: read the "Betal nu" total directly from the page
             betal_nu_el = page.locator("text=Betal nu").locator("xpath=following-sibling::*[1]").first
             price_with_subscription = parse_price(betal_nu_el.text_content()) if betal_nu_el.count() else None
 
-        # if min_cost_6_months can't be  read, calculate it ourselves
         if not min_cost_6_months and price_with_subscription and subscription_price_monthly:
             min_cost_6_months = price_with_subscription + 6 * subscription_price_monthly
 
@@ -351,8 +320,8 @@ def scrape_product_page(page, url: str, saved_at: str, product_type: str = "phon
 
     return offers
 
+
 def collect_product_links(page) -> list[tuple[str, str]]:
-    # returns a list of (url, type) tuples.
     seen_urls: set[str] = set()
     product_links: list[tuple[str, str]] = []
 
@@ -365,21 +334,15 @@ def collect_product_links(page) -> list[tuple[str, str]]:
             print(f"  Could not load {cat_url}: {e}")
             continue
 
-        # scroll to the bottom to trigger lazy-loaded product cards
+        # scroll to trigger lazy-loaded product cards
         page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
         page.wait_for_timeout(1500)
 
-        # match anchors for both phone (/shop/mobiler/) and tablet (/shop/tablets/) pages
         link_selector = 'a[href*="/shop/mobiler/"], a[href*="/shop/tablets/"]'
         for anchor in page.query_selector_all(link_selector):
             href = anchor.get_attribute("href") or ""
-            path_segments = [p for p in href.strip("/").split("/") if p]
-
-            # at least 3 segments means it's a product page, not a category page
-            is_product_page = len(path_segments) >= 3
-            has_no_query_params = "?" not in href
-
-            if is_product_page and has_no_query_params:
+            # at least 4 slashes = product page, not a category
+            if href.count("/") >= 4 and "?" not in href:
                 full_url = f"{BASE_URL}{href}" if href.startswith("/") else href
                 if full_url not in seen_urls:
                     seen_urls.add(full_url)
@@ -390,7 +353,6 @@ def collect_product_links(page) -> list[tuple[str, str]]:
 
 def scrape_3():
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    IMAGE_DIR.mkdir(parents=True, exist_ok=True)
 
     saved_at = datetime.datetime.now().strftime("%d-%m-%Y-%H:%M")
     all_offers: list[Offer] = []
@@ -407,7 +369,7 @@ def scrape_3():
             viewport={"width": 1920, "height": 1080},
             locale="da-DK",
         )
-        context.add_cookies(CONSENT_COOKIES) # type: ignore[arg-type]
+        context.add_cookies(CONSENT_COOKIES)  # type: ignore[arg-type]
         page = context.new_page()
 
         product_links = collect_product_links(page)
@@ -419,9 +381,6 @@ def scrape_3():
                 if offer.product_name and offer.product_name not in seen_names:
                     seen_names.add(offer.product_name)
                     all_offers.append(offer)
-
-        context.close()
-        browser.close()
 
     output_path = DATA_DIR / "3_offers.json"
     with open(output_path, "w", encoding="utf-8") as f:
