@@ -32,7 +32,7 @@ export async function POST(req: Request) {
             `,
         })
 
-        await sql`UPDATE reminders SET sent = true WHERE id = ${row.id}`
+        await sql`DELETE FROM reminders WHERE id = ${row.id}`
         sentCount++
     }
 
