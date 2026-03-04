@@ -8,7 +8,7 @@ interface OfferCardProps {
 export default function OfferCard({ offer }: OfferCardProps) {
     const base = offer.market_price ?? offer.price_without_subscription
     const hasMinCost = offer.min_cost_6_months != null && offer.min_cost_6_months > 0
-    const saved = hasMinCost ? base - offer.min_cost_6_months : null
+    const saved = hasMinCost && base != null ? base - offer.min_cost_6_months! : null
     const isFallback = offer.market_price === null
 
     return (
@@ -76,7 +76,7 @@ export default function OfferCard({ offer }: OfferCardProps) {
                         <span className="underline">{offer.min_cost_6_months} kr.</span>
                     </p>
                 )}
-                
+
                 <hr className="border-none border-t border-[#334155] my-1" />
 
                 <p className="text-[13px] text-[#cdd6e0] m-0 flex items-center gap-1">
