@@ -39,9 +39,12 @@ def scrape_telmore():
 
     # img is dynamically loaded
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
+        browser = p.chromium.launch(
+            headless=True,
+            args=["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"]
+        )
         page = browser.new_page(viewport={"width": 1920, "height": 10000})  # very tall viewport to load images for all products
-        page.goto(url)
+        page.goto(url, timeout=60000, wait_until="domcontentloaded")
         page.wait_for_selector('div.carousel-image-wrapper')
         page.wait_for_timeout(3000)
         html = page.content()

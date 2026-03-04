@@ -17,8 +17,10 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-      - run: pip install requests beautifulsoup4 playwright playwright-stealth
-      - run: playwright install chromium
+      - name: Install system dependencies
+        run: sudo apt-get install -y libgbm-dev
+      - run: pip install -r scrapers/requirements.txt
+      - run: playwright install chromium --with-deps
       - run: python scrapers/telmore_scraper.py
       - run: python scrapers/oister_scraper.py
       - run: python scrapers/elgiganten_scraper.py
