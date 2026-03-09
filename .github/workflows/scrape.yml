@@ -28,6 +28,7 @@ jobs:
       - run: python scrapers/3_scraper.py
       - run: python scrapers/yousee_scraper.py
       - run: python scrapers/norlys_scraper.py
+      - run: python scrapers/callme_scraper.py
       - run: python scrapers/pricerunner_scraper.py
       - run: python scrapers/prisjagt_scraper.py
       - name: Commit updated data

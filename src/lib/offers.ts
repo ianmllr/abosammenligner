@@ -5,6 +5,7 @@ import cbb from '../../data/cbb/cbb_offers.json'
 import three from '../../data/3/3_offers.json'
 import yousee from '../../data/yousee/yousee_offers.json'
 import norlys from '../../data/norlys/norlys_offers.json'
+import callme from '../../data/callme/callme_offers.json'
 import prisjagt from '../../data/prisjagt/prisjagt_prices.json'
 import pricerunner from '../../data/pricerunner/pricerunner_prices.json'
 import type { Offer } from '@/types/offer'
@@ -97,6 +98,18 @@ export const allOffers: Offer[] = [
         product_name: o.product_name,
         image_url: o.image_url,
         provider: 'Norlys' as const,
+        price_with_subscription: o.price_with_subscription,
+        price_without_subscription: o.price_without_subscription,
+        discount_on_product: o.discount_on_product,
+        min_cost_6_months: o.min_cost_6_months,
+        subscription_price_monthly: o.subscription_price_monthly,
+        subscription_price_monthly_after_promo: null,
+    })),
+    ...callme.map(o => ({
+        link: o.link,
+        product_name: o.product_name,
+        image_url: o.image_url,
+        provider: 'CallMe' as const,
         price_with_subscription: o.price_with_subscription,
         price_without_subscription: o.price_without_subscription,
         discount_on_product: o.discount_on_product,
