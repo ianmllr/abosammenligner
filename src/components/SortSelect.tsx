@@ -10,6 +10,8 @@ const SORT_OPTIONS: { value: SortOrder; label: string }[] = [
     { value: 'desc', label: 'Abonnementspris: høj til lav' },
     { value: 'saved_desc', label: 'Reelt sparet: høj til lav' },
     { value: 'saved_asc', label: 'Reelt sparet: lav til høj' },
+    { value: 'pct_desc', label: 'Sparet %: høj til lav' },
+    { value: 'pct_asc', label: 'Sparet %: lav til høj' },
     { value: 'name_asc', label: 'Navn: A → Å' },
     { value: 'name_desc', label: 'Navn: Å → A' },
 ]

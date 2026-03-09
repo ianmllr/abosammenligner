@@ -153,17 +153,12 @@ def scrape_product(page, href: str, product_type: str, saved_at: str) -> dict | 
             continue
 
         if best is None or min_val < best["min_cost_6_months"]:
-            sub_info = next(
-                (s for s in data.get("subscriptions", []) if s.get("code") == code), {}
-            )
             best = {
                 "min_cost_6_months":          min_val,
                 "subscription_price_monthly": (price.get("bundleMonthlyPrice") or {}).get("value"),
                 "price_with_subscription":    (price.get("productPrice") or {}).get("value"),
                 "price_without_subscription": (price.get("productBasePrice") or {}).get("value"),
                 "discount_on_product":        (price.get("productDiscountedPrice") or {}).get("value"),
-                "subscription_name":           sub_info.get("name", ""),
-                "data_gb":                    sub_info.get("dataIncluded", ""),
             }
 
     if not best:
@@ -176,23 +171,19 @@ def scrape_product(page, href: str, product_type: str, saved_at: str) -> dict | 
         f"sub={best['price_with_subscription']}, "
         f"rabat={best['discount_on_product']}, "
         f"min6={best['min_cost_6_months']}, "
-        f"md={best['subscription_price_monthly']} "
-        f"[{best['subscription_name']} / {best['data_gb']}]"
+        f"md={best['subscription_price_monthly']}"
     )
 
     return {
         "link":                       product_url,
         "product_name":               product_name,
         "image_url":                  local_image,
-        "provider":                   "Norlys",
         "type":                       product_type,
-        "data_gb":                    best["data_gb"],
         "price_without_subscription": best["price_without_subscription"],
         "price_with_subscription":    best["price_with_subscription"],
         "discount_on_product":        best["discount_on_product"],
         "min_cost_6_months":          best["min_cost_6_months"],
         "subscription_price_monthly": best["subscription_price_monthly"],
-        "subscription_name":          best["subscription_name"],
         "saved_at":                   saved_at,
     }
 

@@ -17,6 +17,8 @@ export type SortOrder =
     | 'desc'
     | 'saved_desc'
     | 'saved_asc'
+    | 'pct_desc'
+    | 'pct_asc'
     | 'market_asc'
     | 'market_desc'
     | 'name_asc'

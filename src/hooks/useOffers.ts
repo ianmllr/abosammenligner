@@ -33,6 +33,11 @@ export function useOffers() {
                     const bSaved = b.min_cost_6_months != null ? b.market_price! - b.min_cost_6_months : -Infinity
                     return sortOrder === 'saved_desc' ? bSaved - aSaved : aSaved - bSaved
                 }
+                if (sortOrder === 'pct_desc' || sortOrder === 'pct_asc') {
+                    const aPct = a.min_cost_6_months != null && a.market_price! > 0 ? (a.market_price! - a.min_cost_6_months) / a.market_price! : -Infinity
+                    const bPct = b.min_cost_6_months != null && b.market_price! > 0 ? (b.market_price! - b.min_cost_6_months) / b.market_price! : -Infinity
+                    return sortOrder === 'pct_desc' ? bPct - aPct : aPct - bPct
+                }
                 if (sortOrder === 'market_asc' || sortOrder === 'market_desc') {
                     return sortOrder === 'market_asc' ? a.market_price! - b.market_price! : b.market_price! - a.market_price!
                 }

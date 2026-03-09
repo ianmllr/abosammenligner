@@ -21,7 +21,7 @@ export default function Home() {
                             className={`px-4 py-2 rounded-md border text-sm transition-colors ${
                                 hideNegative
                                     ? 'bg-[#4a90b8] border-[#4a90b8] text-white'
-                                    : 'bg-[#2a3340] border-[#334155] text-[#7d8fa0] hover:border-[#4a90b8]'
+                                    : 'bg-[#1a1f27] border-[#2a3340] text-[#7d8fa0] hover:border-[#4a90b8]'
                             }`}
                         >
                             Skjul tilbud du ikke sparer penge på

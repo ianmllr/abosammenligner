@@ -55,15 +55,13 @@ def scrape_oister():
             "product_name": "",
             "image_url": "",
             "provider": "Oister",
-            "signup_price": 99,
-            "data_gb": "",
+            "type": "phone",
             "price_without_subscription": "",
             "price_with_subscription": "",
             "min_cost_6_months": "",
             "subscription_price_monthly": 0,
             "discount_on_product": 0,
             "saved_at": date_time,
-            "sold_out": "false"
         }
 
         # image url
@@ -88,6 +86,8 @@ def scrape_oister():
             strong_tag = punchline_div.find('strong')
             if strong_tag:
                 item["product_name"] = strong_tag.get_text(strip=True)
+                if "urbanista" in item["product_name"].lower():
+                    item["type"] = "sound"
 
             full_text = punchline_div.get_text(strip=True).replace("inkl. ", "")
 
@@ -121,14 +121,7 @@ def scrape_oister():
         if product_card:
             options = product_card.find_all('div', class_='card__option')
             if len(options) >= 2:
-                t_amount = options[0].find('h3', class_='card__text-data').text.strip()
-                t_type = options[0].find('h4', class_='card__text-type').text.strip()
-
-                d_amount = options[1].find('h3', class_='card__text-data').text.strip()
-                d_type = options[1].find('h4', class_='card__text-type').text.strip()
-
-                item["data_gb"] = f"{d_amount} {d_type}"
-                item["talk"] = f"{t_amount} {t_type}"
+                pass  # data_gb and talk fields removed — not used by frontend
 
             all_data_fields = product_card.find_all('h3', class_='card__text-data')
             if len(all_data_fields) >= 3:
@@ -139,16 +132,6 @@ def scrape_oister():
                 except ValueError:
                     item["subscription_price_monthly"] = all_data_fields[2].text.strip()
 
-            callout_element = product_card.find('div', class_='card__callout')
-            if callout_element:
-                strong_tag = callout_element.find('strong')
-                if strong_tag:
-                    item["eu_data"] = strong_tag.text.strip()
-
-            sold_out_element = product_card.find('div', class_='card__btn')
-            if sold_out_element:
-                if "Udsolgt" in sold_out_element.get_text(strip=True):
-                    item["sold_out"] = 'true'
 
         if product_card:
             scraped_data.append(item)
