@@ -5,7 +5,6 @@ import Tooltip from "@/components/Tooltip";
 
 export default function ReminderForm() {
     const [email, setEmail] = useState('')
-    const [message, setMessage] = useState('')
     const [sendEarlier, setSendEarlier] = useState(false)
     const [daysCount, setDaysCount] = useState(1)
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
@@ -34,12 +33,11 @@ export default function ReminderForm() {
             await fetch('/api/reminders', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email, message, daysBefore }),
+                body: JSON.stringify({ email, daysBefore }),
             })
 
             setStatus('success')
             setEmail('')
-            setMessage('')
             setSendEarlier(false)
             setDaysCount(1)
             setGdprAccepted(false)
@@ -71,17 +69,6 @@ export default function ReminderForm() {
                 onChange={e => setEmail(e.target.value)}
                 className="px-3 py-2 rounded-md border border-[#334155] bg-[#2a3340] text-[#cdd6e0] text-sm placeholder-[#7d8fa0] focus:outline-none focus:border-[#4a90b8]"
             />
-
-            <textarea
-                placeholder="Personlig note (valgfrit)"
-                value={message}
-                onChange={e => setMessage(e.target.value)}
-                maxLength={50}
-                rows={2}
-                className="..."
-            />
-            <p className="text-xs text-[#7d8fa0] text-right m-0">{message.length}/50</p>
-
 
             <div className="flex flex-col gap-2 my-1">
                 <div className="flex items-center gap-2">

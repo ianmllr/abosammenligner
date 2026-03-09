@@ -29,7 +29,7 @@ export default function OfferCard({ offer }: OfferCardProps) {
                 <h2 className="text-[15px] leading-snug text-[#cdd6e0] m-0 font-semibold">{offer.product_name}</h2>
 
                 <p className="text-sm text-[#cdd6e0] m-0">
-                    <strong>{offer.price_with_subscription} kr.</strong> med abonnement
+                    <strong>{offer.price_with_subscription} kr.</strong> kontant
                 </p>
 
                 <hr className="border-none border-t border-[#334155] my-1" />

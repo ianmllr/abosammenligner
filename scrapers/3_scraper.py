@@ -15,12 +15,7 @@ DATA_DIR  = BASE_DIR / "data" / "3"
 BASE_URL = "https://www.3.dk"
 
 CATEGORY_URLS: dict[str, str] = {
-    f"{BASE_URL}/shop/mobiler/apple/":    "phone",
-    f"{BASE_URL}/shop/mobiler/samsung/":  "phone",
-    f"{BASE_URL}/shop/mobiler/motorola/": "phone",
-    f"{BASE_URL}/shop/mobiler/oneplus/":  "phone",
-    f"{BASE_URL}/shop/mobiler/nothing/":  "phone",
-    f"{BASE_URL}/shop/mobiler/":          "phone",
+    #f"{BASE_URL}/shop/mobiler/":          "phone",
     f"{BASE_URL}/shop/tablets/":          "tablet",
 }
 
@@ -169,7 +164,7 @@ def get_storage_buttons(page) -> list:
 
 
 def extract_upfront_price(page, btn) -> int | None:
-    kr_pattern = r"(\d{1,3}(?:\.\d{3})+|\d{4,})\s*kr"
+    kr_pattern = r"(\d{1,3}(?:\.\d{3})+|\d{4,})[\s\xa0]*kr"
 
     # 1. Price inside the active storage button
     if btn is not None:
@@ -193,7 +188,10 @@ def extract_upfront_price(page, btn) -> int | None:
             return parse_price(parent.locator("span").first.text_content())
 
     # 4. Any standalone "X.XXX kr." element (skip monthly prices)
-    for el in page.locator(r"text=/\d{1,3}\.\d{3}\s*kr\.?/").all():
+    for el in page.locator(r"text=/\d+.*kr/").all():
+        print(f"  [DEBUG] kr element: {repr(el.text_content())}")
+
+
         raw = el.text_content() or ""
         if "/md" in raw or "md." in raw:
             continue
