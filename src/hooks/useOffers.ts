@@ -19,6 +19,7 @@ export function useOffers() {
         return allOffers
             .filter(o => selectedProviders.includes(o.provider))
             .filter(o => !q || o.product_name.toLowerCase().includes(q))
+            .filter(o => o.market_price != null)
             .filter(o => o.price_with_subscription !== null && o.price_with_subscription !== undefined)
             .filter(o => o.min_cost_6_months == null || (o.min_cost_6_months >= lo && o.min_cost_6_months <= hi))
             .filter(o => {
