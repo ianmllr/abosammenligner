@@ -1,886 +1,882 @@
 {
-    "iPhone 16e 128GB": {
-        "market_price": 3299,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Galaxy S26 256GB Black": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Apple Watch Ultra 3": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 16 128 GB Sort": {
-        "market_price": 5299,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Apple Watch S9": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Motorola Edge 60 Pro 512GB Grey": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S25 FE": {
-        "market_price": 249,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy Tab S11": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 17 256GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy Z Flip7 256GB Black": {
-        "market_price": 8048,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 16e": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Razr 60 Ultra": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 17 Pro Max 5G smartphone 2TB Dybblå": {
-        "market_price": 18943,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Apple iPad Air 11\" (2026) 128GB WiFi + Cellular Space Grey": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy Tab S9 128GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S26 Ultra 5G smartphone 12/256 GB (hvid)": {
-        "market_price": 10326,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 16 128GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Galaxy S25 128GB sort": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 17 Pro 5G smartphone 1TB Dybblå": {
-        "market_price": 13899,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Apple iPhone 16 128GB Black": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 17 Pro 5G smartphone 1TB Sølv": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Galaxy S25 Edge": {
-        "market_price": 5135,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy Tab S10 Plus 256GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 17e 256GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Motorola Razr 60": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPad 9th 10.2 Wi-Fi + Cellular": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Apple iPad 11\" 2025 128GB - Silver": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 17 Pro Max 5G smartphone 1TB Dybblå": {
-        "market_price": 14499,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Galaxy A56 5G 128GB Black": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Galaxy S25 FE": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Galaxy S26 Ultra 512GB Black": {
-        "market_price": 9855,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy A36 5G 128GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S26 Ultra": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Galaxy S24": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S26 Ultra 5G smartphone 16/1TB (sky blue)": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 17 Pro": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 15 128GB Black": {
-        "market_price": 3999,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Google Pixel 9 128 GB Obsidian": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Google Pixel 10 Pro Fold 256GB Grey": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Motorola Moto G86 Power": {
-        "market_price": 2374,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S25+": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Motorola Edge 70, 512GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S26+ 512GB White": {
-        "market_price": 9325,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy A35 5G 128GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Leva 11s Sort": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Apple Watch S11": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Galaxy A26 5G 128 GB Black": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Lenovo Idea Tab WiFi 256GB Luna Grey": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Oneplus CE 5": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPad Pro 11 (2025) 256GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy Watch4 40mm": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "OnePlus 15 256GB Black": {
-        "market_price": 6999,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Pixel 10 Pro XL": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Apple 13\" iPad Pro (2025) Wi-Fi 256GB Space Black med abonnement": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 15 128GB": {
-        "market_price": 3999,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Google Pixel 10 Pro XL 256GB Moonstone": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Edge 70": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Apple Watch SE 3": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 17e": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 17 Pro 5G smartphone 1TB Kosmisk Orange": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy Tab S11 Ultra 256GB": {
-        "market_price": 8266,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 17 Pro Max 5G smartphone 512GB Sølv": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPad Air 13 (2026) 128GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPad Air 13 (2025) 128GB": {
-        "market_price": 6927,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Galaxy S26+": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Galaxy Z Fold7": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S26 Plus 5G smartphone 12/256GB (hvid)": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "3210": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone Air 5G smartphone 1TB Himmelblå": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Apple 11\" iPad Pro (2025) Wi-Fi 256GB Space Black med abonnement": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "HONOR 400 Smart 5G smartphone 4/128GB (velvet black)": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "HONOR 400 Smart 5G smartphone 4/256GB (velvet black)": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPad 11\" (11. Gen) 128GB WiFi (sølv)": {
-        "market_price": 2099,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy Tab A9+": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S24": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Pixel 10 Pro": {
-        "market_price": 5999,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Motorola G86 Power 256GB Dark Blue": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy Z Fold7 256GB Black": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Pixel 10a": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone Air 5G smartphone 1TB Space Black": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 17 Pro 5G smartphone 512GB Dybblå": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "moto G86 Power": {
-        "market_price": 2374,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 17 Pro Max 5G smartphone 1TB Kosmisk Orange": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 17 Pro Max 256 GB Silver": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Apple iPhone 16e 128 GB Sort": {
-        "market_price": 3299,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Google Pixel 9a": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S25 Ultra 256GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Urbanista Los Angeles": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy Z Fold7": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S26 5G smartphone 12/512GB (sort)": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Apple Watch Ultra": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy Tab S10 Ultra 256GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 15": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone Air 5G smartphone 256GB Space Black": {
-        "market_price": 6599,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 17 Pro Max 5G smartphone 256GB Dybblå": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Apple iPhone 17e 256GB Soft Pink": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Galaxy S26+ 256GB Black": {
-        "market_price": 9710,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S25 128GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 17 Pro Max 5G smartphone 1TB Sølv": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy Tab S11 Ultra": {
-        "market_price": 8266,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S25 Edge": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Galaxy S26 Ultra": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 17 Pro Max 5G smartphone 2TB Sølv": {
-        "market_price": 18943,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Galaxy S25": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy A36": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 17 Pro Max": {
-        "market_price": 9999,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy Tab S11 128GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S24 128GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Galaxy A26": {
-        "market_price": 1499,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone Air 5G smartphone 1TB Skyhvid": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
     "OnePlus NORD 5": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S25 Edge 256GB Black": {
-        "market_price": 5135,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Galaxy S24 FE 128 GB Sort": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Moto G75": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Galaxy S24 128GB Grå": {
-        "market_price": 4233,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Galaxy S25+": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone Air 5G smartphone 1TB Lyst Guld": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S26+ 5G smartphone 12/512GB (hvid)": {
-        "market_price": 9268,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 17 Pro Max 256GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPad Air 11 (2026) 128GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Google Pixel 10a": {
-        "market_price": 4250,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S26 Ultra 256GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy Watch8": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Google Pixel 10 Pro 128GB Black": {
-        "market_price": 5999,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy XCover 7 128GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Apple iPad Air 13\" (2026) 128GB WiFi + Cellular Space Grey": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone Air 256GB": {
-        "market_price": 6599,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung tablet": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPad 11th gen 128GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy Watch Ultra": {
-        "market_price": 3039,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Apple iPad Pro 11\" (2024) 256GB Space Black": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy A56": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Google Pixel 10a 128GB Obsidian": {
-        "market_price": 4250,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S26 Ultra 5G smartphone 12/256GB (sort)": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Motorola Signature 512GB Green": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Edge 60": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy Z Flip6 512GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Google Pixel 10A 128GB Black": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Motorola G56 256GB": {
-        "market_price": 1300,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPad Air 11 (2025) 128GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 16 Plus 128 GB Sort": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S26 Plus 256GB": {
-        "market_price": 9710,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S26 256GB Cobalt violet": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S26 Ultra 512GB Cobalt violet": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Apple iPhone Air 256 GB Sky Blue": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
+        "market_price": 2650,
+        "looked_up_at": "10-03-2026-07:03"
     },
     "Samsung Galaxy Z Flip7 FE 128GB": {
         "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
+        "looked_up_at": "10-03-2026-07:03"
     },
-    "Samsung Galaxy Tab A11 4G tablet 4/64GB (grå)": {
+    "iPhone 15 128GB Black": {
         "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
+        "looked_up_at": "10-03-2026-07:03"
     },
-    "iPhone 17 Pro 5G smartphone 256GB Dybblå": {
-        "market_price": 9299,
-        "looked_up_at": "10-03-2026-00:26"
+    "Samsung Galaxy A26 5G 128GB": {
+        "market_price": 1499,
+        "looked_up_at": "10-03-2026-07:03"
     },
-    "Apple iPhone 15 Plus": {
+    "Pixel 10a": {
         "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 16 Plus": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 17 Pro 256GB": {
-        "market_price": 9299,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPad 11th Wi-Fi": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Pixel 10": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPad Pro 13 (2025) 256GB": {
-        "market_price": 10783,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Google Pixel 10 128GB Black": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Galaxy Z Flip7": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Google Pixel 10 Pro XL 256GB Black": {
-        "market_price": 7468,
-        "looked_up_at": "10-03-2026-00:26"
+        "looked_up_at": "10-03-2026-07:03"
     },
     "iPhone 15 128GB Sort": {
         "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S26+": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Apple iPad Pro 11\" (2025) 256GB Space Black med abonnement": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Nokia T21 128GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone Air 256 GB Sort": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy Z Flip7": {
-        "market_price": 8048,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 17 5G smartphone 256GB Sort": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPad 11th Wi-Fi + Cellular": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Watch 5 Pro 45mm LTE Titanium": {
-        "market_price": 3999,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Urbanista Malibu": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Motorola Edge 70": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "TCL Kids Watch": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy Z Fold6 256GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Galaxy S26": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S25 FE 128GB Black": {
-        "market_price": 3985,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy Z Fold7 256GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy A26 5G 128GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 16": {
-        "market_price": 5299,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Motorola Signature 512GB Martini Olive": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Apple iPhone 15": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Galaxy A36 5G 128GB Black": {
-        "market_price": 1915,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Motorola G56 256 Black": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Apple iPhone 17 256 GB Black": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S26 Ultra 5G smartphone 16GB RAM/1TB lagerplads (cobalt violet)": {
-        "market_price": 12399,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy A56 5G 128GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy Tab S11 Ultra WiFi 256GB Gray": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy A16 5G 128GB": {
-        "market_price": 890,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S25": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Google Pixel 10 Pro": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Galaxy A56": {
-        "market_price": 2373,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone Air 5G smartphone 512GB Space Black": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
+        "looked_up_at": "10-03-2026-07:03"
     },
     "15R 256 GB": {
+        "market_price": 4450,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy Watch4 40mm": {
         "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
+        "looked_up_at": "10-03-2026-07:03"
     },
-    "Motorola G56 5G 256GB Black Oyster": {
-        "market_price": 1300,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone Air": {
+    "Galaxy S24 128GB Grå": {
         "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 17 256 GB Sort": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S24 Ultra 256GB": {
-        "market_price": 7995,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Google Pixel 8a": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S26": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S26 Ultra 5G smartphone 12/512GB (sort)": {
-        "market_price": 9855,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Apple Watch S10": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Apple Watch SE 2nd Gen.": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S26 Ultra 5G smartphone 16/1TB (sort)": {
-        "market_price": 12399,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Motorola Edge 60 512GB Blue": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 17e 256GB Black": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Urbanista Phoenix": {
-        "market_price": 589,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPad Pro 11 256GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 17 Pro Max 5G smartphone 2TB Kosmisk Orange": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy Tab S10 Lite": {
-        "market_price": 2529,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S25 Plus 512GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
+        "looked_up_at": "10-03-2026-07:03"
     },
     "iPhone 17 5G smartphone 512GB Sort": {
+        "market_price": 9286,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S25 Edge 256GB Black": {
         "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
+        "looked_up_at": "10-03-2026-07:03"
     },
-    "Apple iPhone 16e 128GB White": {
-        "market_price": 3299,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "reMarkable Paper Pro Move E-ink tablet + Marker Plus": {
+    "Samsung Galaxy S26 Ultra 5G smartphone 12/512GB (sort)": {
         "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S26 256GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Galaxy A36": {
-        "market_price": 2999,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Apple iPad Air 13\" (2024) 128GB Space Grey": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy Z Flip7 256GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S26 Plus 5G smartphone 12/512GB (sort)": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 17": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S25 Edge 256GB": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "iPhone 17 Pro 256 GB Silver": {
-        "market_price": 9299,
-        "looked_up_at": "10-03-2026-00:26"
-    },
-    "Samsung Galaxy S26 Ultra 5G smartphone 16/1TB (hvid)": {
-        "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
+        "looked_up_at": "10-03-2026-07:03"
     },
     "Samsung Galaxy Tab A11 4G tablet 8/128GB (grå)": {
         "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S26 Ultra 5G smartphone 12/256 GB (hvid)": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy Z Flip7 256GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "HONOR 400 Smart 5G smartphone 4/256GB (velvet black)": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Google Pixel 10 128GB Black": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Motorola Signature 512GB Green": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy Z Flip7": {
+        "market_price": 8048,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Apple Watch SE 2nd Gen.": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 17 Pro Max 256 GB Silver": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 17 5G smartphone 256GB Sort": {
+        "market_price": 5999,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy Z Fold7 256GB Black": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 17 Pro Max 5G smartphone 2TB Kosmisk Orange": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Apple 11\" iPad Pro (2025) Wi-Fi 256GB Space Black med abonnement": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 15": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung tablet": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPad Air 13 (2025) 128GB": {
+        "market_price": 6927,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Galaxy Z Fold7": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Motorola Edge 70": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S26 256GB Cobalt violet": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 17 Pro 5G smartphone 1TB Kosmisk Orange": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 17e 256GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Apple iPad Pro 11\" (2024) 256GB Space Black": {
+        "market_price": 6999,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone Air 5G smartphone 1TB Space Black": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 17e": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Galaxy S26 Ultra": {
+        "market_price": 10326,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy A56 5G 128GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPad 11th gen 128GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "3210": {
+        "market_price": 889,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Motorola Edge 60 512GB Blue": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy A16 5G 128GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Edge 70": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 17 256GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S25 128GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 17 Pro Max 256GB": {
+        "market_price": 9999,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Galaxy S25": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Leva 11s Sort": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPad 11th Wi-Fi + Cellular": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S26 Ultra 256GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S26 256GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 16": {
+        "market_price": 5299,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Apple iPhone 16e 128 GB Sort": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 16 128 GB Sort": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "reMarkable Paper Pro Move E-ink tablet + Marker Plus": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Galaxy S26": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Moto G75": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 17 Pro 5G smartphone 256GB Dybblå": {
+        "market_price": 9299,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone Air 5G smartphone 512GB Space Black": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Galaxy S24": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Apple iPhone 15 Plus": {
+        "market_price": 5054,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy Tab S11 Ultra WiFi 256GB Gray": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Galaxy A56 5G 128GB Black": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Apple iPhone 17 256 GB Black": {
+        "market_price": 5999,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Motorola Edge 60 Pro 512GB Grey": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy Tab Active5 5G 128GB Green": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Apple Watch S9": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPad Air 11 (2025) 128GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone Air 5G smartphone 1TB Skyhvid": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Galaxy Z Flip7": {
+        "market_price": 8048,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Google Pixel 10 Pro": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "moto G86 Power": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Galaxy S26+ 256GB Black": {
+        "market_price": 9710,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Galaxy A26 5G 128 GB Black": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 17e 256GB Black": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy Tab A9+": {
+        "market_price": 1545,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Apple Watch SE 3": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy Tab S10 Lite": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy Watch Ultra": {
+        "market_price": 3039,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Apple iPhone 16 128GB Black": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Galaxy S25+": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Urbanista Phoenix": {
+        "market_price": 589,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "TCL Kids Watch": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPad 11th Wi-Fi": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Razr 60 Ultra": {
+        "market_price": 5534,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone Air 256GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Galaxy S25 Edge": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Apple iPad Air 13\" (2024) 128GB Space Grey": {
+        "market_price": 6927,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 17 Pro 256GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S26 Ultra": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 16e": {
+        "market_price": 3299,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Google Pixel 10 Pro Fold 256GB Grey": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 17 Pro 256 GB Silver": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Galaxy S26 Ultra 512GB Black": {
+        "market_price": 9855,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Lenovo Idea Tab WiFi 256GB Luna Grey": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S26 5G smartphone 12/512GB (sort)": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Motorola Razr 60": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S25 Edge": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 17 Pro Max 5G smartphone 1TB Kosmisk Orange": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S26+ 5G smartphone 12/512GB (hvid)": {
+        "market_price": 9181,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Edge 60": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 16 Plus 128 GB Sort": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy Z Flip6 512GB": {
+        "market_price": 10499,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Apple iPad Air 13\" (2026) 128GB WiFi + Cellular Space Grey": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 17 Pro 5G smartphone 1TB Sølv": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 17 Pro Max 5G smartphone 1TB Sølv": {
+        "market_price": 14499,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone Air 5G smartphone 1TB Lyst Guld": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Oneplus CE 5": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy Tab S11 Ultra": {
+        "market_price": 8266,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Google Pixel 10 Pro XL 256GB Black": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S26 Plus 256GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Urbanista Los Angeles": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Pixel 10 Pro XL": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Motorola Moto G86 Power": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Google Pixel 10A 128GB Black": {
+        "market_price": 4250,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy A56": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPad Pro 13 (2025) 256GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPad Air 11 (2026) 128GB": {
+        "market_price": 5077,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy Watch8": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S25 Ultra 256GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Motorola Signature 512GB Martini Olive": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 17 Pro Max 5G smartphone 1TB Dybblå": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Motorola Edge 70, 512GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 17 Pro Max 5G smartphone 2TB Sølv": {
+        "market_price": 18943,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Galaxy A56": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S25 FE 128GB Black": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy Tab S9 128GB": {
+        "market_price": 4812,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy Tab S11 Ultra 256GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Galaxy S26+": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy A35 5G 128GB": {
+        "market_price": 1950,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy Tab S11 128GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy Tab S10 Plus 256GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy A36": {
+        "market_price": 2999,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S26+ 512GB White": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S26 Plus 5G smartphone 12/512GB (sort)": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 17 Pro 5G smartphone 1TB Dybblå": {
+        "market_price": 13899,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S26 Ultra 5G smartphone 16/1TB (sky blue)": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Urbanista Malibu": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Galaxy S25 FE": {
+        "market_price": 3985,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 17 Pro Max 5G smartphone 256GB Dybblå": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Galaxy S25 128GB sort": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Motorola G56 5G 256GB Black Oyster": {
+        "market_price": 1300,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S26 Ultra 5G smartphone 16GB RAM/1TB lagerplads (cobalt violet)": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Apple iPhone 16e 128GB White": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 17 Pro Max 5G smartphone 2TB Dybblå": {
+        "market_price": 18943,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Galaxy A36 5G 128GB Black": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone Air 5G smartphone 256GB Space Black": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S25 Edge 256GB": {
+        "market_price": 5135,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone Air 5G smartphone 1TB Himmelblå": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 16 128GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Google Pixel 9a": {
+        "market_price": 2499,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S26": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S24": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Google Pixel 10a": {
+        "market_price": 4250,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Google Pixel 10 Pro XL 256GB Moonstone": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "HONOR 400 Smart 5G smartphone 4/128GB (velvet black)": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy Z Fold7 256GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy Z Fold6 256GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Galaxy A26": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Motorola G86 Power 256GB Dark Blue": {
+        "market_price": 2374,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Google Pixel 10a 128GB Obsidian": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Apple iPad 11\" 2025 128GB - Silver": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Google Pixel 8a": {
+        "market_price": 3167,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 17 Pro Max 5G smartphone 512GB Sølv": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Google Pixel 9 128 GB Obsidian": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S26 Ultra 5G smartphone 16/1TB (sort)": {
+        "market_price": 12399,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPad 11\" (11. Gen) 128GB WiFi (sølv)": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone Air 256 GB Sort": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Galaxy S24 FE 128 GB Sort": {
+        "market_price": 3565,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Galaxy S26 256GB Black": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S25 Plus 512GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 17": {
+        "market_price": 5999,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Apple iPad Air 11\" (2026) 128GB WiFi + Cellular Space Grey": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 16e 128GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Galaxy A36": {
+        "market_price": 2999,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S26 Ultra 5G smartphone 12/256GB (sort)": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Apple iPhone 15": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone Air": {
+        "market_price": 6599,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Google Pixel 10 Pro 128GB Black": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Pixel 10": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S25": {
+        "market_price": 4888,
+        "looked_up_at": "10-03-2026-07:03"
     },
     "Samsung Galaxy S26 5G smartphone 12/256GB (sort)": {
-        "market_price": 6940,
-        "looked_up_at": "10-03-2026-00:26"
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S26 Plus 5G smartphone 12/256GB (hvid)": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 17 Pro Max": {
+        "market_price": 9999,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "OnePlus 15 256GB Black": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPad Air 13 (2026) 128GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy Tab A11 4G tablet 4/64GB (grå)": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Watch 5 Pro 45mm LTE Titanium": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S24 128GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Apple iPhone Air 256 GB Sky Blue": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Apple iPad Pro 11\" (2025) 256GB Space Black med abonnement": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S26+": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy Tab S11": {
+        "market_price": 5737,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy Z Fold7": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Motorola G56 256GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 16 Plus": {
+        "market_price": 6444,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Apple Watch S11": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S25+": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 15 128GB": {
+        "market_price": 3999,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Apple Watch Ultra": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Apple iPhone 17e 256GB Soft Pink": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy Z Flip7 256GB Black": {
+        "market_price": 7812,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy XCover 7 128GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S25 FE": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Apple Watch Ultra 3": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S26 Ultra 512GB Cobalt violet": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Pixel 10 Pro": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S26 Ultra 5G smartphone 16/1TB (hvid)": {
+        "market_price": 12399,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 17 Pro 5G smartphone 512GB Dybblå": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPad Pro 11 256GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPad Pro 11 (2025) 256GB": {
+        "market_price": 6999,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 17 256 GB Sort": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy Tab S10 Ultra 256GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
     },
     "Samsung Galaxy A26": {
+        "market_price": 1499,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPad 9th 10.2 Wi-Fi + Cellular": {
         "market_price": null,
-        "looked_up_at": "10-03-2026-00:26"
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Apple Watch S10": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Nokia T21 128GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Motorola G56 256 Black": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "Samsung Galaxy S24 Ultra 256GB": {
+        "market_price": null,
+        "looked_up_at": "10-03-2026-07:03"
+    },
+    "iPhone 17 Pro": {
+        "market_price": 9299,
+        "looked_up_at": "10-03-2026-07:03"
     }
 }
