@@ -228,7 +228,10 @@ def scrape_cbb():
 
         for phone in phones_list:
             entry = build_entry(phone, page, date_time)
-            cleaned_results.append(entry)
+            if "brugt" not in entry.get("product_name", "").lower():
+                cleaned_results.append(entry)
+            else:
+                print(f"  Skipping used product: {entry['product_name']}")
 
         browser.close()
 

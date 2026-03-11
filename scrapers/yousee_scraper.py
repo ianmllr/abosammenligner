@@ -210,7 +210,7 @@ def scrape_yousee():
 
             for card in cards:
                 offer = extract_card(card, product_type, saved_at)
-                if offer and offer.product_name and offer.product_name not in seen_names:
+                if offer and offer.product_name and offer.product_name not in seen_names and "brugt" not in offer.product_name.lower():
                     seen_names.add(offer.product_name)
                     all_offers.append(offer)
 

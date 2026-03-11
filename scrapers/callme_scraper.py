@@ -208,7 +208,7 @@ def scrape_callme():
                 if not entry:
                     continue
                 name = entry["product_name"]
-                if name and name not in seen_names:
+                if name and name not in seen_names and "brugt" not in name.lower():
                     seen_names.add(name)
                     all_entries.append(entry)
                     print(f"  {name}: pris={entry['price_with_subscription']} kr, min6={entry['min_cost_6_months']} kr, udsolgt={entry['sold_out']}")

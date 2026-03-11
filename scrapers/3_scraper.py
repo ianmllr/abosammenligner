@@ -242,7 +242,7 @@ def scrape_3():
         for url, product_type in product_links:
             print(f"Scraping: {url}")
             offer = scrape_product_page(page, url, saved_at, product_type)
-            if offer and offer.product_name not in seen_names:
+            if offer and offer.product_name not in seen_names and "brugt" not in offer.product_name.lower():
                 seen_names.add(offer.product_name)
                 all_offers.append(offer)
 

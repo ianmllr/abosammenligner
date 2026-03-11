@@ -139,6 +139,10 @@ def scrape_telmore():
                 print(f"  Scraping detail: {item['product_name']} -> {item['link']}")
                 item["subscription_price_monthly"] = scrape_detail_page(page, item["link"])
 
+            if "brugt" in item["product_name"].lower():
+                print(f"  Skipping used product: {item['product_name']}")
+                continue
+
             scraped_data.append(item)
             print(f"    subscription_price_monthly={item['subscription_price_monthly']}")
 

@@ -134,7 +134,10 @@ def scrape_oister():
 
 
         if product_card:
-            scraped_data.append(item)
+            if "brugt" in item.get("product_name", "").lower():
+                print(f"  Skipping used product: {item['product_name']}")
+            else:
+                scraped_data.append(item)
 
     with open(os.path.join(BASE_DIR, 'data/oister/oister_offers.json'), 'w', encoding='utf-8') as f:
         json.dump(scraped_data, f, ensure_ascii=False, indent=4)

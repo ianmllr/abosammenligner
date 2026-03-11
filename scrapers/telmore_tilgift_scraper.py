@@ -170,6 +170,10 @@ def scrape_telmore_tilgift():
                 "saved_at": date_time
             }
 
+            if "brugt" in full_name.lower():
+                print(f"  Skipping used product: {full_name}")
+                continue
+
             scraped_data.append(item)
             print(f"    price_with_subscription={price_with_subscription}, discount_on_product={discount_on_product}, min_cost_6_months={min_cost_6_months}")
 

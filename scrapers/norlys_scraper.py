@@ -215,7 +215,7 @@ def scrape_norlys():
                 seen_slugs.add(slug)
 
                 offer = scrape_product(page, href, product_type, saved_at)
-                if offer:
+                if offer and "brugt" not in offer.get("product_name", "").lower():
                     all_offers.append(offer)
 
         context.close()
