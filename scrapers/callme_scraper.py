@@ -9,16 +9,58 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 BASE_URL = "https://www.callme.dk"
 
-# maps listing URL -> (product type, allowed productCategory values from the API)
+# maps listing URL -> (product type, allowed productCategory values from the API, use_dynamic_type)
+# use_dynamic_type=True means determine product_type from API productCategory instead of URL assignment
 CATEGORY_URLS = {
-    f"{BASE_URL}/webshop/mobiler/": ("phone", {"handset"}),
-    f"{BASE_URL}/webshop/tablets/": ("tablet", {"tablet"}),
-    f"{BASE_URL}/webshop/tilbehoer/kategori/gaming/PlayStation-5/": ("gaming", {"handset", "accessory"}),
+    f"{BASE_URL}/webshop/mobiler/": ("phone", {"handset"}, False),
+    f"{BASE_URL}/webshop/tablets/": ("tablet", {"tablet"}, False),
+    f"{BASE_URL}/webshop/tilbehoer/kategori/tilbehor-med-abonnement/?ProductBrand=Sony%3BM_rke_143959": ("gaming", {"handset"}, False),
+    f"{BASE_URL}/webshop/tilbehoer/kategori/gaming/PlayStation-5/": ("gaming", {"handset", "accessory"}, False),
+    f"{BASE_URL}/webshop/tilbehoer/kategori/tilbehor-med-abonnement/": ("accessory", {"handset", "accessory", ""}, True),
 }
 
 CONSENT_COOKIES = [
     {"name": "CookieInformationConsent", "value": "true", "domain": ".callme.dk", "path": "/"},
 ]
+
+
+def get_product_type_from_api_category(api_category, product_name=""):
+    # CallMe's API has a very inconsistent productCategory field, so we need to do this manually based on the
+    # category and product name to determine the actual type
+    if api_category == "handset":
+        # Could be a phone, gaming console, or smartwatch
+        name_lower = product_name.lower()
+        if any(x in name_lower for x in ["playstation", "ps5", "xbox", "nintendo", "switch"]):
+            return "gaming"
+        elif any(x in name_lower for x in ["watch", "smartwatch", "galaxy watch"]):
+            return "smartwatch"
+        elif any(x in name_lower for x in ["ipad", "tablet"]):
+            return "tablet"
+        else:
+            return "phone"
+    elif api_category == "accessory":
+        # Audio, wearables, gaming accessories, etc.
+        name_lower = product_name.lower()
+        if any(x in name_lower for x in ["airpods", "earbuds", "headphones", "headset", "speaker", "beats", "boombox", "sonos", "jbl", "harman", "beyerdynamic"]):
+            return "audio"
+        elif any(x in name_lower for x in ["watch", "smartwatch", "galaxy watch", "pixel watch"]):
+            return "smartwatch"
+        elif any(x in name_lower for x in ["backbone", "controller", "gamepad"]):
+            return "gaming"
+        else:
+            return "accessory"
+    elif api_category == "tablet":
+        return "tablet"
+    elif api_category == "":
+        # Blank category - likely tablets or larger devices
+        name_lower = product_name.lower()
+        if "ipad" in name_lower:
+            return "tablet"
+        elif any(x in name_lower for x in ["watch", "smartwatch"]):
+            return "smartwatch"
+        return "accessory"
+    else:
+        return "accessory"
 
 
 def download_image(image_url, product_name):
@@ -93,8 +135,15 @@ def parse_monthly_prices(minimum_price_text):
     return None, None, None
 
 
-def build_entry(hit, product_type, date_time):
+def build_entry(hit, product_type, date_time, use_api_category=False):
     # build a single offer entry from one API hit, using only the first (default) colour variant
+    # if use_api_category=True, determine product_type from the API's productCategory and product name
+    
+    if use_api_category:
+        product_name = hit.get("productName", "")
+        api_category = hit.get("productCategory", "")
+        product_type = get_product_type_from_api_category(api_category, product_name)
+    
     base_product_url = hit.get("productUrl", "")
     full_price_text = hit.get("fullPrice", "")
     minimum_price_text = hit.get("minimumPrice", "")
@@ -173,7 +222,7 @@ def scrape_callme():
         context.add_cookies(CONSENT_COOKIES)
         page = context.new_page()
 
-        for cat_url, (product_type, allowed_categories) in CATEGORY_URLS.items():
+        for cat_url, (product_type, allowed_categories, use_dynamic_type) in CATEGORY_URLS.items():
             print(f"\nScraping: {cat_url} (type={product_type})")
 
             # collect all hits from every catalog/search API call fired by this page
@@ -204,7 +253,7 @@ def scrape_callme():
             print(f"  {len(hits)} relevant hits (out of {len(all_hits)} total)")
 
             for hit in hits:
-                entry = build_entry(hit, product_type, date_time)
+                entry = build_entry(hit, product_type, date_time, use_api_category=use_dynamic_type)
                 if not entry:
                     continue
                 name = entry["product_name"]
