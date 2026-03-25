@@ -16,10 +16,14 @@ INSTALLMENT = "1"
 CATEGORY_URLS: dict[str, str] = {
     f"{SHOP_BASE}/privat/webshop/mobiler/": "phone",
     f"{SHOP_BASE}/privat/webshop/tablets/":  "tablet",
+    f"{SHOP_BASE}/privat/webshop/tilbehoer/kategori/tilbehoer-med-abonnement/?ProductType=WiFi%20Tablets%3BAccessories_-_Category_352948": "tablet",
+    f"{SHOP_BASE}/privat/webshop/tilbehoer/kategori/tilbehoer-med-abonnement/?ProductType=Gaming%3BAccessories_-_Category_352948": "gaming",
+    f"{SHOP_BASE}/privat/webshop/tilbehoer/kategori/tilbehoer-med-abonnement/?ProductType=Smartwatches%3BAccessories_-_Category_352948":  "smartwatch",
+    f"{SHOP_BASE}/privat/webshop/tilbehoer/kategori/tilbehoer-med-abonnement/?ProductType=Høretelefoner%2Fheadsets%3BAccessories_-_Category_352948":  "audio",
+    f"{SHOP_BASE}/privat/webshop/tilbehoer/kategori/tilbehoer-med-abonnement/?ProductType=Højtalere%3BAccessories_-_Category_352948":  "audio",
 }
 
 MAX_SUBSCRIPTIONS = 5
-
 
 def download_image(image_url: str, product_name: str) -> str:
     if not image_url or not product_name:
@@ -74,7 +78,7 @@ def get_product_links_from_listing(page, cat_url: str) -> list[str]:
 
 
 def extract_price_data(price: dict) -> dict | None:
-    """Extract the relevant price fields from a variant API price object."""
+    # extract the relevant price fields from a variant API price object.
     min_price     = (price.get("minimumPrice") or {}).get("value")
     monthly_price = (price.get("bundleMonthlyPrice") or {}).get("value")
     product_price = (price.get("productPrice") or {}).get("value")

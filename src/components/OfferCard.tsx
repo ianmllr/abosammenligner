@@ -116,6 +116,7 @@ export default function OfferCard({ offer }: OfferCardProps) {
                 >
                     Gå til tilbud
                 </a>
+                
             </div>
         </div>
     )
