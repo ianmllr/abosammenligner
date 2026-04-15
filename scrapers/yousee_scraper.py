@@ -89,9 +89,12 @@ def extract_card(card, product_type: str, saved_at: str) -> "Offer | None":
     href = href.split("?")[0] if href else ""
     product_link = (f"{BASE_URL}{href}" if href.startswith("/") else href) if href else ""
 
-    # product name
+    # product name (manufacturer + model) because manufacturer is a separate field
+    manufacturer_el = card.query_selector("span.product-card__subname.taProductCardSubname")
+    manufacturer_name = manufacturer_el.inner_text().strip() if manufacturer_el else ""
+
     name_el = card.query_selector("h3.taProductCardName, h3.product-card__name")
-    product_name = name_el.inner_text().strip() if name_el else ""
+    product_name = manufacturer_name + " " + name_el.inner_text().strip() if name_el else ""
     if not product_name:
         return None
 

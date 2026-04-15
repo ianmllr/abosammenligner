@@ -1,8 +1,8 @@
 [
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/samsung/galaxy-s26",
-        "product_name": "Galaxy S26",
-        "image_url": "/images/yousee/galaxy_s26.webp",
+        "product_name": "Samsung Galaxy S26",
+        "image_url": "/images/yousee/samsung_galaxy_s26.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -11,12 +11,12 @@
         "discount_on_product": 3000,
         "min_cost_6_months": 6313,
         "subscription_price_monthly": 219,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/samsung/samsung-galaxy-a36",
-        "product_name": "Galaxy A36",
-        "image_url": "/images/yousee/galaxy_a36.webp",
+        "product_name": "Samsung Galaxy A36",
+        "image_url": "/images/yousee/samsung_galaxy_a36.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -25,12 +25,12 @@
         "discount_on_product": 2400,
         "min_cost_6_months": 1913,
         "subscription_price_monthly": 219,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/motorola/motorola-moto-g86-power",
-        "product_name": "Moto G86 Power",
-        "image_url": "",
+        "product_name": "Motorola Moto G86 Power",
+        "image_url": "/images/yousee/motorola_moto_g86_power.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -39,12 +39,12 @@
         "discount_on_product": 2700,
         "min_cost_6_months": 1413,
         "subscription_price_monthly": 219,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/apple/apple-iphone-air",
-        "product_name": "iPhone Air",
-        "image_url": "/images/yousee/iphone_air.webp",
+        "product_name": "Apple iPhone Air",
+        "image_url": "/images/yousee/apple_iphone_air.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -53,12 +53,12 @@
         "discount_on_product": 3900,
         "min_cost_6_months": 6893,
         "subscription_price_monthly": 299,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/apple/apple-iphone-17e",
-        "product_name": "iPhone 17e",
-        "image_url": "/images/yousee/iphone_17e.webp",
+        "product_name": "Apple iPhone 17e",
+        "image_url": "/images/yousee/apple_iphone_17e.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -67,12 +67,12 @@
         "discount_on_product": 1500,
         "min_cost_6_months": 5793,
         "subscription_price_monthly": 299,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/apple/apple-iphone-17-pro",
-        "product_name": "iPhone 17 Pro",
-        "image_url": "/images/yousee/iphone_17_pro.webp",
+        "product_name": "Apple iPhone 17 Pro",
+        "image_url": "/images/yousee/apple_iphone_17_pro.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -81,12 +81,12 @@
         "discount_on_product": 1800,
         "min_cost_6_months": 9993,
         "subscription_price_monthly": 299,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/samsung/galaxy-s25plus",
-        "product_name": "Galaxy S25+",
-        "image_url": "/images/yousee/galaxy_s25_.webp",
+        "product_name": "Samsung Galaxy S25+",
+        "image_url": "/images/yousee/samsung_galaxy_s25_.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -95,12 +95,12 @@
         "discount_on_product": 4400,
         "min_cost_6_months": 6393,
         "subscription_price_monthly": 299,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/samsung/samsung-galaxy-s24",
-        "product_name": "Galaxy S24",
-        "image_url": "/images/yousee/galaxy_s24.webp",
+        "product_name": "Samsung Galaxy S24",
+        "image_url": "/images/yousee/samsung_galaxy_s24.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -109,12 +109,12 @@
         "discount_on_product": 4400,
         "min_cost_6_months": 3693,
         "subscription_price_monthly": 299,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/apple/apple-iphone-16e",
-        "product_name": "iPhone 16e",
-        "image_url": "/images/yousee/iphone_16e.webp",
+        "product_name": "Apple iPhone 16e",
+        "image_url": "/images/yousee/apple_iphone_16e.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -123,12 +123,12 @@
         "discount_on_product": 2100,
         "min_cost_6_months": 4713,
         "subscription_price_monthly": 219,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/apple/apple-iphone-17",
-        "product_name": "iPhone 17",
-        "image_url": "/images/yousee/iphone_17.webp",
+        "product_name": "Apple iPhone 17",
+        "image_url": "/images/yousee/apple_iphone_17.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -137,12 +137,26 @@
         "discount_on_product": 1600,
         "min_cost_6_months": 7693,
         "subscription_price_monthly": 299,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
+    },
+    {
+        "link": "https://yousee.dk/shop/mobiltelefoner/samsung/samsung-galaxy-a56",
+        "product_name": "Samsung Galaxy A56",
+        "image_url": "/images/yousee/samsung_galaxy_a56.webp",
+        "provider": "YouSee",
+        "type": "phone",
+        "data_gb": "",
+        "price_without_subscription": 3699,
+        "price_with_subscription": 599,
+        "discount_on_product": 3100,
+        "min_cost_6_months": 2393,
+        "subscription_price_monthly": 299,
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/samsung/galaxy-z-fold7",
-        "product_name": "Galaxy Z Fold7",
-        "image_url": "/images/yousee/galaxy_z_fold7.webp",
+        "product_name": "Samsung Galaxy Z Fold7",
+        "image_url": "/images/yousee/samsung_galaxy_z_fold7.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -151,12 +165,12 @@
         "discount_on_product": 7400,
         "min_cost_6_months": 10893,
         "subscription_price_monthly": 299,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/google/pixel-10a",
-        "product_name": "Pixel 10a",
-        "image_url": "/images/yousee/pixel_10a.webp",
+        "product_name": "Google Pixel 10a",
+        "image_url": "/images/yousee/google_pixel_10a.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -165,12 +179,12 @@
         "discount_on_product": 1800,
         "min_cost_6_months": 3813,
         "subscription_price_monthly": 219,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/google/pixel-10-pro",
-        "product_name": "Pixel 10 Pro",
-        "image_url": "/images/yousee/pixel_10_pro.webp",
+        "product_name": "Google Pixel 10 Pro",
+        "image_url": "/images/yousee/google_pixel_10_pro.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -179,12 +193,12 @@
         "discount_on_product": 3300,
         "min_cost_6_months": 7093,
         "subscription_price_monthly": 299,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/google/pixel-10",
-        "product_name": "Pixel 10",
-        "image_url": "",
+        "product_name": "Google Pixel 10",
+        "image_url": "/images/yousee/google_pixel_10.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -193,12 +207,12 @@
         "discount_on_product": 2000,
         "min_cost_6_months": 6313,
         "subscription_price_monthly": 219,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/apple/apple-iphone-17-pro-max",
-        "product_name": "iPhone 17 Pro Max",
-        "image_url": "/images/yousee/iphone_17_pro_max.webp",
+        "product_name": "Apple iPhone 17 Pro Max",
+        "image_url": "/images/yousee/apple_iphone_17_pro_max.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -207,12 +221,12 @@
         "discount_on_product": 1900,
         "min_cost_6_months": 10893,
         "subscription_price_monthly": 299,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/apple/apple-iphone-15",
-        "product_name": "iPhone 15",
-        "image_url": "/images/yousee/iphone_15.webp",
+        "product_name": "Apple iPhone 15",
+        "image_url": "/images/yousee/apple_iphone_15.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -221,12 +235,12 @@
         "discount_on_product": 3100,
         "min_cost_6_months": 5193,
         "subscription_price_monthly": 299,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/google/pixel-9a",
-        "product_name": "Pixel 9a",
-        "image_url": "/images/yousee/pixel_9a.webp",
+        "product_name": "Google Pixel 9a",
+        "image_url": "/images/yousee/google_pixel_9a.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -235,12 +249,12 @@
         "discount_on_product": 1900,
         "min_cost_6_months": 4193,
         "subscription_price_monthly": 299,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/google/pixel-10-pro-xl",
-        "product_name": "Pixel 10 Pro XL",
-        "image_url": "/images/yousee/pixel_10_pro_xl.webp",
+        "product_name": "Google Pixel 10 Pro XL",
+        "image_url": "/images/yousee/google_pixel_10_pro_xl.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -249,12 +263,12 @@
         "discount_on_product": 2700,
         "min_cost_6_months": 8813,
         "subscription_price_monthly": 219,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/apple/apple-iphone-16",
-        "product_name": "iPhone 16",
-        "image_url": "/images/yousee/iphone_16.webp",
+        "product_name": "Apple iPhone 16",
+        "image_url": "/images/yousee/apple_iphone_16.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -263,12 +277,12 @@
         "discount_on_product": 2000,
         "min_cost_6_months": 6293,
         "subscription_price_monthly": 299,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/samsung/samsung-galaxy-a26",
-        "product_name": "Galaxy A26",
-        "image_url": "/images/yousee/galaxy_a26.webp",
+        "product_name": "Samsung Galaxy A26",
+        "image_url": "/images/yousee/samsung_galaxy_a26.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -277,12 +291,12 @@
         "discount_on_product": 600,
         "min_cost_6_months": 3013,
         "subscription_price_monthly": 219,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/xiaomi/14t-pro-titan-black",
-        "product_name": "14T Pro Titan - Sort",
-        "image_url": "/images/yousee/14t_pro_titan___sort.webp",
+        "product_name": "Xiaomi 14T Pro Titan - Sort",
+        "image_url": "/images/yousee/xiaomi_14t_pro_titan___sort.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -291,12 +305,12 @@
         "discount_on_product": 4500,
         "min_cost_6_months": 3793,
         "subscription_price_monthly": 299,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/apple/apple-iphone-15-plus",
-        "product_name": "iPhone 15 Plus",
-        "image_url": "/images/yousee/iphone_15_plus.webp",
+        "product_name": "Apple iPhone 15 Plus",
+        "image_url": "/images/yousee/apple_iphone_15_plus.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -305,12 +319,12 @@
         "discount_on_product": 3400,
         "min_cost_6_months": 6893,
         "subscription_price_monthly": 299,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/google/pixel-8a",
-        "product_name": "Pixel 8a",
-        "image_url": "/images/yousee/pixel_8a.webp",
+        "product_name": "Google Pixel 8a",
+        "image_url": "/images/yousee/google_pixel_8a.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -319,12 +333,12 @@
         "discount_on_product": 2700,
         "min_cost_6_months": 3893,
         "subscription_price_monthly": 299,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/samsung/galaxy-s26plus",
-        "product_name": "Galaxy S26+",
-        "image_url": "/images/yousee/galaxy_s26_.webp",
+        "product_name": "Samsung Galaxy S26+",
+        "image_url": "/images/yousee/samsung_galaxy_s26_.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -333,12 +347,12 @@
         "discount_on_product": 4900,
         "min_cost_6_months": 8393,
         "subscription_price_monthly": 299,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/samsung/galaxy-s26-ultra",
-        "product_name": "Galaxy S26 Ultra",
-        "image_url": "/images/yousee/galaxy_s26_ultra.webp",
+        "product_name": "Samsung Galaxy S26 Ultra",
+        "image_url": "/images/yousee/samsung_galaxy_s26_ultra.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -347,12 +361,12 @@
         "discount_on_product": 1000,
         "min_cost_6_months": 11813,
         "subscription_price_monthly": 219,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/samsung/samsung-galaxy-a37",
-        "product_name": "Galaxy A37",
-        "image_url": "/images/yousee/galaxy_a37.webp",
+        "product_name": "Samsung Galaxy A37",
+        "image_url": "/images/yousee/samsung_galaxy_a37.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -361,12 +375,12 @@
         "discount_on_product": 1500,
         "min_cost_6_months": 3113,
         "subscription_price_monthly": 219,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/samsung/samsung-galaxy-a57",
-        "product_name": "Galaxy A57",
-        "image_url": "/images/yousee/galaxy_a57.webp",
+        "product_name": "Samsung Galaxy A57",
+        "image_url": "/images/yousee/samsung_galaxy_a57.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -375,26 +389,12 @@
         "discount_on_product": 1800,
         "min_cost_6_months": 3713,
         "subscription_price_monthly": 219,
-        "saved_at": "15-04-2026-07:28"
-    },
-    {
-        "link": "https://yousee.dk/shop/mobiltelefoner/samsung/samsung-galaxy-a56",
-        "product_name": "Galaxy A56",
-        "image_url": "/images/yousee/galaxy_a56.webp",
-        "provider": "YouSee",
-        "type": "phone",
-        "data_gb": "",
-        "price_without_subscription": 3699,
-        "price_with_subscription": 2999,
-        "discount_on_product": 700,
-        "min_cost_6_months": 4313,
-        "subscription_price_monthly": 219,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/samsung/galaxy-s25-fe",
-        "product_name": "Galaxy S25 FE",
-        "image_url": "/images/yousee/galaxy_s25_fe.webp",
+        "product_name": "Samsung Galaxy S25 FE",
+        "image_url": "/images/yousee/samsung_galaxy_s25_fe.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -403,12 +403,12 @@
         "discount_on_product": 500,
         "min_cost_6_months": 6813,
         "subscription_price_monthly": 219,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/mobiltelefoner/samsung/galaxy-z-flip7",
-        "product_name": "Galaxy Z Flip7",
-        "image_url": "/images/yousee/galaxy_z_flip7.webp",
+        "product_name": "Samsung Galaxy Z Flip7",
+        "image_url": "/images/yousee/samsung_galaxy_z_flip7.webp",
         "provider": "YouSee",
         "type": "phone",
         "data_gb": "",
@@ -417,12 +417,12 @@
         "discount_on_product": 600,
         "min_cost_6_months": 10213,
         "subscription_price_monthly": 219,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/tablets/samsung/galaxy-tab-a9plus",
-        "product_name": "Galaxy Tab A9+ 5G",
-        "image_url": "/images/yousee/galaxy_tab_a9__5g.webp",
+        "product_name": "Samsung Galaxy Tab A9+ 5G",
+        "image_url": "/images/yousee/samsung_galaxy_tab_a9__5g.webp",
         "provider": "YouSee",
         "type": "tablet",
         "data_gb": "",
@@ -431,26 +431,12 @@
         "discount_on_product": 2400,
         "min_cost_6_months": 1173,
         "subscription_price_monthly": 179,
-        "saved_at": "15-04-2026-07:28"
-    },
-    {
-        "link": "https://yousee.dk/shop/tablets/samsung/galaxy-tab-s11-ultra",
-        "product_name": "Galaxy Tab S11 Ultra",
-        "image_url": "/images/yousee/galaxy_tab_s11_ultra.webp",
-        "provider": "YouSee",
-        "type": "tablet",
-        "data_gb": "",
-        "price_without_subscription": 12999,
-        "price_with_subscription": 5699,
-        "discount_on_product": 7300,
-        "min_cost_6_months": 7013,
-        "subscription_price_monthly": 219,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/tablets/samsung/galaxy-tab-s10-lite",
-        "product_name": "Galaxy Tab S10 Lite",
-        "image_url": "/images/yousee/galaxy_tab_s10_lite.webp",
+        "product_name": "Samsung Galaxy Tab S10 Lite",
+        "image_url": "/images/yousee/samsung_galaxy_tab_s10_lite.webp",
         "provider": "YouSee",
         "type": "tablet",
         "data_gb": "",
@@ -459,12 +445,12 @@
         "discount_on_product": 2900,
         "min_cost_6_months": 2013,
         "subscription_price_monthly": 219,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/tablets/apple/ipad-11th-11",
-        "product_name": "iPad 11\" (11. gen.) Wi-Fi + 5G",
-        "image_url": "/images/yousee/ipad_11___11__gen___wi_fi___5g.webp",
+        "product_name": "Apple iPad 11\" (11. gen.) Wi-Fi + 5G",
+        "image_url": "/images/yousee/apple_ipad_11___11__gen___wi_fi___5g.webp",
         "provider": "YouSee",
         "type": "tablet",
         "data_gb": "",
@@ -473,12 +459,12 @@
         "discount_on_product": 1500,
         "min_cost_6_months": 4613,
         "subscription_price_monthly": 219,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/tablets/apple/ipad-11th-11-wifi",
-        "product_name": "iPad 11\" (11. gen.) Wi-Fi",
-        "image_url": "/images/yousee/ipad_11___11__gen___wi_fi.webp",
+        "product_name": "Apple iPad 11\" (11. gen.) Wi-Fi",
+        "image_url": "/images/yousee/apple_ipad_11___11__gen___wi_fi.webp",
         "provider": "YouSee",
         "type": "tablet",
         "data_gb": "",
@@ -487,12 +473,12 @@
         "discount_on_product": 1300,
         "min_cost_6_months": 3313,
         "subscription_price_monthly": 219,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/tablets/samsung/galaxy-tab-s11",
-        "product_name": "Galaxy Tab S11",
-        "image_url": "/images/yousee/galaxy_tab_s11.webp",
+        "product_name": "Samsung Galaxy Tab S11",
+        "image_url": "/images/yousee/samsung_galaxy_tab_s11.webp",
         "provider": "YouSee",
         "type": "tablet",
         "data_gb": "",
@@ -501,26 +487,26 @@
         "discount_on_product": 5800,
         "min_cost_6_months": 4513,
         "subscription_price_monthly": 219,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
-        "link": "https://yousee.dk/shop/tablets/apple/ipad-9th-10-2-wi-fi-cellular",
-        "product_name": "iPad 10.2\" (9. gen.) WiFi + 4G",
-        "image_url": "/images/yousee/ipad_10_2___9__gen___wifi___4g.webp",
+        "link": "https://yousee.dk/shop/tablets/samsung/galaxy-tab-s11-ultra",
+        "product_name": "Samsung Galaxy Tab S11 Ultra",
+        "image_url": "/images/yousee/samsung_galaxy_tab_s11_ultra.webp",
         "provider": "YouSee",
         "type": "tablet",
         "data_gb": "",
-        "price_without_subscription": 6099,
-        "price_with_subscription": 1499,
-        "discount_on_product": 4600,
-        "min_cost_6_months": 3293,
-        "subscription_price_monthly": 299,
-        "saved_at": "15-04-2026-07:28"
+        "price_without_subscription": 12999,
+        "price_with_subscription": 5699,
+        "discount_on_product": 7300,
+        "min_cost_6_months": 7013,
+        "subscription_price_monthly": 219,
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/watches/samsung/samsung-watch8",
-        "product_name": "Galaxy Watch8",
-        "image_url": "/images/yousee/galaxy_watch8.webp",
+        "product_name": "Samsung Galaxy Watch8",
+        "image_url": "/images/yousee/samsung_galaxy_watch8.webp",
         "provider": "YouSee",
         "type": "watch",
         "data_gb": "",
@@ -529,12 +515,12 @@
         "discount_on_product": 2700,
         "min_cost_6_months": 1913,
         "subscription_price_monthly": 219,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/watches/samsung/galaxy-watch-ultra",
-        "product_name": "Galaxy Watch Ultra",
-        "image_url": "/images/yousee/galaxy_watch_ultra.webp",
+        "product_name": "Samsung Galaxy Watch Ultra",
+        "image_url": "/images/yousee/samsung_galaxy_watch_ultra.webp",
         "provider": "YouSee",
         "type": "watch",
         "data_gb": "",
@@ -543,12 +529,12 @@
         "discount_on_product": 3300,
         "min_cost_6_months": 3313,
         "subscription_price_monthly": 219,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/watches/apple/apple-watch-se-3",
-        "product_name": "Watch SE 3",
-        "image_url": "/images/yousee/watch_se_3.webp",
+        "product_name": "Apple Watch SE 3",
+        "image_url": "/images/yousee/apple_watch_se_3.webp",
         "provider": "YouSee",
         "type": "watch",
         "data_gb": "",
@@ -557,12 +543,12 @@
         "discount_on_product": 900,
         "min_cost_6_months": 2913,
         "subscription_price_monthly": 219,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/watches/apple/apple-watch-s11",
-        "product_name": "Watch Series 11",
-        "image_url": "/images/yousee/watch_series_11.webp",
+        "product_name": "Apple Watch Series 11",
+        "image_url": "/images/yousee/apple_watch_series_11.webp",
         "provider": "YouSee",
         "type": "watch",
         "data_gb": "",
@@ -571,12 +557,12 @@
         "discount_on_product": 1100,
         "min_cost_6_months": 4613,
         "subscription_price_monthly": 219,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/watches/apple/apple-watch-ultra-3",
-        "product_name": "Watch Ultra 3",
-        "image_url": "/images/yousee/watch_ultra_3.webp",
+        "product_name": "Apple Watch Ultra 3",
+        "image_url": "/images/yousee/apple_watch_ultra_3.webp",
         "provider": "YouSee",
         "type": "watch",
         "data_gb": "",
@@ -585,12 +571,12 @@
         "discount_on_product": 890,
         "min_cost_6_months": 6913,
         "subscription_price_monthly": 219,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/watches/apple/watch-series-10",
-        "product_name": "Watch Series 10",
-        "image_url": "/images/yousee/watch_series_10.webp",
+        "product_name": "Apple Watch Series 10",
+        "image_url": "/images/yousee/apple_watch_series_10.webp",
         "provider": "YouSee",
         "type": "watch",
         "data_gb": "",
@@ -599,12 +585,12 @@
         "discount_on_product": 2800,
         "min_cost_6_months": 3493,
         "subscription_price_monthly": 299,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/watches/apple/apple-watch-se-2nd-gen",
-        "product_name": "Watch SE 2nd Gen.",
-        "image_url": "/images/yousee/watch_se_2nd_gen_.webp",
+        "product_name": "Apple Watch SE 2nd Gen.",
+        "image_url": "/images/yousee/apple_watch_se_2nd_gen_.webp",
         "provider": "YouSee",
         "type": "watch",
         "data_gb": "",
@@ -613,12 +599,12 @@
         "discount_on_product": 2550,
         "min_cost_6_months": 1993,
         "subscription_price_monthly": 299,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/watches/tcl/tcl-kids-watch",
-        "product_name": "Kids Watch",
-        "image_url": "/images/yousee/kids_watch.webp",
+        "product_name": "TCL Kids Watch",
+        "image_url": "/images/yousee/tcl_kids_watch.webp",
         "provider": "YouSee",
         "type": "watch",
         "data_gb": "",
@@ -627,12 +613,12 @@
         "discount_on_product": 500,
         "min_cost_6_months": null,
         "subscription_price_monthly": null,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     },
     {
         "link": "https://yousee.dk/shop/watches/samsung/samsung-galaxy-watch5-pro-45mm-4g-titanium",
-        "product_name": "Galaxy Watch5 Pro",
-        "image_url": "/images/yousee/galaxy_watch5_pro.webp",
+        "product_name": "Samsung Galaxy Watch5 Pro",
+        "image_url": "/images/yousee/samsung_galaxy_watch5_pro.webp",
         "provider": "YouSee",
         "type": "watch",
         "data_gb": "",
@@ -641,6 +627,6 @@
         "discount_on_product": 3900,
         "min_cost_6_months": 1893,
         "subscription_price_monthly": 299,
-        "saved_at": "15-04-2026-07:28"
+        "saved_at": "16-04-2026-00:15"
     }
 ]
