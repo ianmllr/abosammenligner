@@ -16,14 +16,15 @@ BASE_URL = "https://yousee.dk"
 # using the site filters to isolate phones with specific storage options, and then appending the storage label to the
 # product name during extraction
 PHONE_STORAGE_URLS: dict[str, str] = {
-    f"{BASE_URL}/shop/mobiltelefoner?sort=popularity-asc&installments=none&memory=128": "128GB",
-    f"{BASE_URL}/shop/mobiltelefoner?sort=popularity-asc&installments=none&memory=256": "256GB",
-    f"{BASE_URL}/shop/mobiltelefoner?sort=popularity-asc&installments=none&memory=512": "512GB",
-    f"{BASE_URL}/shop/mobiltelefoner?sort=popularity-asc&installments=none&memory=1000": "1TB",
+    # f"{BASE_URL}/shop/mobiltelefoner?sort=popularity-asc&installments=none&memory=128": "128GB",
+    # f"{BASE_URL}/shop/mobiltelefoner?sort=popularity-asc&installments=none&memory=256": "256GB",
+    # f"{BASE_URL}/shop/mobiltelefoner?sort=popularity-asc&installments=none&memory=512": "512GB",
+    # f"{BASE_URL}/shop/mobiltelefoner?sort=popularity-asc&installments=none&memory=1000": "1TB",
 }
 
 # Other category listing pages mapped to product type
 CATEGORY_URLS: dict[str, str] = {
+    f"{BASE_URL}/shop/mobiltelefoner": "phone",
     f"{BASE_URL}/shop/tablets": "tablet",
     f"{BASE_URL}/shop/watches": "watch",
 }
