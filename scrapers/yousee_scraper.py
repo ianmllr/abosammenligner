@@ -2,7 +2,7 @@ import re
 import dataclasses
 from pathlib import Path
 from playwright.sync_api import ViewportSize, sync_playwright
-from scraper_utils import download_image_cached, now_timestamp, write_json, log as print
+from scraper_utils import download_image_cached, now_timestamp, write_json, log
 
 BASE_DIR  = Path(__file__).parent.parent
 IMAGE_DIR = BASE_DIR / "public" / "images" / "yousee"
@@ -117,7 +117,7 @@ def extract_card(card, product_type: str, saved_at: str) -> "Offer | None":
     if min_cost_6_months is not None and price_with_subscription is not None:
         subscription_price_monthly = round((min_cost_6_months - price_with_subscription) / 6)
 
-    print(
+    log(
         f"  {product_name}: "
         f"sub={price_with_subscription}, "
         f"rabat={discount_on_product}, "
@@ -163,20 +163,20 @@ def scrape_yousee():
         page = context.new_page()
 
         # Accept cookies once on the homepage so the banner doesn't reappear
-        print("Accepting cookies on homepage...")
+        log("Accepting cookies on homepage...")
         page.goto(BASE_URL, wait_until="networkidle", timeout=30000)
         page.wait_for_timeout(2000)
         accept_cookies(page)
 
         # scrape each category listing page
         for cat_url, product_type in CATEGORY_URLS.items():
-            print(f"\nScraping category: {cat_url} (type={product_type})")
+            log(f"\nScraping category: {cat_url} (type={product_type})")
 
             try:
                 page.goto(cat_url, wait_until="networkidle", timeout=30000)
                 page.wait_for_timeout(2500)
             except Exception as e:
-                print(f"  Could not load {cat_url}: {e}")
+                log(f"  Could not load {cat_url}: {e}")
                 continue
 
             # Dismiss cookie banner again in case it reappeared
@@ -190,7 +190,7 @@ def scrape_yousee():
 
             # All product cards carry the taProductCard marker class
             cards = page.query_selector_all('div[class*="taProductCard"]')
-            print(f"  Found {len(cards)} product cards")
+            log(f"  Found {len(cards)} product cards")
 
             for card in cards:
                 offer = extract_card(card, product_type, saved_at)
@@ -205,7 +205,7 @@ def scrape_yousee():
     output_path = DATA_DIR / "yousee_offers.json"
     write_json(output_path, [dataclasses.asdict(o) for o in all_offers])
 
-    print(f"\nDone. Saved {len(all_offers)} offers to '{output_path}'")
+    log(f"\nDone. Saved {len(all_offers)} offers to '{output_path}'")
 
 
 if __name__ == "__main__":

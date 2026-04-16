@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 from typing import TYPE_CHECKING
 from playwright.sync_api import sync_playwright
-from scraper_utils import download_image_cached, now_timestamp, write_json, log as print, offer_summary
+from scraper_utils import download_image_cached, now_timestamp, write_json, log, offer_summary
 
 if TYPE_CHECKING:
     from playwright._impl._api_structures import SetCookieParam
@@ -24,7 +24,6 @@ def download_image(image_url, product_name):
         "/images/cbb",
         base_url="https://www.cbb.dk",
     )
-
 
 def parse_price(text):
     # extract integer price from a string like '1.064 kr.' or '39 kr./md.
@@ -127,7 +126,7 @@ def get_min_cost_from_page(page, url):
             return kontant_price + 6 * monthly_price, monthly_price, None
 
     except Exception as e:
-        print(f"  Error scraping {url}: {e}")
+        log(f"  Error scraping {url}: {e}")
 
     return None, None, None
 
@@ -189,17 +188,17 @@ def scrape_cbb():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
     }
 
-    print("Fetching product list from CBB API...")
+    log("Fetching product list from CBB API...")
     try:
         response = requests.get(api_url, headers=headers)
         response.raise_for_status()
         raw_data = response.json()
     except requests.RequestException as e:
-        print(f"Couldn't fetch data from CBB API: {e}")
+        log(f"Couldn't fetch data from CBB API: {e}")
         return
 
     phones_list = raw_data.get("content", {}).get("phones", [])
-    print(f"Found {len(phones_list)} products in JSON")
+    log(f"Found {len(phones_list)} products in JSON")
 
     is_ci = os.environ.get('CI') == 'true'
 
@@ -230,14 +229,14 @@ def scrape_cbb():
                     md=entry["subscription_price_monthly"],
                 )
             else:
-                print(f"  Skipping used product: {product_name}")
+                log(f"  Skipping used product: {product_name}")
 
         browser.close()
 
     # save output
     write_json(OUTPUT_PATH, cleaned_results)
 
-    print(f"\nScraping complete. Saved {len(cleaned_results)} offers to 'cbb_offers.json'")
+    log(f"\nScraping complete. Saved {len(cleaned_results)} offers to 'cbb_offers.json'")
 
 
 if __name__ == "__main__":

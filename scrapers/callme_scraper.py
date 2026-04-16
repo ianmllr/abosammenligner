@@ -3,7 +3,7 @@ import os
 from pathlib import Path
 from typing import TYPE_CHECKING
 from playwright.sync_api import sync_playwright
-from scraper_utils import download_image_cached, now_timestamp, write_json, log as print, offer_summary
+from scraper_utils import download_image_cached, now_timestamp, write_json, log, offer_summary
 
 if TYPE_CHECKING:
     from playwright._impl._api_structures import SetCookieParam
@@ -225,7 +225,7 @@ def scrape_callme():
         page = context.new_page()
 
         for cat_url, (product_type, allowed_categories, use_dynamic_type) in CATEGORY_URLS.items():
-            print(f"\nScraping: {cat_url} (type={product_type})")
+            log(f"\nScraping: {cat_url} (type={product_type})")
 
             # collect all hits from every catalog/search API call fired by this page
             all_hits = []
@@ -244,7 +244,7 @@ def scrape_callme():
                 page.goto(cat_url, wait_until="networkidle", timeout=30000)
                 page.wait_for_timeout(2000)
             except Exception as e:
-                print(f"  [WARN] Could not load {cat_url}: {e}")
+                log(f"  [WARN] Could not load {cat_url}: {e}")
                 page.remove_listener("response", handle_response)
                 continue
 
@@ -252,7 +252,7 @@ def scrape_callme():
 
             # filter out accessories that are recommended alongside the main products
             hits = [h for h in all_hits if h.get("productCategory") in allowed_categories]
-            print(f"  {len(hits)} relevant hits (out of {len(all_hits)} total)")
+            log(f"  {len(hits)} relevant hits (out of {len(all_hits)} total)")
 
             for hit in hits:
                 entry = build_entry(hit, product_type, date_time, use_api_category=use_dynamic_type)
@@ -275,7 +275,7 @@ def scrape_callme():
 
     write_json(CALLME_OUTPUT_FILE, all_entries)
 
-    print(f"\nDone. Saved {len(all_entries)} offers to '{CALLME_OUTPUT_FILE}'")
+    log(f"\nDone. Saved {len(all_entries)} offers to '{CALLME_OUTPUT_FILE}'")
 
 
 if __name__ == "__main__":

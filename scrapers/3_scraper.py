@@ -3,7 +3,7 @@ import dataclasses
 import os
 from pathlib import Path
 from playwright.sync_api import ViewportSize, sync_playwright
-from scraper_utils import download_image_cached, now_timestamp, write_json, log as print, offer_summary
+from scraper_utils import download_image_cached, now_timestamp, write_json, log, offer_summary
 
 
 BASE_DIR = Path(__file__).parent.parent
@@ -132,13 +132,13 @@ def scrape_product_page(page, url: str, saved_at: str, product_type: str = "phon
         page.goto(url, wait_until="networkidle", timeout=30000)
         page.wait_for_timeout(1500)
     except Exception as e:
-        print(f"  [WARN] Could not load {url}: {e}")
+        log(f"  [WARN] Could not load {url}: {e}")
         return None
 
     name_el = page.query_selector("h1")
     product_name = name_el.inner_text().strip() if name_el else ""
     if not product_name:
-        print(f"  [WARN] No product name found at {url}")
+        log(f"  [WARN] No product name found at {url}")
         return None
 
     row_text = get_storrelse_row_text(page)
@@ -187,12 +187,12 @@ def collect_product_links(page) -> list[tuple[str, str]]:
     product_links: list[tuple[str, str]] = []
 
     for cat_url, product_type in CATEGORY_URLS.items():
-        print(f"Scanning category: {cat_url}")
+        log(f"Scanning category: {cat_url}")
         try:
             page.goto(cat_url, wait_until="networkidle", timeout=30000)
             page.wait_for_timeout(2000)
         except Exception as e:
-            print(f"  [WARN] Could not load {cat_url}: {e}")
+            log(f"  [WARN] Could not load {cat_url}: {e}")
             continue
 
         page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
@@ -232,10 +232,10 @@ def scrape_3():
         page = context.new_page()
 
         product_links = collect_product_links(page)
-        print(f"\nFound {len(product_links)} unique product pages\n")
+        log(f"\nFound {len(product_links)} unique product pages\n")
 
         for url, product_type in product_links:
-            print(f"Scraping: {url}")
+            log(f"Scraping: {url}")
             offer = scrape_product_page(page, url, saved_at, product_type)
             if offer and offer.product_name not in seen_names and "brugt" not in offer.product_name.lower():
                 seen_names.add(offer.product_name)
@@ -244,7 +244,7 @@ def scrape_3():
     output_path = DATA_DIR / "3_offers.json"
     write_json(output_path, [dataclasses.asdict(o) for o in all_offers])
 
-    print(f"\nDone. Saved {len(all_offers)} offers to '{output_path}'")
+    log(f"\nDone. Saved {len(all_offers)} offers to '{output_path}'")
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 import re
 from pathlib import Path
 from playwright.sync_api import ViewportSize, sync_playwright
-from scraper_utils import download_image_cached, now_timestamp, write_json, log as print
+from scraper_utils import download_image_cached, now_timestamp, write_json, log
 
 BASE_DIR  = Path(__file__).parent.parent
 IMAGE_DIR = BASE_DIR / "public" / "images" / "norlys"
@@ -53,7 +53,7 @@ def get_product_links_from_listing(page, cat_url: str) -> list[str]:
         page.goto(cat_url, wait_until="networkidle", timeout=30000)
         page.wait_for_timeout(2500)
     except Exception as e:
-        print(f"  Could not load {cat_url}: {e}")
+        log(f"  Could not load {cat_url}: {e}")
         return []
 
     links: list[str] = []
@@ -68,7 +68,7 @@ def get_product_links_from_listing(page, cat_url: str) -> list[str]:
                 seen.add(slug)
                 links.append(href)
 
-    print(f"  Found {len(links)} unique products on {cat_url}")
+    log(f"  Found {len(links)} unique products on {cat_url}")
     return links
 
 
@@ -111,12 +111,12 @@ def scrape_product(page, href: str, product_type: str, saved_at: str) -> dict | 
         page.goto(product_url, wait_until="networkidle", timeout=30000)
         page.wait_for_timeout(2000)
     except Exception as e:
-        print(f"  Could not load {product_url}: {e}")
+        log(f"  Could not load {product_url}: {e}")
         page.remove_listener("response", handle_response)
         return None
 
     if not api_responses:
-        print(f"  No variant API response captured for {href}")
+        log(f"  No variant API response captured for {href}")
         page.remove_listener("response", handle_response)
         return None
 
@@ -144,10 +144,10 @@ def scrape_product(page, href: str, product_type: str, saved_at: str) -> dict | 
             best = entry
 
     if not best:
-        print(f"  No valid subscription data for {product_name}")
+        log(f"  No valid subscription data for {product_name}")
         return None
 
-    print(
+    log(
         f"  {product_name}: "
         f"kontant={best['price_without_subscription']}, "
         f"sub={best['price_with_subscription']}, "
@@ -193,18 +193,18 @@ def scrape_norlys():
         page = context.new_page()
 
         # accept cookies once on the homepage
-        print("Accepting cookies...")
+        log("Accepting cookies...")
         page.goto(SHOP_BASE, wait_until="networkidle", timeout=30000)
         page.wait_for_timeout(2000)
         try:
             page.click("button.coi-banner__accept", timeout=4000)
             page.wait_for_timeout(1200)
-            print("  Cookies accepted")
+            log("  Cookies accepted")
         except Exception:
             pass
 
         for cat_url, product_type in CATEGORY_URLS.items():
-            print(f"\nScraping category: {cat_url} (type={product_type})")
+            log(f"\nScraping category: {cat_url} (type={product_type})")
 
             product_hrefs = get_product_links_from_listing(page, cat_url)
 
@@ -224,7 +224,7 @@ def scrape_norlys():
     output_path = DATA_DIR / "norlys_offers.json"
     write_json(output_path, all_offers)
 
-    print(f"\nDone. Saved {len(all_offers)} offers to '{output_path}'")
+    log(f"\nDone. Saved {len(all_offers)} offers to '{output_path}'")
 
 
 if __name__ == "__main__":

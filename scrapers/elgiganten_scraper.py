@@ -2,7 +2,7 @@ import time
 import re
 from playwright.sync_api import ViewportSize, sync_playwright
 from pathlib import Path
-from scraper_utils import download_image_cached, now_timestamp, write_json, log as print, offer_summary
+from scraper_utils import download_image_cached, now_timestamp, write_json, log, offer_summary
 
 # setup
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -78,7 +78,7 @@ def scrape_elgiganten():
         for category in CATEGORY_URLS:
             base_url = category["base_url"]
             product_type = category["type"]
-            print(f"\nScraping category: {base_url} (type: {product_type})")
+            log(f"\nScraping category: {base_url} (type: {product_type})")
 
             for page_num in range(1, max_pages + 1):
                 if page_num == 1:
@@ -86,17 +86,17 @@ def scrape_elgiganten():
                 else:
                     url = f"{base_url}/page-{page_num}"
 
-                print(f"scanning page {page_num}: {url}")
+                log(f"scanning page {page_num}: {url}")
 
                 try:
                     browser_page.goto(url, wait_until="networkidle")
                     browser_page.wait_for_selector('a[data-testid="product-card"]', timeout=10000)
                 except Exception as e:
-                    print(f"Couldn't load page {page_num} or found no products: {e}")
+                    log(f"Couldn't load page {page_num} or found no products: {e}")
                     continue
 
                 product_cards = browser_page.query_selector_all('a[data-testid="product-card"]')
-                print(f"Found {len(product_cards)} products on page {page_num}")
+                log(f"Found {len(product_cards)} products on page {page_num}")
 
                 for card in product_cards:
                     card_html = card.inner_html()
@@ -154,7 +154,7 @@ def scrape_elgiganten():
 
     write_json(OUTPUT_PATH, cleaned_results)
 
-    print(f"\n Scanned {max_pages} pages. Saved {len(cleaned_results)} offers 'elgiganten_offers.json'")
+    log(f"\n Scanned {max_pages} pages. Saved {len(cleaned_results)} offers 'elgiganten_offers.json'")
 
 
 if __name__ == "__main__":

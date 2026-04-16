@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import re
 from pathlib import Path
 from typing import TypedDict
-from scraper_utils import download_image_cached, now_timestamp, write_json, log as print, offer_summary
+from scraper_utils import download_image_cached, now_timestamp, write_json, log, offer_summary
 
 # setup
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -70,7 +70,7 @@ def scrape_oister():
     date_time = now_timestamp()
 
     if response.status_code != 200:
-        print(f"Error! Could not fetch the page. Status code: {response.status_code}")
+        log(f"Error! Could not fetch the page. Status code: {response.status_code}")
         return
 
     soup = BeautifulSoup(response.text, 'html.parser')
@@ -158,7 +158,7 @@ def scrape_oister():
                     if last_word in GENERIC_LABELS and '-inkl-' in href:
                         better_name = product_name_from_url(href, item["product_name"])
                         if better_name and better_name != item["product_name"]:
-                            print(f"  Enriched name from: '{item['product_name']}' -> '{better_name}'")
+                            log(f"  Enriched name from: '{item['product_name']}' -> '{better_name}'")
                             item["product_name"] = better_name
 
 
@@ -184,7 +184,7 @@ def scrape_oister():
             
             if is_blocked:
                 matched_keyword = next(keyword for keyword in BLOCKED_PRODUCTS if keyword.lower() in product_name_lower)
-                print(f"  Skipping blocked product: {item['product_name']} (matched: '{matched_keyword}')")
+                log(f"  Skipping blocked product: {item['product_name']} (matched: '{matched_keyword}')")
             else:
                 scraped_data.append(item)
                 offer_summary(
@@ -198,7 +198,7 @@ def scrape_oister():
 
     write_json(OUTPUT_PATH, scraped_data)
 
-    print(f"Exported {len(scraped_data)} offers to 'data/oister/oister_offers.json'")
+    log(f"Exported {len(scraped_data)} offers to 'data/oister/oister_offers.json'")
 
 
 if __name__ == "__main__":

@@ -9,7 +9,7 @@ from pathlib import Path
 from playwright.sync_api import ViewportSize, sync_playwright
 from playwright_stealth import Stealth
 from provider_sources import PROVIDER_SOURCES
-from scraper_utils import log as print
+from scraper_utils import log
 
 # setup
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -177,14 +177,14 @@ def get_market_price(page, product_name):
         page.goto(url, wait_until="domcontentloaded", timeout=25000)
         page.wait_for_timeout(random.uniform(2000, 3500))
     except Exception:
-        print(f"Could not load page for: {product_name}")
+        log(f"Could not load page for: {product_name}")
         return None, False
 
     # each product card is an <a> with a title attribute and href starting with "/pl/"
     card_links = page.query_selector_all('a[href^="/pl/"][title]')
 
     if not card_links:
-        print(f"No product cards found")
+        log(f"No product cards found")
         return None, True
 
     # collect (title, price_text) for every card
@@ -220,7 +220,7 @@ def get_market_price(page, product_name):
             candidates.append((title, price_text))
 
     if not candidates:
-        print(f"Could not extract any prices")
+        log(f"Could not extract any prices")
         return None, True
 
     query_clean = clean_search_query(product_name)
@@ -232,14 +232,14 @@ def get_market_price(page, product_name):
     scored = [s for s in scored if s[0] > 0.0]
 
     if not scored:
-        print(f"All candidates disqualified")
+        log(f"All candidates disqualified")
         return None, True
 
     scored.sort(key=lambda x: x[0], reverse=True)
     best_score = scored[0][0]
 
     if best_score < 0.4:
-        print(f"Best score {best_score:.2f} below threshold, skipping")
+        log(f"Best score {best_score:.2f} below threshold, skipping")
         return None, True
 
     # keep candidates within 15% of the best score — wide enough for storage/colour variants to all be included
@@ -256,7 +256,7 @@ def get_market_price(page, product_name):
         top_candidates.sort(key=storage_sort_key)
         best_score, best_title, best_price_text = top_candidates[0]
 
-    print(f"Matched: '{best_title}' (score={best_score:.2f})")
+    log(f"Matched: '{best_title}' (score={best_score:.2f})")
 
     # get price as int, eg "10.899,00 kr." -> 10899
     price_clean = re.sub(r'\.(?=\d{3}(\D|$))', '', best_price_text)  # strip thousands dots
@@ -346,22 +346,22 @@ def scrape_pricerunner():
         consecutive_failures = 0
 
         for product_name in products:
-            print(f"Looking up: {product_name}")
+            log(f"Looking up: {product_name}")
             price, page_loaded = get_market_price(page, product_name)
 
             if not page_loaded:
                 consecutive_failures += 1
-                print(f"  [failure {consecutive_failures}/{failure_threshold}]")
+                log(f"  [failure {consecutive_failures}/{failure_threshold}]")
 
                 if consecutive_failures >= failure_threshold:
                     # recycle the browser context to recover from a potential block
-                    print(f"\n  !! {failure_threshold} consecutive failures — recycling browser context and pausing 10s...\n")
+                    log(f"\n  !! {failure_threshold} consecutive failures — recycling browser context and pausing 10s...\n")
                     context.close()
                     time.sleep(10)
                     context, page = make_fresh_page(browser)
                     consecutive_failures = 0
 
-                    print(f"  Retrying: {product_name}")
+                    log(f"  Retrying: {product_name}")
                     price, page_loaded = get_market_price(page, product_name)
             else:
                 consecutive_failures = 0
@@ -370,7 +370,7 @@ def scrape_pricerunner():
                 "market_price": price,
                 "looked_up_at": date_time
             }
-            print(f"  -> {price} kr.")
+            log(f"  -> {price} kr.")
 
         context.close()
         browser.close()
@@ -378,7 +378,7 @@ def scrape_pricerunner():
     with (BASE_DIR / 'data' / 'pricerunner' / 'pricerunner_prices.json').open('w', encoding='utf-8') as f:
         json.dump(results, f, ensure_ascii=False, indent=4)
 
-    print(f"\nLooked up {len(results)} products.")
+    log(f"\nLooked up {len(results)} products.")
 
 
 if __name__ == "__main__":

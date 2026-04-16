@@ -9,7 +9,7 @@ from difflib import SequenceMatcher
 from playwright.sync_api import ViewportSize, sync_playwright
 from playwright_stealth import Stealth
 from provider_sources import PROVIDER_SOURCES
-from scraper_utils import log as print
+from scraper_utils import log
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 VIEWPORT: ViewportSize = {"width": 1920, "height": 1080}
@@ -158,7 +158,7 @@ def get_market_price(page, product_name):
         page.wait_for_timeout(random.uniform(1500, 3000))
         page.wait_for_selector('[data-test="ProductGridCard"]', timeout=8000)
     except:
-        print(f"  -> Could not load results for: {product_name}")
+        log(f"  -> Could not load results for: {product_name}")
         return None, False
 
     cards = page.query_selector_all('[data-test="ProductGridCard"]')
@@ -189,14 +189,14 @@ def get_market_price(page, product_name):
     scored = [s for s in scored if s[0] > 0.0]
 
     if not scored:
-        print(f"  -> All candidates disqualified")
+        log(f"  -> All candidates disqualified")
         return None, True
 
     scored.sort(key=lambda x: x[0], reverse=True)
     best_score = scored[0][0]
 
     if best_score < 0.4:
-        print(f"  -> Best score {best_score:.2f} below threshold, skipping")
+        log(f"  -> Best score {best_score:.2f} below threshold, skipping")
         return None, True
 
     # keep candidates within 15% of the best score — wide enough for storage variants to all be included
@@ -213,7 +213,7 @@ def get_market_price(page, product_name):
         top_candidates.sort(key=storage_sort_key)
         best_score, best_title, best_price_el = top_candidates[0]
 
-    print(f"  -> Matched: '{best_title}' (score={best_score:.2f})")
+    log(f"  -> Matched: '{best_title}' (score={best_score:.2f})")
 
     # get number as int instead of danihs number (eg 4.299 -> 4299)
     raw = best_price_el.inner_text().strip()
@@ -281,21 +281,21 @@ def scrape_prisjagt():
         consecutive_failures = 0
 
         for product_name in products:
-            print(f"Looking up: {product_name}")
+            log(f"Looking up: {product_name}")
             price, page_loaded = get_market_price(page, product_name)
 
             if not page_loaded:
                 consecutive_failures += 1
-                print(f"  [failure {consecutive_failures}/{failure_threshold}]")
+                log(f"  [failure {consecutive_failures}/{failure_threshold}]")
 
                 if consecutive_failures >= failure_threshold:
-                    print(f"\n  !! {failure_threshold} consecutive failures — recycling browser context and pausing 10s...\n")
+                    log(f"\n  !! {failure_threshold} consecutive failures — recycling browser context and pausing 10s...\n")
                     context.close()
                     time.sleep(10)
                     context, page = make_fresh_page(browser)
                     consecutive_failures = 0
 
-                    print(f"  Retrying: {product_name}")
+                    log(f"  Retrying: {product_name}")
                     price, page_loaded = get_market_price(page, product_name)
             else:
                 consecutive_failures = 0
@@ -304,7 +304,7 @@ def scrape_prisjagt():
                 "market_price": price,
                 "looked_up_at": date_time
             }
-            print(f"  -> {price} kr.")
+            log(f"  -> {price} kr.")
 
         context.close()
         browser.close()
@@ -312,7 +312,7 @@ def scrape_prisjagt():
     with (BASE_DIR / 'data' / 'prisjagt' / 'prisjagt_prices.json').open('w', encoding='utf-8') as f:
         json.dump(results, f, ensure_ascii=False, indent=4)
 
-    print(f"\nLooked up {len(results)} products.")
+    log(f"\nLooked up {len(results)} products.")
 
 
 if __name__ == "__main__":

@@ -2,7 +2,7 @@ import re
 from bs4 import BeautifulSoup
 from pathlib import Path
 from playwright.sync_api import ViewportSize, sync_playwright
-from scraper_utils import download_image_cached, now_timestamp, write_json, log as print
+from scraper_utils import download_image_cached, now_timestamp, write_json, log
 
 # setup
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -125,14 +125,14 @@ def scrape_telmore():
                 item["subscription_price_monthly"] = scrape_detail_page(page, item["link"])
 
             if "brugt" in item["product_name"].lower():
-                print(f"  Skipping used product: {item['product_name']}")
+                log(f"  Skipping used product: {item['product_name']}")
                 continue
 
             def fmt(value):
                 return value if value not in (None, "") else "-"
 
             scraped_data.append(item)
-            print(
+            log(
                 f"  {item['product_name']}: "
                 f"sub={fmt(item['price_with_subscription'])}, "
                 f"rabat={fmt(item['discount_on_product'])}, "
@@ -146,7 +146,7 @@ def scrape_telmore():
     # save results to JSON file
     write_json(OUTPUT_PATH, scraped_data)
 
-    print(f"Exported {len(scraped_data)} offers")
+    log(f"Exported {len(scraped_data)} offers")
 
 
 if __name__ == "__main__":

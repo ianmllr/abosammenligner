@@ -2,7 +2,7 @@ import re
 from bs4 import BeautifulSoup
 from pathlib import Path
 from playwright.sync_api import ViewportSize, sync_playwright
-from scraper_utils import download_image_cached, now_timestamp, write_json, log as print, offer_summary
+from scraper_utils import download_image_cached, now_timestamp, write_json, log, offer_summary
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 BASE_URL = "https://www.telmore.dk"
@@ -95,14 +95,14 @@ def scrape_telmore_tilgift():
         page = browser.new_page(viewport=VIEWPORT)
 
         # scrape listing page
-        print(f"Loading listing: {listing_url}")
+        log(f"Loading listing: {listing_url}")
         page.goto(listing_url, timeout=60000, wait_until="domcontentloaded")
         page.wait_for_timeout(3000)
         listing_html = page.content()
         soup = BeautifulSoup(listing_html, 'html.parser')
 
         cards = soup.find_all('div', class_='tlm-product-list-card')
-        print(f"Found {len(cards)} tilgift offers")
+        log(f"Found {len(cards)} tilgift offers")
 
         scraped_data = []
 
@@ -164,7 +164,7 @@ def scrape_telmore_tilgift():
             }
 
             if "brugt" in full_name.lower():
-                print(f"  Skipping used product: {full_name}")
+                log(f"  Skipping used product: {full_name}")
                 continue
 
             scraped_data.append(item)
@@ -181,7 +181,7 @@ def scrape_telmore_tilgift():
 
     write_json(OUTPUT_PATH, scraped_data)
 
-    print(f"\nExported {len(scraped_data)} tilgift offers to {OUTPUT_PATH}")
+    log(f"\nExported {len(scraped_data)} tilgift offers to {OUTPUT_PATH}")
 
 
 if __name__ == "__main__":
