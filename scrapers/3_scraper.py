@@ -151,11 +151,11 @@ def scrape_product_page(page, url: str, saved_at: str, product_type: str = "phon
     if not min_cost_6_months and price_with_subscription and subscription_price_monthly:
         min_cost_6_months = price_with_subscription + (6 * subscription_price_monthly)
 
-    price_without_subscription = (
-        price_with_subscription + discount_on_product
-        if price_with_subscription is not None and discount_on_product is not None
-        else price_with_subscription
-    )
+    price_without_subscription = None
+    if price_with_subscription is not None and discount_on_product is not None:
+        price_without_subscription = (
+            price_with_subscription + discount_on_product
+        )
 
     image_url = find_product_image(page)
     local_image_path = download_image(image_url, full_name)
