@@ -1,7 +1,7 @@
 import re
 from pathlib import Path
 from playwright.sync_api import ViewportSize, sync_playwright
-from scraper_utils import download_image_cached, now_timestamp, write_json, log
+from scraper_utils import download_image_cached, now_timestamp, write_json, log, apply_name_substitutions
 
 BASE_DIR  = Path(__file__).parent.parent
 IMAGE_DIR = BASE_DIR / "public" / "images" / "norlys"
@@ -142,6 +142,7 @@ def scrape_product(page, href: str, product_type: str, saved_at: str) -> dict | 
     display_name = initial_data.get("displayName", "")
     raw_product_name = display_name or href.rstrip("/").split("/")[-1].replace("-", " ").title()
     product_name = normalize_product_name(raw_product_name)
+    product_name = apply_name_substitutions(product_name)
 
     image_urls = initial_data.get("imageUrls", [])
     raw_image  = image_urls[0] if image_urls else ""

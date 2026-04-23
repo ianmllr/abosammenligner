@@ -9,7 +9,7 @@ from pathlib import Path
 from playwright.sync_api import ViewportSize, sync_playwright
 from playwright_stealth import Stealth
 from provider_sources import PROVIDER_SOURCES
-from scraper_utils import log
+from scraper_utils import log, apply_name_substitutions
 
 # setup
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -348,6 +348,7 @@ def scrape_pricerunner():
         consecutive_failures = 0
 
         for product_name in products:
+            product_name = apply_name_substitutions(product_name) # back up check for name substitutions
             log(f"Looking up: {product_name}")
             price, page_loaded = get_market_price(page, product_name)
 

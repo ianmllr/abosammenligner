@@ -1,12 +1,12 @@
 import re
 import os
 from pathlib import Path
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Any
 from playwright.sync_api import sync_playwright
-from scraper_utils import download_image_cached, now_timestamp, write_json, log, offer_summary
+from scraper_utils import download_image_cached, now_timestamp, write_json, log, offer_summary, apply_name_substitutions
 
 if TYPE_CHECKING:
-    from playwright._impl._api_structures import SetCookieParam
+    SetCookieParam = Any
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +26,7 @@ CATEGORY_URLS = {
     f"{BASE_URL}/webshop/tilbehoer/kategori/tilbehor-med-abonnement/": ("accessory", {"handset", "accessory", ""}, True),
 }
 
-CONSENT_COOKIES: list["SetCookieParam"] = [
+CONSENT_COOKIES: list[dict[str, str]] = [
     {"name": "CookieInformationConsent", "value": "true", "domain": ".callme.dk", "path": "/"},
 ]
 
@@ -173,6 +173,7 @@ def build_entry(hit, product_type, date_time, use_api_category=False):
 
     variant_name = variant.get("name", hit.get("productName", ""))
     variant_name = normalize_product_name(variant_name)
+    variant_name = apply_name_substitutions(variant_name)
 
     badge = variant.get("badgeText") or {}
     sold_out = "true" if "udsolgt" in (badge.get("item2", "")).lower() else "false"

@@ -7,6 +7,53 @@ from typing import Any
 
 import requests
 
+# manual substitutions for product names that are too inconsistent to reliably parse price data from. the keys are regex
+# patterns that are applied to the raw product name, and the values are the normalized product names that are used for
+# price extraction
+PRODUCT_NAME_SUBSTITUTIONS = {
+    # iPad Pro 11 inch
+    r"Apple iPad Pro 11\" M5 \(2025\) WiFi \+ Cellular 256GB": "iPad Pro 11 M5 Wi-Fi Cellular 256GB",
+    r"Apple iPad Pro 11\" M5 \(2025\) WiFi 256GB": "iPad Pro 11 M5 Wi-Fi 256GB",
+    r"Apple iPad Pro 11\" M4 \(2024\) WiFi \+ Cellular 256GB": "iPad Pro 11 M4 Wi-Fi Cellular 256GB",
+
+    # iPad Pro 13 inch
+    r"Apple iPad Pro 13\" M5 \(2025\) WiFi \+ Cellular 256GB": "iPad Pro 13 M5 Wi-Fi Cellular 256GB",
+    r"Apple iPad Pro 13\" M5 \(2025\) WiFi 256GB": "iPad Pro 13 M5 Wi-Fi 256GB",
+
+    # iPad (base model) 11 inch
+    r"Apple iPad 11\" A16 \(2025\) WiFi \+ Cellular 128GB": "iPad 11 A16 Wi-Fi Cellular 128GB",
+    r"Apple iPad 11\" A16 \(2025\) WiFi 128GB": "iPad 11 A16 Wi-Fi 128GB",
+
+    # iPad Air 11 inch
+    r"Apple iPad Air 11\" M4 \(2026\) WiFi \+ Cellular 128GB": "iPad Air 11 M4 Wi-Fi Cellular 128GB",
+    r"Apple iPad Air 11\" M4 \(2026\) WiFi 128GB": "iPad Air 11 M4 Wi-Fi 128GB",
+    r"Apple iPad Air 11\" M3 \(2025\) WiFi \+ Cellular 128GB": "iPad Air 11 M3 Wi-Fi Cellular 128GB",
+    r"Apple iPad Air 11\" M3 \(2025\) WiFi 128GB": "iPad Air 11 M3 Wi-Fi 128GB",
+
+    # iPad Air 13 inch
+    r"Apple iPad Air 13\" M4 \(2026\) WiFi \+ Cellular 128GB": "iPad Air 13 M4 Wi-Fi Cellular 128GB",
+    r"Apple iPad Air 13\" M4 \(2026\) WiFi 128GB": "iPad Air 13 M4 Wi-Fi 128GB",
+    r"Apple iPad Air 13\" M3 \(2025\) WiFi \+ Cellular 128GB": "iPad Air 13 M3 Wi-Fi Cellular 128GB",
+    r"Apple iPad Air 13\" M3 \(2025\) WiFi 128GB": "iPad Air 13 M3 Wi-Fi 128GB",
+    r"Apple iPad Air 13\" M2 \(2024\) WiFi \+ Cellular 128GB": "iPad Air 13 M2 Wi-Fi Cellular 128GB",
+
+    # other device substitutions
+    "Samsung Galaxy Watch8 40mm eSIM - Grafit": "Samsung Galaxy Watch8 40mm LTE",
+}
+
+# apply manual substitution
+def apply_name_substitutions(product_name):
+    import re
+    if not product_name:
+        return product_name
+
+    result = product_name
+    for pattern, replacement in PRODUCT_NAME_SUBSTITUTIONS.items():
+        result = re.sub(pattern, replacement, result, flags=re.IGNORECASE)
+
+    return result.strip()
+
+
 
 def now_timestamp() -> str:
     return datetime.datetime.now().strftime("%d-%m-%Y-%H:%M")
