@@ -41,7 +41,7 @@ def normalize(text):
 
 
 # tier words — if a candidate has one the query doesn't (or vice versa), it's a different product
-TIER_WORDS = {'ultra', 'plus', 'pro', 'max', 'mini', 'fe', 'fold', 'flip', 'lite', 'edge', 'air'}
+TIER_WORDS = {'ultra', 'cellular', 'plus', 'pro', 'max', 'mini', 'fe', 'fold', 'flip', 'lite', 'edge', 'air'}
 
 # accessory keywords — disqualify any candidate that is clearly not a device
 ACCESSORY_KEYWORDS = {
