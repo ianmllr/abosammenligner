@@ -17,7 +17,7 @@ CATEGORY_URLS: dict[str, str] = {
     f"{SHOP_BASE}/privat/webshop/tablets/":  "tablet",
     f"{SHOP_BASE}/privat/webshop/tilbehoer/kategori/tilbehoer-med-abonnement/?ProductType=WiFi%20Tablets%3BAccessories_-_Category_352948": "tablet",
 #    f"{SHOP_BASE}/privat/webshop/tilbehoer/kategori/tilbehoer-med-abonnement/?ProductType=Gaming%3BAccessories_-_Category_352948": "gaming",
-    f"{SHOP_BASE}/privat/webshop/tilbehoer/kategori/tilbehoer-med-abonnement/?ProductType=Smartwatches%3BAccessories_-_Category_352948":  "smartwatch",
+#    f"{SHOP_BASE}/privat/webshop/tilbehoer/kategori/tilbehoer-med-abonnement/?ProductType=Smartwatches%3BAccessories_-_Category_352948":  "smartwatch",
     f"{SHOP_BASE}/privat/webshop/tilbehoer/kategori/tilbehoer-med-abonnement/?ProductType=Høretelefoner%2Fheadsets%3BAccessories_-_Category_352948":  "audio",
     f"{SHOP_BASE}/privat/webshop/tilbehoer/kategori/tilbehoer-med-abonnement/?ProductType=Højtalere%3BAccessories_-_Category_352948":  "audio",
 }
