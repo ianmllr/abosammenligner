@@ -37,6 +37,12 @@ PRODUCT_NAME_SUBSTITUTIONS = {
     r"Apple iPad Air 13\" M3 \(2025\) WiFi 128GB": "iPad Air 13 M3 Wi-Fi 128GB",
     r"Apple iPad Air 13\" M2 \(2024\) WiFi \+ Cellular 128GB": "iPad Air 13 M2 Wi-Fi Cellular 128GB",
 
+    # Apple Watch Series 11
+    r"Apple Watch Series 11 GPS \+ Cellular 46mm Rose Gold Aluminium Case with Light Blush Sport Band M/L": "Apple Watch Series 11 GPS + Cellular 46mm M/L",
+    r"Apple Watch Series 11 GPS \+ Cellular 46mm Slate Titanium Case with Slate Milanese Loop M/L": "Apple Watch Series 11 GPS + Cellular 46mm M/L",
+    r"Apple Watch Series 11 GPS 46mm Jet Black Aluminium Case with Black Sport Band M/L": "Apple Watch Series 11 GPS 46mm M/L",
+    r"Apple Watch Series 11 GPS \+ Cellular 42mm Gold Titanium Case with Gold Milanese Loop": "Apple Watch Series 11 GPS + Cellular 42mm M/L",
+
     # other device substitutions
     "Samsung Galaxy Watch8 40mm eSIM - Grafit": "Samsung Galaxy Watch8 40mm LTE",
 }
