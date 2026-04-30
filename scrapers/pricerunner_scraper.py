@@ -170,6 +170,16 @@ def score_match(query, candidate):
     return SequenceMatcher(None, normalize(query), normalize(candidate)).ratio()
 
 
+def parse_price_text(price_text):
+    # convert e.g. "10.899,00 kr." -> 10899
+    if not price_text:
+        return None
+    price_clean = re.sub(r'\.(?=\d{3}(\D|$))', '', price_text)  # strip thousands dots
+    price_clean = re.sub(r',\d+', '', price_clean)                # strip decimal fraction
+    digits = "".join(re.findall(r'\d+', price_clean))
+    return int(digits) if digits else None
+
+
 def get_market_price(page, product_name):
 
     query = clean_search_query(product_name).replace(' ', '+')
@@ -248,7 +258,17 @@ def get_market_price(page, product_name):
     top_candidates = [s for s in scored if s[0] >= best_score * 0.85]
 
     if q_has_storage:
-        best_score, best_title, best_price_text = top_candidates[0]
+        # for exact storage queries, choose the cheapest among top score matches
+        priced_top = []
+        for score, title, price_text in top_candidates:
+            parsed = parse_price_text(price_text)
+            if parsed is not None:
+                priced_top.append((score, title, price_text, parsed))
+        if not priced_top:
+            log("No parseable prices among top candidates")
+            return None, True
+        priced_top.sort(key=lambda x: (x[3], -x[0]))
+        best_score, best_title, best_price_text, best_price = priced_top[0]
     else:
         # no storage in query — among tied candidates, prefer the smallest storage size
         def storage_sort_key(item):
@@ -256,15 +276,22 @@ def get_market_price(page, product_name):
             return s if s is not None else 9999
 
         top_candidates.sort(key=storage_sort_key)
-        best_score, best_title, best_price_text = top_candidates[0]
+        min_storage = storage_sort_key(top_candidates[0])
+        storage_group = [item for item in top_candidates if storage_sort_key(item) == min_storage]
+        priced_group = []
+        for score, title, price_text in storage_group:
+            parsed = parse_price_text(price_text)
+            if parsed is not None:
+                priced_group.append((score, title, price_text, parsed))
+        if not priced_group:
+            log("No parseable prices in preferred storage group")
+            return None, True
+        priced_group.sort(key=lambda x: (x[3], -x[0]))
+        best_score, best_title, best_price_text, best_price = priced_group[0]
 
     log(f"Matched: '{best_title}' (score={best_score:.2f})")
 
-    # get price as int, eg "10.899,00 kr." -> 10899
-    price_clean = re.sub(r'\.(?=\d{3}(\D|$))', '', best_price_text)  # strip thousands dots
-    price_clean = re.sub(r',\d+', '', price_clean)                    # strip decimal fraction
-    digits = "".join(re.findall(r'\d+', price_clean))
-    return (int(digits) if digits else None), True
+    return best_price, True
 
 
 def make_fresh_page(browser):
