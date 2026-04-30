@@ -25,18 +25,5 @@
         }
       ]
     }
-  ],
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.tech-tilbud.com"
-        }
-      ],
-      "destination": "https://tech-tilbud.com/:path*",
-      "permanent": true
-    }
   ]
 }
