@@ -28,7 +28,7 @@
   ],
   "redirects": [
     {
-      "source": "/(.+)",
+      "source": "/((?!_next/|api/|favicon.ico|.*\\..*).+)",
       "destination": "https://tech-tilbud.com/$1",
       "permanent": true
     }
