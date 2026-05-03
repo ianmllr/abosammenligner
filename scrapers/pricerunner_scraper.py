@@ -41,7 +41,7 @@ def normalize(text):
 
 
 # tier words — if a candidate has one the query doesn't (or vice versa), it's a different product
-TIER_WORDS = {'ultra', 'cellular', 'plus', 'pro', 'max', 'mini', 'fe', 'fold', 'flip', 'lite', 'edge', 'air'}
+TIER_WORDS = {'ultra', 'cellular', 'aktiv støjreduktion', 'anc', 'plus', 'pro', 'max', 'mini', 'fe', 'fold', 'flip', 'lite', 'edge', 'air'}
 
 # accessory keywords — disqualify any candidate that is clearly not a device
 ACCESSORY_KEYWORDS = {
@@ -274,6 +274,7 @@ def get_market_price(page, product_name):
         def storage_sort_key(item):
             s = extract_storage(item[1])
             return s if s is not None else 9999
+
 
         top_candidates.sort(key=storage_sort_key)
         min_storage = storage_sort_key(top_candidates[0])
