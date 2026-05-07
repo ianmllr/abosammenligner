@@ -13,7 +13,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 3268,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -30,7 +30,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 9168,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -47,7 +47,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 3668,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -64,7 +64,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 3168,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -81,7 +81,24 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 2168,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
+        "sold_out": "false"
+    },
+    {
+        "link": "https://www.cbb.dk/shop/mobiltelefoner/google/google-pixel-10-pro/?variant=Google-Pixel-10-Pro-128GB-Black_1",
+        "product_name": "Google Pixel 10 Pro 128GB Black",
+        "image_url": "/images/cbb/google_pixel_10_pro_128gb_black.webp",
+        "provider": "CBB",
+        "type": "phone",
+        "signup_price": 0,
+        "data_gb": 0,
+        "price_without_subscription": 0,
+        "price_with_subscription": 4999,
+        "subscription_price_monthly": 74,
+        "subscription_price_monthly_after_promo": 149,
+        "min_cost_6_months": 5668,
+        "discount_on_product": 0,
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -98,7 +115,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 3168,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -115,7 +132,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 4468,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -132,7 +149,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 8168,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -149,7 +166,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 2968,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -166,7 +183,24 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 10668,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
+        "sold_out": "false"
+    },
+    {
+        "link": "https://www.cbb.dk/shop/mobiltelefoner/samsung/samsung-galaxy-a37/?variant=Galaxy-A37-5G-128GB-Grey_1",
+        "product_name": "Galaxy A37 5G 128GB Grey",
+        "image_url": "/images/cbb/galaxy_a37_5g_128gb_grey.webp",
+        "provider": "CBB",
+        "type": "phone",
+        "signup_price": 0,
+        "data_gb": 0,
+        "price_without_subscription": 0,
+        "price_with_subscription": 3199,
+        "subscription_price_monthly": 74,
+        "subscription_price_monthly_after_promo": 149,
+        "min_cost_6_months": 3868,
+        "discount_on_product": 0,
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -183,7 +217,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 3468,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -200,24 +234,24 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 5668,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
-        "link": "https://www.cbb.dk/shop/mobiltelefoner/samsung/galaxy-s262/?variant=Galaxy-S26-256GB-Black_2",
-        "product_name": "Galaxy S26+ 256GB Black",
-        "image_url": "/images/cbb/galaxy_s26__256gb_black.webp",
+        "link": "https://www.cbb.dk/shop/mobiltelefoner/samsung/galaxy-s262/?variant=Galaxy-S26-512GB-Black_1",
+        "product_name": "Galaxy S26+ 512GB Black",
+        "image_url": "/images/cbb/galaxy_s26__512gb_black.webp",
         "provider": "CBB",
         "type": "phone",
         "signup_price": 0,
         "data_gb": 0,
         "price_without_subscription": 0,
-        "price_with_subscription": 8999,
+        "price_with_subscription": 9999,
         "subscription_price_monthly": 74,
         "subscription_price_monthly_after_promo": 149,
-        "min_cost_6_months": 9668,
+        "min_cost_6_months": 10668,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -234,7 +268,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 7668,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -251,7 +285,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 7168,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -268,7 +302,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 2568,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -285,7 +319,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 15468,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -302,7 +336,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 7668,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -319,7 +353,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 6668,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -336,7 +370,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 10968,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -353,7 +387,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 9968,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -370,7 +404,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 7468,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -387,7 +421,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 7668,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -404,7 +438,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 10868,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -421,7 +455,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 17168,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -438,7 +472,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 10168,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -455,7 +489,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 5168,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -472,7 +506,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 1668,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -489,7 +523,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 7168,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -506,7 +540,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 6468,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -523,7 +557,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 5668,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "false"
     },
     {
@@ -540,7 +574,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 2468,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "true"
     },
     {
@@ -557,7 +591,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 2868,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "true"
     },
     {
@@ -574,7 +608,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 2568,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "true"
     },
     {
@@ -591,24 +625,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 1668,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
-        "sold_out": "true"
-    },
-    {
-        "link": "https://www.cbb.dk/shop/mobiltelefoner/google/google-pixel-10-pro/?variant=Google-Pixel-10-Pro-128GB-Black_1",
-        "product_name": "Google Pixel 10 Pro 128GB Black",
-        "image_url": "/images/cbb/google_pixel_10_pro_128gb_black.webp",
-        "provider": "CBB",
-        "type": "phone",
-        "signup_price": 0,
-        "data_gb": 0,
-        "price_without_subscription": 0,
-        "price_with_subscription": 4999,
-        "subscription_price_monthly": 74,
-        "subscription_price_monthly_after_promo": 149,
-        "min_cost_6_months": 5668,
-        "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "true"
     },
     {
@@ -625,7 +642,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 4668,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "true"
     },
     {
@@ -642,24 +659,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 6668,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
-        "sold_out": "true"
-    },
-    {
-        "link": "https://www.cbb.dk/shop/mobiltelefoner/samsung/samsung-galaxy-a37/?variant=Galaxy-A37-5G-128GB-Grey_1",
-        "product_name": "Galaxy A37 5G 128GB Grey",
-        "image_url": "/images/cbb/galaxy_a37_5g_128gb_grey.webp",
-        "provider": "CBB",
-        "type": "phone",
-        "signup_price": 0,
-        "data_gb": 0,
-        "price_without_subscription": 0,
-        "price_with_subscription": 3199,
-        "subscription_price_monthly": 74,
-        "subscription_price_monthly_after_promo": 149,
-        "min_cost_6_months": 3868,
-        "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "true"
     },
     {
@@ -676,7 +676,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 11168,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "true"
     },
     {
@@ -693,7 +693,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 4368,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "true"
     },
     {
@@ -710,7 +710,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 7668,
         "discount_on_product": 0,
-        "saved_at": "06-05-2026-13:44",
+        "saved_at": "07-05-2026-08:13",
         "sold_out": "true"
     }
 ]
