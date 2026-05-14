@@ -1,25 +1,8 @@
 [
     {
-        "link": "https://www.cbb.dk/shop/mobiltelefoner/oneplus/oneplus-nord-5/?variant=OnePlus-NORD-5_2",
-        "product_name": "OnePlus NORD 5",
-        "image_url": "/images/cbb/oneplus_nord_5.webp",
-        "provider": "CBB",
-        "type": "phone",
-        "signup_price": 0,
-        "data_gb": 0,
-        "price_without_subscription": 0,
-        "price_with_subscription": 2599,
-        "subscription_price_monthly": 74,
-        "subscription_price_monthly_after_promo": 149,
-        "min_cost_6_months": 3268,
-        "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
-        "sold_out": "false"
-    },
-    {
-        "link": "https://www.cbb.dk/shop/mobiltelefoner/samsung/galaxy-s26-ultra/?variant=Galaxy-S26-Ultra-256GB-Blue_1",
-        "product_name": "Galaxy S26 Ultra 256GB Blue",
-        "image_url": "/images/cbb/galaxy_s26_ultra_256gb_blue.webp",
+        "link": "https://www.cbb.dk/shop/mobiltelefoner/samsung/galaxy-s26-ultra/?variant=Galaxy-S26-Ultra-256GB-Purple_1",
+        "product_name": "Galaxy S26 Ultra 256GB Purple",
+        "image_url": "/images/cbb/galaxy_s26_ultra_256gb_purple.webp",
         "provider": "CBB",
         "type": "phone",
         "signup_price": 0,
@@ -30,7 +13,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 9168,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -47,7 +30,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 2868,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -64,7 +47,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 3668,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -81,7 +64,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 3168,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -98,7 +81,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 1668,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -115,7 +98,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 2168,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -132,7 +115,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 5668,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -149,7 +132,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 3168,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -166,7 +149,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 4468,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -183,7 +166,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 8168,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -200,7 +183,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 2968,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -217,7 +200,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 10668,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -234,7 +217,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 3868,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -251,7 +234,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 3468,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -268,7 +251,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 5668,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -285,7 +268,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 10668,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -302,7 +285,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 7668,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -319,7 +302,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 7168,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -336,7 +319,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 2568,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -353,7 +336,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 15468,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -370,7 +353,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 7668,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -387,7 +370,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 6668,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -404,7 +387,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 10968,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -421,7 +404,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 9968,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -438,7 +421,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 7468,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -455,7 +438,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 7668,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -472,7 +455,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 10868,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -489,7 +472,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 17168,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -506,7 +489,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 10168,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -523,7 +506,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 5168,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -540,7 +523,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 1668,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -557,7 +540,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 7168,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -574,7 +557,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 6468,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
     },
     {
@@ -591,8 +574,25 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 5668,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "false"
+    },
+    {
+        "link": "https://www.cbb.dk/shop/mobiltelefoner/oneplus/oneplus-nord-5/?variant=OnePlus-NORD-5_2",
+        "product_name": "OnePlus NORD 5",
+        "image_url": "/images/cbb/oneplus_nord_5.webp",
+        "provider": "CBB",
+        "type": "phone",
+        "signup_price": 0,
+        "data_gb": 0,
+        "price_without_subscription": 0,
+        "price_with_subscription": 2599,
+        "subscription_price_monthly": 74,
+        "subscription_price_monthly_after_promo": 149,
+        "min_cost_6_months": 3268,
+        "discount_on_product": 0,
+        "saved_at": "14-05-2026-08:26",
+        "sold_out": "true"
     },
     {
         "link": "https://www.cbb.dk/shop/mobiltelefoner/motorola/edge-602/?variant=Motorola-Edge-60-512GB-Blue_2",
@@ -608,7 +608,7 @@
         "subscription_price_monthly_after_promo": 149,
         "min_cost_6_months": 2568,
         "discount_on_product": 0,
-        "saved_at": "13-05-2026-08:32",
+        "saved_at": "14-05-2026-08:26",
         "sold_out": "true"
     }
 ]
